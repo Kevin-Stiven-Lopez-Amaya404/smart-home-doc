@@ -37,6 +37,8 @@ Los validadores y consumidores del código son la referencia efectiva; un .env.e
 
 Las variables MQTT de provisión/roles privilegiados, cifrado y perfiles DEV tienen consumidores específicos: usar el catálogo exhaustivo y sus validadores, sin habilitar flags por ensayo.
 
+El [detalle de configuración de datos](../10-arquitectura/base-de-datos/configuracion-y-ejecucion.md) relaciona liquibase.properties, Compose local/productivo, variables de conexión y scripts. No copiar sus plantillas al backend sin revisar consumidores.
+
 ## Discrepancias
 
 JWT_REFRESH_SECRET y JWT_REFRESH_EXPIRES_IN aparecen en ejemplos antiguos, pero no son la autoridad de duración/firma del refresh opaco actual. LOG_LEVEL y LOCAL_DEVICE_DISCOVERY_ENABLED no tienen consumidor identificado en el análisis backend. El Compose productivo aún exige JWT_REFRESH_SECRET.

@@ -16,6 +16,7 @@ Componentes observados, responsabilidades y límites.
 - [Arquitectura general](arquitectura-general.md)
 - [Backend](backend.md)
 - [Persistencia y datos](persistencia-y-datos.md)
+- [Documentación técnica de la base de datos](base-de-datos/README.md)
 - [Frontend web](frontend-web.md)
 - [Aplicación móvil](aplicacion-movil.md)
 - [Comunicaciones](comunicaciones-mqtt-realtime.md)

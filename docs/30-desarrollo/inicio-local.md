@@ -56,6 +56,8 @@ Configurar EXPO_PUBLIC_API_URL con una dirección accesible desde el teléfono; 
 
 ## Datos e integración
 
+El procedimiento detallado, los nombres de configuración y los efectos de validate/update están en [configuración de datos](../10-arquitectura/base-de-datos/configuracion-y-ejecucion.md).
+
 El [Compose local](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docker-compose.yml) declara PostgreSQL, Mosquitto y Liquibase; su servicio Liquibase ejecuta update. Leer primero sus requisitos, roles y .env locales; no se ofrece un comando de migración genérico contra producción.
 
 Pendientes: ensayo reproducible completo, versiones mínimas de herramientas, orden validado de instalación y configuración autenticada del broker local. El Compose declara Mosquitto sin montar configuración de autenticación; no presentarlo como broker seguro ya preparado.

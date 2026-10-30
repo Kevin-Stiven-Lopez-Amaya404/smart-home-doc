@@ -1,0 +1,2003 @@
+{
+  "schema_version": 1,
+  "repository": "nataliachala1/smarthome-database",
+  "branch": "dev",
+  "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+  "reviewed_on": "2026-10-29",
+  "method": "Static inspection of complete Git tree and retrieved source files; constrained changelog traversal and SQL lexical extraction, not Liquibase or PostgreSQL execution.",
+  "counts": {
+    "tree_files": 332,
+    "retrieved_files": 288,
+    "gitkeep_markers": 44,
+    "sql_files": 199,
+    "yaml_files": 52,
+    "markdown_files": 24,
+    "reachable_changelogs": 42,
+    "changesets": 96,
+    "forward_sql_references": 96,
+    "rollback_sql_references": 93,
+    "inline_rollbacks": 1,
+    "changesets_without_rollback": 2,
+    "table_names_after_static_drops": 33,
+    "declared_columns_excluding_inherited_default_partition": 295,
+    "create_function_declarations": 83,
+    "latest_function_names": 73,
+    "latest_security_definer_names": 62,
+    "created_group_role_names": 13,
+    "enable_rls_table_names": 26,
+    "create_policy_declarations": 60,
+    "create_index_declarations": 51,
+    "create_trigger_declarations": 30
+  },
+  "checks": {
+    "missing_changelog_or_sql_paths": [],
+    "include_cycles": [],
+    "duplicate_id_in_same_changelog": [],
+    "broken_original_relative_markdown_paths": [],
+    "sql_execution": "not_run",
+    "liquibase_validate": "not_run",
+    "integration_tests": "not_run",
+    "production_inspection": "not_run"
+  },
+  "changelogs": [
+    "changelog/changelog-master.yaml",
+    "01_ddl/changelog.yaml",
+    "01_ddl/00_extensions/changelog.yaml",
+    "01_ddl/01_schemas/changelog.yaml",
+    "01_ddl/02_types/changelog.yaml",
+    "01_ddl/03_tables/changelog.yaml",
+    "01_ddl/04_alter/changelog.yaml",
+    "01_ddl/05_views/changelog.yaml",
+    "01_ddl/06_materialized_views/changelog.yaml",
+    "01_ddl/07_functions/changelog.yaml",
+    "01_ddl/08_procedures/changelog.yaml",
+    "01_ddl/09_triggers/changelog.yaml",
+    "01_ddl/10_indexes/changelog.yaml",
+    "02_dml/changelog.yaml",
+    "02_dml/00_inserts/changelog.yaml",
+    "03_dcl/changelog.yaml",
+    "03_dcl/00_roles/changelog.yaml",
+    "03_dcl/01_grants/changelog.yaml",
+    "03_dcl/02_policies/changelog.yaml",
+    "01_ddl/11_refactors/changelog.yaml",
+    "releases/009_session_schema/changelog.yaml",
+    "releases/011_mqtt_revocation/changelog.yaml",
+    "releases/011_mqtt_identity_events/changelog.yaml",
+    "releases/016_consumption_access/changelog.yaml",
+    "releases/018_household_permissions/changelog.yaml",
+    "releases/019_device_pairing_sessions/changelog.yaml",
+    "releases/020_lan_pairing_method/changelog.yaml",
+    "releases/020a_device_schema_reconciliation/changelog.yaml",
+    "releases/021_shelly_device_repairing/changelog.yaml",
+    "releases/022_mqtt_pairing_operation/changelog.yaml",
+    "releases/023_mqtt_identity_repairing/changelog.yaml",
+    "releases/024_mqtt_pairing_state_guards/changelog.yaml",
+    "releases/025_mqtt_lease_fencing/changelog.yaml",
+    "releases/026_mqtt_rpc_challenge/changelog.yaml",
+    "releases/027_mqtt_pairing_prepared_confirmation/changelog.yaml",
+    "releases/028_mqtt_preparation_secret/changelog.yaml",
+    "releases/029_mqtt_authenticated_pairing/changelog.yaml",
+    "releases/030_mqtt_enable_fencing/changelog.yaml",
+    "releases/031_mqtt_bootstrap_authorization/changelog.yaml",
+    "releases/032_mqtt_pairing_revocation/changelog.yaml",
+    "releases/033_mqtt_ingest_realtime/changelog.yaml",
+    "releases/034_energy_tariff_budget/changelog.yaml"
+  ],
+  "changesets": [
+    {
+      "sequence": 1,
+      "id": "b1ef8cee-c201-4e68-bc25-bf6e2e7ea028",
+      "changelog": "01_ddl/00_extensions/changelog.yaml",
+      "forward": [
+        "01_ddl/00_extensions/001_enable_uuid_extension.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/00_extensions/001_enable_uuid_extension.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 2,
+      "id": "5d2b7897-01d2-4f32-8a38-9d9ae1d0d4dd",
+      "changelog": "01_ddl/00_extensions/changelog.yaml",
+      "forward": [
+        "01_ddl/00_extensions/002_enable_btree_gist_extension.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/00_extensions/002_enable_btree_gist_extension.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 3,
+      "id": "b2373da2-a937-455a-a350-976ab989e275",
+      "changelog": "01_ddl/01_schemas/changelog.yaml",
+      "forward": [
+        "01_ddl/01_schemas/001_create_schemas_auth.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/01_schemas/001_create_schemas_rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 4,
+      "id": "a1a4c984-d259-48a3-b749-e42cc0327891",
+      "changelog": "01_ddl/01_schemas/changelog.yaml",
+      "forward": [
+        "01_ddl/01_schemas/002_create_schemas_homes.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/01_schemas/002_create_schemas_rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 5,
+      "id": "c1c4d984-e259-48a3-b749-e42cc0327892",
+      "changelog": "01_ddl/01_schemas/changelog.yaml",
+      "forward": [
+        "01_ddl/01_schemas/003_create_schemas_devices.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/01_schemas/003_create_schemas.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 6,
+      "id": "15cfe1a2-86fc-4c88-8dae-100c4da9ec9d",
+      "changelog": "01_ddl/01_schemas/changelog.yaml",
+      "forward": [
+        "01_ddl/01_schemas/004_create_schemas_consumption.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/01_schemas/004_create_schemas.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 7,
+      "id": "f0380626-7e8f-42ce-9ff2-7027ee92562a",
+      "changelog": "01_ddl/01_schemas/changelog.yaml",
+      "forward": [
+        "01_ddl/01_schemas/005_create_schemas_notifications.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/01_schemas/005_create_schemas.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 8,
+      "id": "8e108faf-d126-4a30-b772-6cb84b3be342",
+      "changelog": "01_ddl/01_schemas/changelog.yaml",
+      "forward": [
+        "01_ddl/01_schemas/006_create_schemas_sync.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/01_schemas/006_create_schemas_rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 9,
+      "id": "3f14d2cd-2266-45ea-9b16-ea54a3d00cb3",
+      "changelog": "01_ddl/01_schemas/changelog.yaml",
+      "forward": [
+        "01_ddl/01_schemas/007_create_schemas_config.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/01_schemas/007_create_schemas_rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 10,
+      "id": "b1e8f3a2-4c5d-4e6b-9f3a-2c1e4d5f6a7b",
+      "changelog": "01_ddl/01_schemas/changelog.yaml",
+      "forward": [
+        "01_ddl/01_schemas/008_create_schemas_identity_audit.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/01_schemas/008_create_schemas_rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 11,
+      "id": "19a23933-46d0-4909-8d3d-e94a7aec1689",
+      "changelog": "01_ddl/03_tables/changelog.yaml",
+      "forward": [
+        "01_ddl/03_tables/001_create_auth_tables.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/03_tables/001_create_auth_tables_rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 12,
+      "id": "c77d2fbc-0a83-4f79-b089-424452cc3cc8",
+      "changelog": "01_ddl/03_tables/changelog.yaml",
+      "forward": [
+        "01_ddl/03_tables/002_create_homes_tables.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/03_tables/002_create_homes_tables_rollbacks.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 13,
+      "id": "305b5430-ab58-4512-8682-933181e31ec9",
+      "changelog": "01_ddl/03_tables/changelog.yaml",
+      "forward": [
+        "01_ddl/03_tables/003_create_devices_tables.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/03_tables/003_create_devices_tables_rollbacks.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 14,
+      "id": "406c6541-bc69-4623-9793-044292f42fd0",
+      "changelog": "01_ddl/03_tables/changelog.yaml",
+      "forward": [
+        "01_ddl/03_tables/004_create_consumption_tables.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/03_tables/004_create_consumption_tables.rollbacks.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 15,
+      "id": "c4f5e16e-82a7-43b0-86d7-7aad33a158b9",
+      "changelog": "01_ddl/03_tables/changelog.yaml",
+      "forward": [
+        "01_ddl/03_tables/005_create_notifications_tables.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/03_tables/005_create_notifications_tables.rollbacks.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 16,
+      "id": "507d7652-cd7a-4784-9894-1553a4c56d0e",
+      "changelog": "01_ddl/03_tables/changelog.yaml",
+      "forward": [
+        "01_ddl/03_tables/006_create_sync_tables.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/03_tables/006_create_sync_tables.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 17,
+      "id": "608e8763-de8b-4895-aa96-2664a5d77e1f",
+      "changelog": "01_ddl/03_tables/changelog.yaml",
+      "forward": [
+        "01_ddl/03_tables/007_create_config_tables.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/03_tables/007_create_config_tables_rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 18,
+      "id": "2af62fe1-5bc2-4e7f-93b6-7b9860c56a21",
+      "changelog": "01_ddl/03_tables/changelog.yaml",
+      "forward": [
+        "01_ddl/03_tables/008_create_identity_audit_tables.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/03_tables/008_create_audit_tables.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 19,
+      "id": "a00ac303-9af8-4292-bc3d-7b7600190f51",
+      "changelog": "01_ddl/04_alter/changelog.yaml",
+      "forward": [
+        "01_ddl/04_alter/001_add_alter_auth.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/04_alter/001_add_alter_auth.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 20,
+      "id": "ea9f510a-51ea-4ccc-a56a-b42ce0fc1991",
+      "changelog": "01_ddl/04_alter/changelog.yaml",
+      "forward": [
+        "01_ddl/04_alter/002_add_alter_homes.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/04_alter/002_add_alter_homes.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 21,
+      "id": "9d8dd52d-cd9f-48f1-b8df-94ccdcf1dd1a",
+      "changelog": "01_ddl/04_alter/changelog.yaml",
+      "forward": [
+        "01_ddl/04_alter/003_add_alter_devices.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/04_alter/003_add_alter_devices.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 22,
+      "id": "94147612-fe99-438e-8fe6-8f4aa5f09b5a",
+      "changelog": "01_ddl/04_alter/changelog.yaml",
+      "forward": [
+        "01_ddl/04_alter/004_add_alter_consumption.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/04_alter/004_add_alter_consumption.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 23,
+      "id": "74496839-d385-4921-9935-c2954ffcf0ba",
+      "changelog": "01_ddl/04_alter/changelog.yaml",
+      "forward": [
+        "01_ddl/04_alter/005_add_alter_notifications.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/04_alter/005_add_alter_notifications.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 24,
+      "id": "a0cbc7b1-6884-4eb1-a5f5-34eb147d06db",
+      "changelog": "01_ddl/04_alter/changelog.yaml",
+      "forward": [
+        "01_ddl/04_alter/006_add_alter_sync.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/04_alter/006_add_alter_sync.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 25,
+      "id": "5c14a249-6430-4623-8e75-a2464c12e220",
+      "changelog": "01_ddl/04_alter/changelog.yaml",
+      "forward": [
+        "01_ddl/04_alter/007_add_alter_identity_audit.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/04_alter/007_add_alter_identity_audit.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 26,
+      "id": "10fe8f39-4023-4e66-b0c8-35d4bc11fcad",
+      "changelog": "01_ddl/04_alter/changelog.yaml",
+      "forward": [
+        "01_ddl/04_alter/008_fix_device_active_name_uniqueness.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/04_alter/009_fix_device_active_name_uniqueness.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 27,
+      "id": "7f13ce58-1d50-4bde-95ef-1c5fa908f1c8",
+      "changelog": "01_ddl/04_alter/changelog.yaml",
+      "forward": [
+        "01_ddl/04_alter/010_align_device_lifecycle.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/04_alter/010_align_device_lifecycle.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 28,
+      "id": "add-user-session-version-2026-09-22",
+      "changelog": "01_ddl/04_alter/changelog.yaml",
+      "forward": [
+        "01_ddl/04_alter/011_add_user_session_version.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/04_alter/011_add_user_session_version.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 29,
+      "id": "create-refresh-token-table-2026-09-22",
+      "changelog": "01_ddl/04_alter/changelog.yaml",
+      "forward": [
+        "01_ddl/04_alter/012_create_refresh_token_table.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/04_alter/012_create_refresh_token_table.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 30,
+      "id": "d50ff794-183a-4e9c-bba9-d1d3e6c57206",
+      "changelog": "01_ddl/07_functions/changelog.yaml",
+      "forward": [
+        "01_ddl/07_functions/001_update_functions.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/07_functions/001_update_functions_rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 31,
+      "id": "9b7c9fc6-93e0-447a-b111-76e398b4640c",
+      "changelog": "01_ddl/07_functions/changelog.yaml",
+      "forward": [
+        "01_ddl/07_functions/004_auth_security_functions.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/07_functions/004_auth_security_functions.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 32,
+      "id": "deb3fc9e-ac39-4515-bcef-640226993f77",
+      "changelog": "01_ddl/07_functions/changelog.yaml",
+      "forward": [
+        "01_ddl/07_functions/005_consumption_partition_functions.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/07_functions/005_consumption_partition_functions.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 33,
+      "id": "43a79f51-f436-4099-b24a-ffbdc55838b0",
+      "changelog": "01_ddl/07_functions/changelog.yaml",
+      "forward": [
+        "01_ddl/07_functions/006_rls_security_functions.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/07_functions/006_rls_security_functions.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 34,
+      "id": "34077983-26ba-47b4-aa80-888ef0b5b662",
+      "changelog": "01_ddl/07_functions/changelog.yaml",
+      "forward": [
+        "01_ddl/07_functions/007_rls_device_security_functions.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/07_functions/007_rls_device_security_functions.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 35,
+      "id": "b5df25d1-5987-428a-8e85-b18ea9592467",
+      "changelog": "01_ddl/07_functions/changelog.yaml",
+      "forward": [
+        "01_ddl/07_functions/008_rls_consumption_security_functions.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/07_functions/008_rls_consumption_security_functions.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 36,
+      "id": "19c41bf7-5c40-46ee-a222-02be7b624bbd",
+      "changelog": "01_ddl/07_functions/changelog.yaml",
+      "forward": [
+        "01_ddl/07_functions/009_rls_notification_security_functions.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/07_functions/009_rls_notification_security_functions.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 37,
+      "id": "6e859c61-d534-4fe6-904c-92a7e175fd72",
+      "changelog": "01_ddl/07_functions/changelog.yaml",
+      "forward": [
+        "01_ddl/07_functions/010_align_device_lifecycle_security.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/07_functions/010_align_device_lifecycle_security.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 38,
+      "id": "b1a9bf66-fe75-4bd3-82db-f2ed4a262dbf",
+      "changelog": "01_ddl/09_triggers/changelog.yaml",
+      "forward": [
+        "01_ddl/09_triggers/001_update_triggers.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/09_triggers/001_update_triggers.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 39,
+      "id": "d9647530-11fb-4b7e-a92c-f6ee620f8c3a",
+      "changelog": "01_ddl/10_indexes/changelog.yaml",
+      "forward": [
+        "01_ddl/10_indexes/001_auth_indexes.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/10_indexes/001_auth_indexes.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 40,
+      "id": "b25b47f8-2951-4383-9107-7b578c81d76d",
+      "changelog": "01_ddl/10_indexes/changelog.yaml",
+      "forward": [
+        "01_ddl/10_indexes/002_homes_indexes.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/10_indexes/002_homes_indexes.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 41,
+      "id": "5c6c697f-2d32-41da-ae31-0984bed48a62",
+      "changelog": "01_ddl/10_indexes/changelog.yaml",
+      "forward": [
+        "01_ddl/10_indexes/003_devices_indexes.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/10_indexes/003_devices_indexes.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 42,
+      "id": "748c900a-68b2-4a8a-b76f-408764691e5d",
+      "changelog": "01_ddl/10_indexes/changelog.yaml",
+      "forward": [
+        "01_ddl/10_indexes/004_consumption_indexes.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/10_indexes/004_consumption_indexes.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 43,
+      "id": "04cdddce-1c13-439b-b60b-96e6c4eb095a",
+      "changelog": "01_ddl/10_indexes/changelog.yaml",
+      "forward": [
+        "01_ddl/10_indexes/005_notifications_indexes.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/10_indexes/005_notifications_indexes.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 44,
+      "id": "7dfec709-3dea-41c9-9731-52a8dce27465",
+      "changelog": "01_ddl/10_indexes/changelog.yaml",
+      "forward": [
+        "01_ddl/10_indexes/006_sync_indexes.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/10_indexes/006_sync_indexes.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 45,
+      "id": "5ab7bcd2-3f7f-4531-90fb-c13b66c007d2",
+      "changelog": "01_ddl/10_indexes/changelog.yaml",
+      "forward": [
+        "01_ddl/10_indexes/007_config_indexes.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/10_indexes/007_config_indexes.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 46,
+      "id": "8692c538-a72b-431b-8afc-903dbde62987",
+      "changelog": "01_ddl/10_indexes/changelog.yaml",
+      "forward": [
+        "01_ddl/10_indexes/008_audit_indexes.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/10_indexes/008_audit_indexes.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 47,
+      "id": "91bbf5f6-bb17-45f4-a4b6-63b885ec5308",
+      "changelog": "02_dml/00_inserts/changelog.yaml",
+      "forward": [
+        "02_dml/00_inserts/001_insert_roles.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/02_dml/00_inserts/001_insert_roles.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 48,
+      "id": "dd406ee7-34c0-416d-befe-52254f5cab75",
+      "changelog": "02_dml/00_inserts/changelog.yaml",
+      "forward": [
+        "02_dml/00_inserts/004_insert_tipos_dispositivos.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/02_dml/00_inserts/004_insert_tipos_dispositivos.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 49,
+      "id": "7afd86d3-7320-4910-9e36-3ce73849fb82",
+      "changelog": "03_dcl/00_roles/changelog.yaml",
+      "forward": [
+        "03_dcl/00_roles/001_create_roles.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/00_roles/001_create_roles.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 50,
+      "id": "e8a7609f-7954-4ade-b40a-f4c76790e402",
+      "changelog": "03_dcl/01_grants/changelog.yaml",
+      "forward": [
+        "03_dcl/01_grants/001_grants_auth.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/01_grants/001_grants_auth.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 51,
+      "id": "f6b7b256-3169-4391-baec-429c2b87275e",
+      "changelog": "03_dcl/01_grants/changelog.yaml",
+      "forward": [
+        "03_dcl/01_grants/002_grants_homes.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/01_grants/002_grants_homes.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 52,
+      "id": "8b3759b0-e1f9-479a-ae61-ef74f8904612",
+      "changelog": "03_dcl/01_grants/changelog.yaml",
+      "forward": [
+        "03_dcl/01_grants/003_grants_devices.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/01_grants/003_grants_devices.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 53,
+      "id": "4c5d4e21-4772-4750-b3fd-5a387a254ed6",
+      "changelog": "03_dcl/01_grants/changelog.yaml",
+      "forward": [
+        "03_dcl/01_grants/004_grants_consumption.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/01_grants/004_grants_consumption.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 54,
+      "id": "a1b2c3d4-e5f6-7890-a1b2-c3d4e5f67890",
+      "changelog": "03_dcl/01_grants/changelog.yaml",
+      "forward": [
+        "03_dcl/01_grants/005_grants_notifications.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/01_grants/005_grants_notifications.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 55,
+      "id": "ca0b135c-1e6b-4f74-add1-f340878d8e52",
+      "changelog": "03_dcl/01_grants/changelog.yaml",
+      "forward": [
+        "03_dcl/01_grants/006_grants_sync.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/01_grants/006_grants_sync.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 56,
+      "id": "04ad6d88-2518-464f-b0e9-49957fb20762",
+      "changelog": "03_dcl/01_grants/changelog.yaml",
+      "forward": [
+        "03_dcl/01_grants/007_grants_config.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/01_grants/007_grants_config.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 57,
+      "id": "19574bc4-443b-4c95-a642-d2de095fdc54",
+      "changelog": "03_dcl/01_grants/changelog.yaml",
+      "forward": [
+        "03_dcl/01_grants/008_grants_audit.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/01_grants/008_grants_audit.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 58,
+      "id": "3e4aa5d3-c3a8-4115-837b-7faa7b187f47",
+      "changelog": "03_dcl/01_grants/changelog.yaml",
+      "forward": [
+        "03_dcl/01_grants/009_grants_rls_helpers.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/01_grants/009_grants_rls_helpers.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 59,
+      "id": "grants-refresh-token-2026-09-22",
+      "changelog": "03_dcl/01_grants/changelog.yaml",
+      "forward": [
+        "03_dcl/01_grants/010_grants_refresh_token.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/01_grants/010_grants_refresh_token.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 60,
+      "id": "99445118-5508-4610-9bd6-3b55658e78a6",
+      "changelog": "03_dcl/02_policies/changelog.yaml",
+      "forward": [
+        "03_dcl/02_policies/001_rls_homes.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/02_policies/001_rls_homes.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 61,
+      "id": "99445118-5508-4610-9bd6-3b55658e78a7",
+      "changelog": "03_dcl/02_policies/changelog.yaml",
+      "forward": [
+        "03_dcl/02_policies/002_rls_devices.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/02_policies/002_rls_devices.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 62,
+      "id": "99445118-5508-4610-9bd6-3b55658e78a8",
+      "changelog": "03_dcl/02_policies/changelog.yaml",
+      "forward": [
+        "03_dcl/02_policies/003_rls_consumption.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/02_policies/003_rls_consumption.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 63,
+      "id": "99445118-5508-4610-9bd6-3b55658e78a9",
+      "changelog": "03_dcl/02_policies/changelog.yaml",
+      "forward": [
+        "03_dcl/02_policies/004_rls_notifications.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/02_policies/004_rls_notifications.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 64,
+      "id": "2f1cd769-315a-4039-b44a-35d27e88a298",
+      "changelog": "03_dcl/02_policies/changelog.yaml",
+      "forward": [
+        "03_dcl/02_policies/005_rls_config.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/02_policies/005_rls_config.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 65,
+      "id": "b053d59f-26a1-4116-925e-6c7f090c996b",
+      "changelog": "03_dcl/02_policies/changelog.yaml",
+      "forward": [
+        "03_dcl/02_policies/006_rls_sync.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/02_policies/006_rls_sync.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 66,
+      "id": "99445118-5508-4610-9bd6-3b55658e78aa",
+      "changelog": "03_dcl/02_policies/changelog.yaml",
+      "forward": [
+        "03_dcl/02_policies/007_rls_identity_audit.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/02_policies/007_rls_identity_audit.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 67,
+      "id": "17939556-f525-4333-aea0-e4f00c4db3e0",
+      "changelog": "03_dcl/02_policies/changelog.yaml",
+      "forward": [
+        "03_dcl/02_policies/008_fix_home_select_policy_initial_owner.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/03_dcl/02_policies/008_fix_home_select_policy_initial_owner.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 68,
+      "id": "remove-device-type-2026-09-24",
+      "changelog": "01_ddl/11_refactors/changelog.yaml",
+      "forward": [
+        "01_ddl/11_refactors/001_remove_device_type.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/11_refactors/001_remove_device_type.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 69,
+      "id": "fix-device-lifecycle-permissions-2026-10-01",
+      "changelog": "01_ddl/11_refactors/changelog.yaml",
+      "forward": [
+        "01_ddl/11_refactors/002_fix_device_lifecycle_permissions.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/11_refactors/002_fix_device_lifecycle_permissions.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 70,
+      "id": "allow-iot-active-home-recipient-read-2026-10-01",
+      "changelog": "01_ddl/11_refactors/changelog.yaml",
+      "forward": [
+        "01_ddl/11_refactors/003_allow_iot_home_recipient_read.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/11_refactors/003_allow_iot_home_recipient_read.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 71,
+      "id": "allow-iot-alert-read-2026-10-01",
+      "changelog": "01_ddl/11_refactors/changelog.yaml",
+      "forward": [
+        "01_ddl/11_refactors/004_allow_iot_alert_read.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/11_refactors/004_allow_iot_alert_read.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 72,
+      "id": "allow-iot-notification-returning-2026-10-01",
+      "changelog": "01_ddl/11_refactors/changelog.yaml",
+      "forward": [
+        "01_ddl/11_refactors/005_allow_iot_notification_returning.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/11_refactors/005_allow_iot_notification_returning.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 73,
+      "id": "add-device-last-seen-at-2026-10-02",
+      "changelog": "01_ddl/11_refactors/changelog.yaml",
+      "forward": [
+        "01_ddl/11_refactors/006_add_device_last_seen_at.sql"
+      ],
+      "rollback": [
+        "05_rollbacks/01_ddl/11_refactors/006_add_device_last_seen_at.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 74,
+      "id": "hu09-session-schema-bridge-20261014",
+      "changelog": "releases/009_session_schema/changelog.yaml",
+      "forward": [
+        "releases/009_session_schema/001_session_schema.sql"
+      ],
+      "rollback": [],
+      "inlineRollback": true
+    },
+    {
+      "sequence": 75,
+      "id": "hu11-mqtt-identity-durable-revocation-v1",
+      "changelog": "releases/011_mqtt_revocation/changelog.yaml",
+      "forward": [
+        "releases/011_mqtt_revocation/mqtt-revocation.sql"
+      ],
+      "rollback": [
+        "releases/011_mqtt_revocation/mqtt-revocation.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 76,
+      "id": "hu11-mqtt-identity-events-v1",
+      "changelog": "releases/011_mqtt_identity_events/changelog.yaml",
+      "forward": [
+        "releases/011_mqtt_identity_events/mqtt-identity-events.sql"
+      ],
+      "rollback": [
+        "releases/011_mqtt_identity_events/mqtt-identity-events.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 77,
+      "id": "hu16-consumption-detail-access-20261014",
+      "changelog": "releases/016_consumption_access/changelog.yaml",
+      "forward": [
+        "releases/016_consumption_access/001_consumption_access.sql"
+      ],
+      "rollback": [
+        "releases/016_consumption_access/001_consumption_access.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 78,
+      "id": "hu16-household-permissions-20261016",
+      "changelog": "releases/018_household_permissions/changelog.yaml",
+      "forward": [
+        "releases/018_household_permissions/001_household_permissions.sql"
+      ],
+      "rollback": [
+        "releases/018_household_permissions/001_household_permissions.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 79,
+      "id": "hu16-device-pairing-sessions-20261016",
+      "changelog": "releases/019_device_pairing_sessions/changelog.yaml",
+      "forward": [
+        "releases/019_device_pairing_sessions/001_device_pairing_sessions.sql"
+      ],
+      "rollback": [
+        "releases/019_device_pairing_sessions/001_device_pairing_sessions.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 80,
+      "id": "hu16-lan-pairing-method-20261019",
+      "changelog": "releases/020_lan_pairing_method/changelog.yaml",
+      "forward": [
+        "releases/020_lan_pairing_method/001_lan_pairing_method.sql"
+      ],
+      "rollback": [
+        "releases/020_lan_pairing_method/001_lan_pairing_method.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 81,
+      "id": "reconcile-device-home-integrity-20261021",
+      "changelog": "releases/020a_device_schema_reconciliation/changelog.yaml",
+      "forward": [
+        "releases/020a_device_schema_reconciliation/001_device_home_integrity.sql"
+      ],
+      "rollback": [
+        "releases/020a_device_schema_reconciliation/001_device_home_integrity.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 82,
+      "id": "hu16-shelly-device-repairing-20261020",
+      "changelog": "releases/021_shelly_device_repairing/changelog.yaml",
+      "forward": [
+        "releases/021_shelly_device_repairing/001_shelly_device_repairing.sql"
+      ],
+      "rollback": [
+        "releases/021_shelly_device_repairing/001_shelly_device_repairing.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 83,
+      "id": "hu16-mqtt-pairing-operation-reservation-20261021",
+      "changelog": "releases/022_mqtt_pairing_operation/changelog.yaml",
+      "forward": [
+        "releases/022_mqtt_pairing_operation/001_mqtt_pairing_operation.sql"
+      ],
+      "rollback": [
+        "releases/022_mqtt_pairing_operation/001_mqtt_pairing_operation.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 84,
+      "id": "hu16-mqtt-identity-repairing-20261021",
+      "changelog": "releases/023_mqtt_identity_repairing/changelog.yaml",
+      "forward": [
+        "releases/023_mqtt_identity_repairing/001_mqtt_identity_repairing.sql"
+      ],
+      "rollback": [
+        "releases/023_mqtt_identity_repairing/001_mqtt_identity_repairing.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 85,
+      "id": "hu16-mqtt-state-guards-audit-20261021",
+      "changelog": "releases/024_mqtt_pairing_state_guards/changelog.yaml",
+      "forward": [
+        "releases/024_mqtt_pairing_state_guards/001_mqtt_pairing_state_guards.sql"
+      ],
+      "rollback": [
+        "releases/024_mqtt_pairing_state_guards/001_mqtt_pairing_state_guards.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 86,
+      "id": "hu16-mqtt-lease-fencing-20261022",
+      "changelog": "releases/025_mqtt_lease_fencing/changelog.yaml",
+      "forward": [
+        "releases/025_mqtt_lease_fencing/001_mqtt_lease_fencing.sql"
+      ],
+      "rollback": [
+        "releases/025_mqtt_lease_fencing/001_mqtt_lease_fencing.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 87,
+      "id": "hu16-mqtt-rpc-challenge-20261022",
+      "changelog": "releases/026_mqtt_rpc_challenge/changelog.yaml",
+      "forward": [
+        "releases/026_mqtt_rpc_challenge/001_mqtt_rpc_challenge.sql"
+      ],
+      "rollback": [
+        "releases/026_mqtt_rpc_challenge/001_mqtt_rpc_challenge.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 88,
+      "id": "hu16-mqtt-prepared-confirmation-20261022",
+      "changelog": "releases/027_mqtt_pairing_prepared_confirmation/changelog.yaml",
+      "forward": [
+        "releases/027_mqtt_pairing_prepared_confirmation/001_mqtt_pairing_prepared_confirmation.sql"
+      ],
+      "rollback": [
+        "releases/027_mqtt_pairing_prepared_confirmation/001_mqtt_pairing_prepared_confirmation.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 89,
+      "id": "hu16-mqtt-preparation-secret-envelope-fencing-20261023",
+      "changelog": "releases/028_mqtt_preparation_secret/changelog.yaml",
+      "forward": [
+        "releases/028_mqtt_preparation_secret/001_mqtt_preparation_secret.sql"
+      ],
+      "rollback": [
+        "releases/028_mqtt_preparation_secret/001_mqtt_preparation_secret.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 90,
+      "id": "hu16-mqtt-authenticated-session-fence-20261026",
+      "changelog": "releases/029_mqtt_authenticated_pairing/changelog.yaml",
+      "forward": [
+        "releases/029_mqtt_authenticated_pairing/001_mqtt_authenticated_pairing.sql"
+      ],
+      "rollback": [
+        "releases/029_mqtt_authenticated_pairing/001_mqtt_authenticated_pairing.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 91,
+      "id": "hu16-mqtt-enable-fencing-20261026",
+      "changelog": "releases/030_mqtt_enable_fencing/changelog.yaml",
+      "forward": [
+        "releases/030_mqtt_enable_fencing/001_mqtt_enable_fencing.sql"
+      ],
+      "rollback": [],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 92,
+      "id": "hu16-mqtt-bootstrap-authorization-20261026",
+      "changelog": "releases/031_mqtt_bootstrap_authorization/changelog.yaml",
+      "forward": [
+        "releases/031_mqtt_bootstrap_authorization/001_mqtt_bootstrap_authorization.sql"
+      ],
+      "rollback": [],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 93,
+      "id": "hu16-mqtt-pairing-revocation-reconciliation-20261027",
+      "changelog": "releases/032_mqtt_pairing_revocation/changelog.yaml",
+      "forward": [
+        "releases/032_mqtt_pairing_revocation/001_mqtt_pairing_revocation.sql"
+      ],
+      "rollback": [
+        "releases/032_mqtt_pairing_revocation/001_mqtt_pairing_revocation.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 94,
+      "id": "hu16-mqtt-ingest-realtime-20261028",
+      "changelog": "releases/033_mqtt_ingest_realtime/changelog.yaml",
+      "forward": [
+        "releases/033_mqtt_ingest_realtime/001_mqtt_ingest_realtime.sql"
+      ],
+      "rollback": [
+        "releases/033_mqtt_ingest_realtime/001_mqtt_ingest_realtime.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 95,
+      "id": "smarthome-sql034-energy-tariff-budget-20261029",
+      "changelog": "releases/034_energy_tariff_budget/changelog.yaml",
+      "forward": [
+        "releases/034_energy_tariff_budget/001_energy_tariff_budget.sql"
+      ],
+      "rollback": [
+        "releases/034_energy_tariff_budget/001_energy_tariff_budget.rollback.sql"
+      ],
+      "inlineRollback": false
+    },
+    {
+      "sequence": 96,
+      "id": "smarthome-sql034-energy-goal-optional-budget-20261029",
+      "changelog": "releases/034_energy_tariff_budget/changelog.yaml",
+      "forward": [
+        "releases/034_energy_tariff_budget/002_energy_goal_optional_budget.sql"
+      ],
+      "rollback": [
+        "releases/034_energy_tariff_budget/002_energy_goal_optional_budget.rollback.sql"
+      ],
+      "inlineRollback": false
+    }
+  ],
+  "without_rollback": [
+    {
+      "id": "hu16-mqtt-enable-fencing-20261026",
+      "changelog": "releases/030_mqtt_enable_fencing/changelog.yaml"
+    },
+    {
+      "id": "hu16-mqtt-bootstrap-authorization-20261026",
+      "changelog": "releases/031_mqtt_bootstrap_authorization/changelog.yaml"
+    }
+  ],
+  "tables": [
+    {
+      "name": "auth.role",
+      "source": "01_ddl/03_tables/001_create_auth_tables.sql",
+      "declared_columns": 4
+    },
+    {
+      "name": "auth.user",
+      "source": "01_ddl/03_tables/001_create_auth_tables.sql",
+      "declared_columns": 14
+    },
+    {
+      "name": "auth.recovery_token",
+      "source": "01_ddl/03_tables/001_create_auth_tables.sql",
+      "declared_columns": 7
+    },
+    {
+      "name": "homes.home",
+      "source": "01_ddl/03_tables/002_create_homes_tables.sql",
+      "declared_columns": 7
+    },
+    {
+      "name": "homes.home_member",
+      "source": "01_ddl/03_tables/002_create_homes_tables.sql",
+      "declared_columns": 11
+    },
+    {
+      "name": "devices.device",
+      "source": "01_ddl/03_tables/003_create_devices_tables.sql",
+      "declared_columns": 14
+    },
+    {
+      "name": "devices.smart_device",
+      "source": "01_ddl/03_tables/003_create_devices_tables.sql",
+      "declared_columns": 9
+    },
+    {
+      "name": "devices.device_schedule",
+      "source": "01_ddl/03_tables/003_create_devices_tables.sql",
+      "declared_columns": 9
+    },
+    {
+      "name": "devices.device_telemetry_raw",
+      "source": "01_ddl/03_tables/003_create_devices_tables.sql",
+      "declared_columns": 4
+    },
+    {
+      "name": "consumption.consumption",
+      "source": "01_ddl/03_tables/004_create_consumption_tables.sql",
+      "declared_columns": 11
+    },
+    {
+      "name": "consumption.consumption_default",
+      "source": "01_ddl/03_tables/004_create_consumption_tables.sql",
+      "declared_columns": 0,
+      "special": "PARTITION OF consumption.consumption DEFAULT"
+    },
+    {
+      "name": "consumption.consumption_metric",
+      "source": "01_ddl/03_tables/004_create_consumption_tables.sql",
+      "declared_columns": 12
+    },
+    {
+      "name": "notifications.alert_rule",
+      "source": "01_ddl/03_tables/005_create_notifications_tables.sql",
+      "declared_columns": 9
+    },
+    {
+      "name": "notifications.alert",
+      "source": "01_ddl/03_tables/005_create_notifications_tables.sql",
+      "declared_columns": 10
+    },
+    {
+      "name": "notifications.notification",
+      "source": "01_ddl/03_tables/005_create_notifications_tables.sql",
+      "declared_columns": 13
+    },
+    {
+      "name": "sync.backup",
+      "source": "01_ddl/03_tables/006_create_sync_tables.sql",
+      "declared_columns": 10
+    },
+    {
+      "name": "config.user_preference",
+      "source": "01_ddl/03_tables/007_create_config_tables.sql",
+      "declared_columns": 11
+    },
+    {
+      "name": "identity_audit.audit_log",
+      "source": "01_ddl/03_tables/008_create_identity_audit_tables.sql",
+      "declared_columns": 13
+    },
+    {
+      "name": "auth.refresh_token",
+      "source": "releases/009_session_schema/001_session_schema.sql",
+      "declared_columns": 10
+    },
+    {
+      "name": "devices.mqtt_identity",
+      "source": "releases/011_mqtt_revocation/mqtt-revocation.sql",
+      "declared_columns": 12
+    },
+    {
+      "name": "devices.mqtt_identity_event",
+      "source": "releases/011_mqtt_identity_events/mqtt-identity-events.sql",
+      "declared_columns": 8
+    },
+    {
+      "name": "homes.home_member_permission",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "declared_columns": 5
+    },
+    {
+      "name": "devices.device_member_permission",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "declared_columns": 6
+    },
+    {
+      "name": "devices.device_pairing_session",
+      "source": "releases/019_device_pairing_sessions/001_device_pairing_sessions.sql",
+      "declared_columns": 17
+    },
+    {
+      "name": "devices.mqtt_pairing_operation",
+      "source": "releases/022_mqtt_pairing_operation/001_mqtt_pairing_operation.sql",
+      "declared_columns": 21
+    },
+    {
+      "name": "devices.mqtt_pairing_state_event",
+      "source": "releases/024_mqtt_pairing_state_guards/001_mqtt_pairing_state_guards.sql",
+      "declared_columns": 6
+    },
+    {
+      "name": "devices.mqtt_rpc_challenge",
+      "source": "releases/026_mqtt_rpc_challenge/001_mqtt_rpc_challenge.sql",
+      "declared_columns": 7
+    },
+    {
+      "name": "devices.mqtt_preparation_secret",
+      "source": "releases/028_mqtt_preparation_secret/001_mqtt_preparation_secret.sql",
+      "declared_columns": 7
+    },
+    {
+      "name": "devices.mqtt_broker_auth_attestation",
+      "source": "releases/029_mqtt_authenticated_pairing/001_mqtt_authenticated_pairing.sql",
+      "declared_columns": 6
+    },
+    {
+      "name": "devices.mqtt_bootstrap_delivery_audit",
+      "source": "releases/031_mqtt_bootstrap_authorization/001_mqtt_bootstrap_authorization.sql",
+      "declared_columns": 4
+    },
+    {
+      "name": "devices.mqtt_pairing_revocation_attestation",
+      "source": "releases/032_mqtt_pairing_revocation/001_mqtt_pairing_revocation.sql",
+      "declared_columns": 6
+    },
+    {
+      "name": "config.home_energy_tariff",
+      "source": "releases/034_energy_tariff_budget/001_energy_tariff_budget.sql",
+      "declared_columns": 5
+    },
+    {
+      "name": "config.home_energy_goal",
+      "source": "releases/034_energy_tariff_budget/001_energy_tariff_budget.sql",
+      "declared_columns": 7
+    }
+  ],
+  "functions": [
+    {
+      "name": "public.fn_set_updated_at",
+      "source": "01_ddl/07_functions/001_update_functions.sql",
+      "sequence": 30,
+      "line": 12,
+      "security": "INVOKER"
+    },
+    {
+      "name": "auth.fn_current_user_id",
+      "source": "01_ddl/07_functions/004_auth_security_functions.sql",
+      "sequence": 31,
+      "line": 22,
+      "security": "INVOKER"
+    },
+    {
+      "name": "auth.fn_is_active_user",
+      "source": "01_ddl/07_functions/004_auth_security_functions.sql",
+      "sequence": 31,
+      "line": 42,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth"
+    },
+    {
+      "name": "auth.fn_is_system_admin",
+      "source": "01_ddl/07_functions/004_auth_security_functions.sql",
+      "sequence": 31,
+      "line": 75,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth"
+    },
+    {
+      "name": "consumption.fn_ensure_consumption_partitions",
+      "source": "01_ddl/07_functions/005_consumption_partition_functions.sql",
+      "sequence": 32,
+      "line": 12,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, consumption"
+    },
+    {
+      "name": "homes.fn_has_home_membership",
+      "source": "01_ddl/07_functions/006_rls_security_functions.sql",
+      "sequence": 33,
+      "line": 23,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth, homes"
+    },
+    {
+      "name": "homes.fn_is_home_member",
+      "source": "01_ddl/07_functions/006_rls_security_functions.sql",
+      "sequence": 33,
+      "line": 52,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth, homes"
+    },
+    {
+      "name": "homes.fn_is_home_owner",
+      "source": "01_ddl/07_functions/006_rls_security_functions.sql",
+      "sequence": 33,
+      "line": 84,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth, homes"
+    },
+    {
+      "name": "homes.fn_is_home_active",
+      "source": "01_ddl/07_functions/006_rls_security_functions.sql",
+      "sequence": 33,
+      "line": 112,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, homes"
+    },
+    {
+      "name": "homes.fn_can_manage_home",
+      "source": "01_ddl/07_functions/006_rls_security_functions.sql",
+      "sequence": 33,
+      "line": 136,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, homes"
+    },
+    {
+      "name": "homes.fn_can_create_initial_owner",
+      "source": "01_ddl/07_functions/006_rls_security_functions.sql",
+      "sequence": 33,
+      "line": 157,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth, homes"
+    },
+    {
+      "name": "homes.fn_owner_membership_update_allowed",
+      "source": "01_ddl/07_functions/006_rls_security_functions.sql",
+      "sequence": 33,
+      "line": 201,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, homes"
+    },
+    {
+      "name": "homes.fn_self_membership_transition_allowed",
+      "source": "01_ddl/07_functions/006_rls_security_functions.sql",
+      "sequence": 33,
+      "line": 271,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth, homes"
+    },
+    {
+      "name": "devices.fn_is_device_owner",
+      "source": "01_ddl/07_functions/007_rls_device_security_functions.sql",
+      "sequence": 34,
+      "line": 35,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, devices, homes"
+    },
+    {
+      "name": "devices.fn_can_view_device",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "sequence": 78,
+      "line": 132,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth, homes, devices"
+    },
+    {
+      "name": "devices.fn_can_manage_device",
+      "source": "01_ddl/07_functions/007_rls_device_security_functions.sql",
+      "sequence": 34,
+      "line": 88,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, devices, homes"
+    },
+    {
+      "name": "devices.fn_is_ingestable_device",
+      "source": "01_ddl/07_functions/007_rls_device_security_functions.sql",
+      "sequence": 34,
+      "line": 111,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, devices, homes"
+    },
+    {
+      "name": "devices.fn_device_belongs_to_home",
+      "source": "01_ddl/07_functions/008_rls_consumption_security_functions.sql",
+      "sequence": 35,
+      "line": 13,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, devices"
+    },
+    {
+      "name": "notifications.fn_recipient_has_home_role",
+      "source": "01_ddl/07_functions/009_rls_notification_security_functions.sql",
+      "sequence": 36,
+      "line": 10,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth, homes, notifications"
+    },
+    {
+      "name": "notifications.fn_can_generate_alert",
+      "source": "01_ddl/07_functions/009_rls_notification_security_functions.sql",
+      "sequence": 36,
+      "line": 59,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, homes, devices, notifications"
+    },
+    {
+      "name": "notifications.fn_notification_status_transition_allowed",
+      "source": "01_ddl/07_functions/009_rls_notification_security_functions.sql",
+      "sequence": 36,
+      "line": 119,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth, notifications"
+    },
+    {
+      "name": "devices.fn_device_app_update_allowed",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "sequence": 78,
+      "line": 146,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, devices, homes"
+    },
+    {
+      "name": "devices.fn_register_mqtt_identity",
+      "source": "releases/011_mqtt_revocation/mqtt-revocation.sql",
+      "sequence": 75,
+      "line": 58,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_mqtt_identity_device_update",
+      "source": "releases/011_mqtt_revocation/mqtt-revocation.sql",
+      "sequence": 75,
+      "line": 92,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_claim_mqtt_revocation",
+      "source": "releases/011_mqtt_revocation/mqtt-revocation.sql",
+      "sequence": 75,
+      "line": 117,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_finish_mqtt_revocation",
+      "source": "releases/011_mqtt_revocation/mqtt-revocation.sql",
+      "sequence": 75,
+      "line": 137,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_capture_mqtt_identity_event",
+      "source": "releases/011_mqtt_identity_events/mqtt-identity-events.sql",
+      "sequence": 76,
+      "line": 50,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_mqtt_identity_event_append_only",
+      "source": "releases/011_mqtt_identity_events/mqtt-identity-events.sql",
+      "sequence": 76,
+      "line": 91,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "consumption.fn_can_read_detail",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "sequence": 78,
+      "line": 188,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth, homes"
+    },
+    {
+      "name": "consumption.fn_history_devices",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "sequence": 78,
+      "line": 214,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth, homes, devices, consumption"
+    },
+    {
+      "name": "consumption.fn_basic_home_consumption",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "sequence": 78,
+      "line": 225,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth, consumption, homes"
+    },
+    {
+      "name": "homes.fn_initialize_member_permissions",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "sequence": 78,
+      "line": 31,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, homes"
+    },
+    {
+      "name": "homes.fn_reset_member_permissions_on_role_change",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "sequence": 78,
+      "line": 49,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, homes"
+    },
+    {
+      "name": "homes.fn_has_permission",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "sequence": 78,
+      "line": 71,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth, homes"
+    },
+    {
+      "name": "devices.fn_has_device_permission",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "sequence": 78,
+      "line": 104,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth, homes, devices"
+    },
+    {
+      "name": "consumption.fn_can_read_device_detail",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "sequence": 78,
+      "line": 199,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, devices, consumption"
+    },
+    {
+      "name": "devices.fn_device_control_target",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "sequence": 78,
+      "line": 245,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, auth, homes, devices"
+    },
+    {
+      "name": "homes.fn_get_member_permissions",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "sequence": 78,
+      "line": 266,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, homes"
+    },
+    {
+      "name": "homes.fn_set_member_permissions",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "sequence": 78,
+      "line": 277,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, homes"
+    },
+    {
+      "name": "homes.fn_get_device_permissions",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "sequence": 78,
+      "line": 298,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, homes, devices"
+    },
+    {
+      "name": "homes.fn_set_device_permissions",
+      "source": "releases/018_household_permissions/001_household_permissions.sql",
+      "sequence": 78,
+      "line": 311,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, homes, devices"
+    },
+    {
+      "name": "devices.fn_guard_pairing_session_transition",
+      "source": "releases/019_device_pairing_sessions/001_device_pairing_sessions.sql",
+      "sequence": 79,
+      "line": 78,
+      "security": "INVOKER",
+      "search_path": "pg_catalog, devices"
+    },
+    {
+      "name": "devices.fn_claim_pairing_identity",
+      "source": "releases/021_shelly_device_repairing/001_shelly_device_repairing.sql",
+      "sequence": 82,
+      "line": 21,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, devices, homes, auth"
+    },
+    {
+      "name": "devices.fn_guard_mqtt_pairing_operation_binding",
+      "source": "releases/022_mqtt_pairing_operation/001_mqtt_pairing_operation.sql",
+      "sequence": 83,
+      "line": 113,
+      "security": "INVOKER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_reserve_mqtt_pairing_operation",
+      "source": "releases/022_mqtt_pairing_operation/001_mqtt_pairing_operation.sql",
+      "sequence": 83,
+      "line": 143,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_guard_mqtt_identity_repairing",
+      "source": "releases/023_mqtt_identity_repairing/001_mqtt_identity_repairing.sql",
+      "sequence": 84,
+      "line": 48,
+      "security": "INVOKER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_guard_mqtt_pairing_state_event",
+      "source": "releases/024_mqtt_pairing_state_guards/001_mqtt_pairing_state_guards.sql",
+      "sequence": 85,
+      "line": 53,
+      "security": "INVOKER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_guard_mqtt_pairing_operation_state",
+      "source": "releases/024_mqtt_pairing_state_guards/001_mqtt_pairing_state_guards.sql",
+      "sequence": 85,
+      "line": 69,
+      "security": "INVOKER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_audit_mqtt_pairing_operation_state",
+      "source": "releases/024_mqtt_pairing_state_guards/001_mqtt_pairing_state_guards.sql",
+      "sequence": 85,
+      "line": 241,
+      "security": "INVOKER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_claim_mqtt_pairing_preparation",
+      "source": "releases/025_mqtt_lease_fencing/001_mqtt_lease_fencing.sql",
+      "sequence": 86,
+      "line": 27,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_report_mqtt_pairing_uncertain",
+      "source": "releases/025_mqtt_lease_fencing/001_mqtt_lease_fencing.sql",
+      "sequence": 86,
+      "line": 85,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_quarantine_expired_mqtt_pairing_lease",
+      "source": "releases/025_mqtt_lease_fencing/001_mqtt_lease_fencing.sql",
+      "sequence": 86,
+      "line": 131,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_guard_mqtt_rpc_challenge",
+      "source": "releases/026_mqtt_rpc_challenge/001_mqtt_rpc_challenge.sql",
+      "sequence": 87,
+      "line": 52,
+      "security": "INVOKER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_issue_mqtt_rpc_challenge",
+      "source": "releases/026_mqtt_rpc_challenge/001_mqtt_rpc_challenge.sql",
+      "sequence": 87,
+      "line": 87,
+      "security": "DEFINER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_consume_mqtt_rpc_candidate",
+      "source": "releases/026_mqtt_rpc_challenge/001_mqtt_rpc_challenge.sql",
+      "sequence": 87,
+      "line": 174,
+      "security": "DEFINER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_confirm_mqtt_pairing_prepared",
+      "source": "releases/027_mqtt_pairing_prepared_confirmation/001_mqtt_pairing_prepared_confirmation.sql",
+      "sequence": 88,
+      "line": 28,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_load_mqtt_preparation_secret",
+      "source": "releases/028_mqtt_preparation_secret/001_mqtt_preparation_secret.sql",
+      "sequence": 89,
+      "line": 44,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_insert_mqtt_preparation_secret_if_absent",
+      "source": "releases/028_mqtt_preparation_secret/001_mqtt_preparation_secret.sql",
+      "sequence": 89,
+      "line": 79,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, pg_temp"
+    },
+    {
+      "name": "devices.fn_block_mqtt_auth_attestation_mutation",
+      "source": "releases/029_mqtt_authenticated_pairing/001_mqtt_authenticated_pairing.sql",
+      "sequence": 90,
+      "line": 54,
+      "security": "INVOKER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_guard_mqtt_pairing_session_verified",
+      "source": "releases/029_mqtt_authenticated_pairing/001_mqtt_authenticated_pairing.sql",
+      "sequence": 90,
+      "line": 70,
+      "security": "INVOKER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_confirm_mqtt_broker_authentication",
+      "source": "releases/029_mqtt_authenticated_pairing/001_mqtt_authenticated_pairing.sql",
+      "sequence": 90,
+      "line": 117,
+      "security": "DEFINER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_finish_verified_pairing",
+      "source": "releases/029_mqtt_authenticated_pairing/001_mqtt_authenticated_pairing.sql",
+      "sequence": 90,
+      "line": 213,
+      "security": "DEFINER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_request_mqtt_enable",
+      "source": "releases/030_mqtt_enable_fencing/001_mqtt_enable_fencing.sql",
+      "sequence": 91,
+      "line": 19,
+      "security": "DEFINER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_claim_mqtt_enable",
+      "source": "releases/030_mqtt_enable_fencing/001_mqtt_enable_fencing.sql",
+      "sequence": 91,
+      "line": 70,
+      "security": "DEFINER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_confirm_mqtt_enabled",
+      "source": "releases/030_mqtt_enable_fencing/001_mqtt_enable_fencing.sql",
+      "sequence": 91,
+      "line": 117,
+      "security": "DEFINER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_get_authorized_mqtt_bootstrap",
+      "source": "releases/031_mqtt_bootstrap_authorization/001_mqtt_bootstrap_authorization.sql",
+      "sequence": 92,
+      "line": 30,
+      "security": "DEFINER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_guard_mqtt_pairing_revocation_attestation",
+      "source": "releases/032_mqtt_pairing_revocation/001_mqtt_pairing_revocation.sql",
+      "sequence": 93,
+      "line": 63,
+      "security": "DEFINER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_guard_mqtt_pairing_revoked_evidence",
+      "source": "releases/032_mqtt_pairing_revocation/001_mqtt_pairing_revocation.sql",
+      "sequence": 93,
+      "line": 77,
+      "security": "DEFINER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_claim_mqtt_pairing_revocation",
+      "source": "releases/032_mqtt_pairing_revocation/001_mqtt_pairing_revocation.sql",
+      "sequence": 93,
+      "line": 103,
+      "security": "DEFINER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_finish_mqtt_pairing_revocation",
+      "source": "releases/032_mqtt_pairing_revocation/001_mqtt_pairing_revocation.sql",
+      "sequence": 93,
+      "line": 200,
+      "security": "DEFINER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_claim_mqtt_revocation_with_binding",
+      "source": "releases/032_mqtt_pairing_revocation/001_mqtt_pairing_revocation.sql",
+      "sequence": 93,
+      "line": 277,
+      "security": "DEFINER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "devices.fn_finish_mqtt_revocation_evidenced",
+      "source": "releases/032_mqtt_pairing_revocation/001_mqtt_pairing_revocation.sql",
+      "sequence": 93,
+      "line": 382,
+      "security": "DEFINER",
+      "search_path": "pg_catalog,pg_temp"
+    },
+    {
+      "name": "homes.fn_mqtt_realtime_recipients",
+      "source": "releases/033_mqtt_ingest_realtime/001_mqtt_ingest_realtime.sql",
+      "sequence": 94,
+      "line": 14,
+      "security": "DEFINER",
+      "search_path": "pg_catalog, pg_temp"
+    }
+  ],
+  "limits": [
+    "Counts describe declarations in a source snapshot, not installed objects.",
+    "Function tracking uses the last located definition by name; validate overloads and permissions with PostgreSQL catalog.",
+    "CREATE TABLE IF NOT EXISTS and conditional blocks require verification against preexisting state.",
+    "DEFAULT partition inherits parent columns; monthly partitions are dynamic and not counted as installed.",
+    "No original implementation files, credentials, row data or secret values are copied into this artifact."
+  ]
+}

@@ -28,11 +28,11 @@ En esta máquina se ejecutó Node con su ruta absoluta; no requiere instalación
 - Nombres Markdown, un título principal y bloques de código balanceados.
 - Metadatos YAML del subconjunto establecido: título, estado, rol, fecha y canonical_for único.
 - Destinos relativos y anclas explícitas o derivadas de encabezados.
-- Ejemplos JSON sintácticamente válidos y estructura básica de tablas.
-- Referencias GitHub contra [el manifiesto de fuentes comprobadas](../../scripts/source-references.json), fijado a rutas y commits de los árboles inspeccionados.
+- Ejemplos y archivos JSON sintácticamente válidos, formato del registro de fuentes y estructura básica de tablas. El inventario de datos se contrasta internamente por cantidades, secuencia y rutas de changesets verificadas.
+- Referencias externas contra [el manifiesto de fuentes comprobadas](../../scripts/source-references.json), fijado a rutas y commits de los árboles inspeccionados.
 - Señales simples de claves privadas o asignaciones de secretos; no es un escáner de seguridad exhaustivo.
 
-El [script](../../scripts/check-docs.mjs) es deliberadamente pequeño: no implementa un parser Markdown/YAML completo, no renderiza Mermaid ni DOCX y no hace solicitudes HTTP. El manifiesto registra comprobación de acceso y rutas en Git; no garantiza disponibilidad futura o funcionamiento de servicios.
+El [script](../../scripts/check-docs.mjs) es deliberadamente pequeño: no implementa un parser Markdown/YAML completo, no renderiza Mermaid ni DOCX y no hace solicitudes HTTP. El manifiesto registra comprobación de acceso y rutas en Git, además de páginas oficiales consultadas; no garantiza disponibilidad futura o funcionamiento de servicios.
 
 ## Actualizar fuentes
 

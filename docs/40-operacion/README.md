@@ -19,6 +19,10 @@ Procedimientos y requisitos, sin acreditar servicios activos.
 - [Copias de seguridad](copias-de-seguridad.md)
 - [Diagnóstico](solucion-de-problemas.md)
 
+## Base de datos
+
+Consultar [operación y mantenimiento de datos](../10-arquitectura/base-de-datos/operacion-y-mantenimiento.md) para particiones, roles, retención y límites de las guías locales.
+
 ## Fuentes y pendientes
 
 Estado inicial: borrador. Consultar [mapa de fuentes](../00-contexto/mapa-de-repositorios.md) y [pendientes](../00-contexto/evidencias-y-pendientes.md). Los roles de mantenimiento se proponen por tema y su asignación está pendiente.

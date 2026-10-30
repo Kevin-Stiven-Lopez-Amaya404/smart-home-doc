@@ -18,6 +18,11 @@ canonical_for:
 - [Producto y procesos](60-producto-procesos/README.md): Reglas observadas frente a requisitos documentales y procesos por acordar.
 - [Archivo](99-archivo/README.md): Retiro de referencias con preservación de historial.
 
+## Referencias por implementación
+
+- [Backend](10-arquitectura/backend/referencia-tecnica.md).
+- [Base de datos](10-arquitectura/base-de-datos/README.md).
+
 ## Fuentes y estado
 
 Los documentos iniciales son borradores con fuentes explícitas. Consultar [mapa](00-contexto/mapa-de-repositorios.md), [inventario](00-contexto/inventario-documental.md), [discrepancias](00-contexto/evidencias-y-pendientes.md) y [validaciones](00-contexto/validacion-documental.md).

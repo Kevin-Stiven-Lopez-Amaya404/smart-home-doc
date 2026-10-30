@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "checked_on": "2026-10-29",
-  "method": "Repository access, full Git trees at fixed commits and original branch file/blob inspection. This is recorded evidence, not a live HTTP or implementation check.",
+  "method": "Git source paths verified at fixed commits; original documents inspected; official PostgreSQL pages accessed for platform semantics. Recorded evidence does not assert live service availability or SQL execution.",
   "references": [
     {
       "url": "https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil",
@@ -2082,6 +2082,2356 @@
       "path": "web/vite.config.ts",
       "blob": "2a32843e403f4b96e7af664d36049a50cdf7d594",
       "evidence": "Path verified in complete Git tree at inspected commit"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/.env.example",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": ".env.example",
+      "blob": "19c3ebc36bd18795686d601554b30f3557e9c6fe",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/.env.production.example",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": ".env.production.example",
+      "blob": "83e50d63e8a60e4c1552e0244c161bb7273758b3",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/.gitignore",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": ".gitignore",
+      "blob": "115be30af8c4d03174bef0f94ad9a4765fb0bc42",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/00_extensions/001_enable_uuid_extension.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/00_extensions/001_enable_uuid_extension.sql",
+      "blob": "18f07d15454d8594a9ede977f387ede33ae23424",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/00_extensions/002_enable_btree_gist_extension.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/00_extensions/002_enable_btree_gist_extension.sql",
+      "blob": "fc33bc93cc862e3b8f1c812b6808008798e2acad",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/00_extensions/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/00_extensions/changelog.yaml",
+      "blob": "63e013854aaf8bd2907ce07a8bed361037989f20",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/01_schemas/001_create_schemas_auth.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/01_schemas/001_create_schemas_auth.sql",
+      "blob": "6f3c1d007d98c32cfde935e54b0854c398185755",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/01_schemas/002_create_schemas_homes.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/01_schemas/002_create_schemas_homes.sql",
+      "blob": "5dff1ba353ed95d02846aa34ebb450a8c28a26bc",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/01_schemas/003_create_schemas_devices.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/01_schemas/003_create_schemas_devices.sql",
+      "blob": "08721e946aa2406a4ce9e292db4148aecadb7ebe",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/01_schemas/004_create_schemas_consumption.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/01_schemas/004_create_schemas_consumption.sql",
+      "blob": "348584f807ac2aa0dce2fca2cb97b83e4823325b",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/01_schemas/005_create_schemas_notifications.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/01_schemas/005_create_schemas_notifications.sql",
+      "blob": "5d0536c00ab736c4ed62107b9175df6cb809f556",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/01_schemas/006_create_schemas_sync.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/01_schemas/006_create_schemas_sync.sql",
+      "blob": "c1a652dc028c96c5f08ca6652591f2ca95a86be2",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/01_schemas/007_create_schemas_config.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/01_schemas/007_create_schemas_config.sql",
+      "blob": "c62f20da08353200b1caf22c99f61058e54483fa",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/01_schemas/008_create_schemas_identity_audit.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/01_schemas/008_create_schemas_identity_audit.sql",
+      "blob": "9fb53d9cea1983e4f9ee37f844205085f49f4748",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/01_schemas/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/01_schemas/changelog.yaml",
+      "blob": "a8661eedb2b0fa8cac004262ade3bdf84d0986f7",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/02_types/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/02_types/changelog.yaml",
+      "blob": "daf9f00fc8006704119e1c76c043ebbad4459d74",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/03_tables/001_create_auth_tables.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/03_tables/001_create_auth_tables.sql",
+      "blob": "7ed9d349e18e5cc3e03e0aa3316c59003aa78f44",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/03_tables/002_create_homes_tables.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/03_tables/002_create_homes_tables.sql",
+      "blob": "58d37eb3e8791512d9e736290ff97b62b1b6bab3",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/03_tables/003_create_devices_tables.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/03_tables/003_create_devices_tables.sql",
+      "blob": "550a47715f058429ab16610cef515fcda87bd06b",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/03_tables/004_create_consumption_tables.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/03_tables/004_create_consumption_tables.sql",
+      "blob": "ee2ffc821706d811c91efeab232397ac9ee34d7d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/03_tables/005_create_notifications_tables.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/03_tables/005_create_notifications_tables.sql",
+      "blob": "b174877ed514d044fdf9229efbdf2d926727d02e",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/03_tables/006_create_sync_tables.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/03_tables/006_create_sync_tables.sql",
+      "blob": "baf412c2475eab0a907285fc8bba3428050e02ad",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/03_tables/007_create_config_tables.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/03_tables/007_create_config_tables.sql",
+      "blob": "d2c1aa0c6aebb4fdde1cf6c3c922cff4bd453602",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/03_tables/008_create_identity_audit_tables.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/03_tables/008_create_identity_audit_tables.sql",
+      "blob": "080162a6d5b5b5ed1357b25b75eb3bd3978f2ea6",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/03_tables/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/03_tables/changelog.yaml",
+      "blob": "b11c263c1458a2539002e834109006a3c50b5ca0",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/04_alter/001_add_alter_auth.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/04_alter/001_add_alter_auth.sql",
+      "blob": "0241d57c76ecdf8cc96ef860f28d5fbb65dce8ed",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/04_alter/002_add_alter_homes.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/04_alter/002_add_alter_homes.sql",
+      "blob": "d60873c6a9a7659fac269d749aacd918aa9346be",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/04_alter/003_add_alter_devices.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/04_alter/003_add_alter_devices.sql",
+      "blob": "66015d9076dea64abaa79133f58196da8cd2ac60",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/04_alter/004_add_alter_consumption.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/04_alter/004_add_alter_consumption.sql",
+      "blob": "d82a13f5851d145d61f1995fc4c8c5fb838c98c4",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/04_alter/005_add_alter_notifications.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/04_alter/005_add_alter_notifications.sql",
+      "blob": "50f450f69aaee33b5731ac2a2998d838893ea733",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/04_alter/006_add_alter_sync.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/04_alter/006_add_alter_sync.sql",
+      "blob": "5ea9449661629ad5da0902df50f4aa1af16ff68c",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/04_alter/007_add_alter_identity_audit.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/04_alter/007_add_alter_identity_audit.sql",
+      "blob": "7231633e8c7c73a9669bc46f764ac977c425041a",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/04_alter/008_fix_device_active_name_uniqueness.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/04_alter/008_fix_device_active_name_uniqueness.sql",
+      "blob": "09cb834f37d42ce60db8341d9fab36e4213fbca9",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/04_alter/010_align_device_lifecycle.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/04_alter/010_align_device_lifecycle.sql",
+      "blob": "b6dd1e264d94e905edd7afb3476cf5dd0175ac13",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/04_alter/011_add_user_session_version.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/04_alter/011_add_user_session_version.sql",
+      "blob": "d0301f21958c1119b3bc892f46bb594722fbe465",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/04_alter/012_create_refresh_token_table.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/04_alter/012_create_refresh_token_table.sql",
+      "blob": "6edcee64fb4b54ea8d96dc7ac76dbf0849c0b3de",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/04_alter/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/04_alter/changelog.yaml",
+      "blob": "1cbdb1541814a7015d855670c13b82214558f827",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/05_views/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/05_views/changelog.yaml",
+      "blob": "daf9f00fc8006704119e1c76c043ebbad4459d74",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/06_materialized_views/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/06_materialized_views/changelog.yaml",
+      "blob": "daf9f00fc8006704119e1c76c043ebbad4459d74",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/07_functions/001_update_functions.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/07_functions/001_update_functions.sql",
+      "blob": "c94f9450f1046e7e68d6cc5b53ee17730ea8eac8",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/07_functions/004_auth_security_functions.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/07_functions/004_auth_security_functions.sql",
+      "blob": "8338e40bf3c6a58b52b1c11da128c915c4b17a23",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/07_functions/005_consumption_partition_functions.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/07_functions/005_consumption_partition_functions.sql",
+      "blob": "70df8b61bcbc654289df28c8491b6759f3bf4a88",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/07_functions/006_rls_security_functions.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/07_functions/006_rls_security_functions.sql",
+      "blob": "34a59ab4c681b1fd5a1bdaabbd623a4c25030f84",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/07_functions/007_rls_device_security_functions.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/07_functions/007_rls_device_security_functions.sql",
+      "blob": "027cb1eba74e33ae4dc1691f84202f135869cd8a",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/07_functions/008_rls_consumption_security_functions.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/07_functions/008_rls_consumption_security_functions.sql",
+      "blob": "4914b442504e06455274ee8410c712898811612b",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/07_functions/009_rls_notification_security_functions.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/07_functions/009_rls_notification_security_functions.sql",
+      "blob": "19a78444854ebeeb3f9e246ab967bd1aab3c985e",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/07_functions/010_align_device_lifecycle_security.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/07_functions/010_align_device_lifecycle_security.sql",
+      "blob": "0fbae5452aad64da49e04bb189de7a714897d611",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/07_functions/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/07_functions/changelog.yaml",
+      "blob": "a2e311c1bb5814afa2ff982827044369f5e0cfe9",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/08_procedures/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/08_procedures/changelog.yaml",
+      "blob": "daf9f00fc8006704119e1c76c043ebbad4459d74",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/09_triggers/001_update_triggers.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/09_triggers/001_update_triggers.sql",
+      "blob": "33bae40b8c66d74686439aef4eb73919c5937541",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/09_triggers/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/09_triggers/changelog.yaml",
+      "blob": "ca7251cd0e53a54d1fb90dce5d1ade9743543487",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/10_indexes/001_auth_indexes.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/10_indexes/001_auth_indexes.sql",
+      "blob": "ad0718dd8b7309a7ac180c80035b15493f325abc",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/10_indexes/002_homes_indexes.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/10_indexes/002_homes_indexes.sql",
+      "blob": "37bf328f00f10739fef41e214140799de9055e59",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/10_indexes/003_devices_indexes.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/10_indexes/003_devices_indexes.sql",
+      "blob": "26635ad726b3ce154bbd498e22ad580e4f10e7f2",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/10_indexes/004_consumption_indexes.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/10_indexes/004_consumption_indexes.sql",
+      "blob": "a63b83bf31d440c7c0e7fe1273c734f4f937f873",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/10_indexes/005_notifications_indexes.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/10_indexes/005_notifications_indexes.sql",
+      "blob": "6b1ba7ddd82a7f3db972b3bd4e24a6f190731086",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/10_indexes/006_sync_indexes.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/10_indexes/006_sync_indexes.sql",
+      "blob": "0e917963b204737c96d80e6f10eb6328efa46942",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/10_indexes/007_config_indexes.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/10_indexes/007_config_indexes.sql",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/10_indexes/008_audit_indexes.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/10_indexes/008_audit_indexes.sql",
+      "blob": "da70af167e7a0f9d71f4eccc9eec53c901dc8eb2",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/10_indexes/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/10_indexes/changelog.yaml",
+      "blob": "7ce4663779dd852b29e69c954b4240cb75d0fc4f",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/11_refactors/001_remove_device_type.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/11_refactors/001_remove_device_type.sql",
+      "blob": "edb2e09774be1a43dbf974aef2362925d41e89dd",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/11_refactors/002_fix_device_lifecycle_permissions.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/11_refactors/002_fix_device_lifecycle_permissions.sql",
+      "blob": "f90952a9ea2b7ec4f28246a5c0e0a85642d2425a",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/11_refactors/003_allow_iot_home_recipient_read.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/11_refactors/003_allow_iot_home_recipient_read.sql",
+      "blob": "b3de7e1246ac6c70a00a6f4fd4e673866e72a933",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/11_refactors/004_allow_iot_alert_read.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/11_refactors/004_allow_iot_alert_read.sql",
+      "blob": "2297144e953e18d4668eba627b1179e083f1c011",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/11_refactors/005_allow_iot_notification_returning.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/11_refactors/005_allow_iot_notification_returning.sql",
+      "blob": "c9538cb057e31cc92a99f07449fc9f45f61a426b",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/11_refactors/006_add_device_last_seen_at.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/11_refactors/006_add_device_last_seen_at.sql",
+      "blob": "b24bd05711f14757f565a978d9f36aab2a05d690",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/11_refactors/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/11_refactors/changelog.yaml",
+      "blob": "48c2a39b4e32c2115ac293a6b9c832bd8fdc1c5d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "01_ddl/changelog.yaml",
+      "blob": "e18f0d14d08cf4de77ec7fd2691554d6a5b8677c",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/02_dml/00_inserts/001_insert_roles.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "02_dml/00_inserts/001_insert_roles.sql",
+      "blob": "5bd6dfdae1c1e536894fd41f116033912a0402ae",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/02_dml/00_inserts/004_insert_tipos_dispositivos.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "02_dml/00_inserts/004_insert_tipos_dispositivos.sql",
+      "blob": "5de0d5e852595c053386b5ec3255505f1edcc050",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/02_dml/00_inserts/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "02_dml/00_inserts/changelog.yaml",
+      "blob": "de970e8cafac054aac1d88cb573f79514bec50fa",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/02_dml/01_updates/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "02_dml/01_updates/changelog.yaml",
+      "blob": "daf9f00fc8006704119e1c76c043ebbad4459d74",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/02_dml/02_deletes/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "02_dml/02_deletes/changelog.yaml",
+      "blob": "daf9f00fc8006704119e1c76c043ebbad4459d74",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/02_dml/03_upserts/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "02_dml/03_upserts/changelog.yaml",
+      "blob": "daf9f00fc8006704119e1c76c043ebbad4459d74",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/02_dml/04_patches/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "02_dml/04_patches/changelog.yaml",
+      "blob": "daf9f00fc8006704119e1c76c043ebbad4459d74",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/02_dml/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "02_dml/changelog.yaml",
+      "blob": "dd1b474a31b64db1e9b81966a9244311becd0d83",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/00_roles/001_create_roles.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/00_roles/001_create_roles.sql",
+      "blob": "96760c8759c60444179fdfa0aded3ed04097f152",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/00_roles/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/00_roles/changelog.yaml",
+      "blob": "cd9fa5bb1fff8a4380c48d646a73bdf0186a230b",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/01_grants/001_grants_auth.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/01_grants/001_grants_auth.sql",
+      "blob": "a2d4f910e7c3d402d3c3b7a04c11b29c0d577a3a",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/01_grants/002_grants_homes.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/01_grants/002_grants_homes.sql",
+      "blob": "a24ddefd36cc83ffb25b99ae371b1ca45e55adfb",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/01_grants/003_grants_devices.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/01_grants/003_grants_devices.sql",
+      "blob": "7ab6e7f6c160fb6eee0e6bdb1ada1a4880dba42f",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/01_grants/004_grants_consumption.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/01_grants/004_grants_consumption.sql",
+      "blob": "1987a6378299f4f586b75b19ebea34c97612e96d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/01_grants/005_grants_notifications.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/01_grants/005_grants_notifications.sql",
+      "blob": "dd9fce7f81230024898a18fa1060e86842c0b3f9",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/01_grants/006_grants_sync.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/01_grants/006_grants_sync.sql",
+      "blob": "99e1b9032b6c45883f3a3623b5b2ce20af0fe17a",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/01_grants/007_grants_config.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/01_grants/007_grants_config.sql",
+      "blob": "1bdbc2521bc0b2c25fc54de3ddc29dddb75459fd",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/01_grants/008_grants_audit.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/01_grants/008_grants_audit.sql",
+      "blob": "bfc557deb02a62bc3976f5907a81290bf322f69b",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/01_grants/009_grants_rls_helpers.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/01_grants/009_grants_rls_helpers.sql",
+      "blob": "1e7fac92cb17553df27ec5d7e59c8216c45602f9",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/01_grants/010_grants_refresh_token.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/01_grants/010_grants_refresh_token.sql",
+      "blob": "074d89c29cc50e53d5b5807b645b4fbb9c227b9d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/01_grants/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/01_grants/changelog.yaml",
+      "blob": "21d7cf8ad68705c33f400503f78bde46598283f3",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/02_policies/001_rls_homes.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/02_policies/001_rls_homes.sql",
+      "blob": "f6426be280e6dd946480a981cf669fd5eeee04ad",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/02_policies/002_rls_devices.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/02_policies/002_rls_devices.sql",
+      "blob": "747d2254f618facb72fb1017223be0bb83755ebc",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/02_policies/003_rls_consumption.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/02_policies/003_rls_consumption.sql",
+      "blob": "2ff57ea101378629c305e9f03b3fbe2fbf4cf1e0",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/02_policies/004_rls_notifications.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/02_policies/004_rls_notifications.sql",
+      "blob": "1f15ab327ac15f58ef5eec8c8624d9334aadeea7",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/02_policies/005_rls_config.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/02_policies/005_rls_config.sql",
+      "blob": "0b6cf9329ea28120f70cd9e93a9fd74a32db2bf5",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/02_policies/006_rls_sync.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/02_policies/006_rls_sync.sql",
+      "blob": "0e6877b8ce3314f5b0bc0f8fe722429c3c8be118",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/02_policies/007_rls_identity_audit.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/02_policies/007_rls_identity_audit.sql",
+      "blob": "2f66b75e55df6011a6c422015801ca87aa2e00c0",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/02_policies/008_fix_home_select_policy_initial_owner.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/02_policies/008_fix_home_select_policy_initial_owner.sql",
+      "blob": "b9e3a7a79f6f8be469094f87f4807572462fb36e",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/02_policies/009_fix_zone_select_policy_soft_delete.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/02_policies/009_fix_zone_select_policy_soft_delete.sql",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/02_policies/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/02_policies/changelog.yaml",
+      "blob": "909d6f57a9b53aaa560644c05e2f5e084b1f6e6d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "03_dcl/changelog.yaml",
+      "blob": "d3c02bc8db2e8f114458863b0d35e8b9b785eac1",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/04_tcl/00_transaction_blocks/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "04_tcl/00_transaction_blocks/changelog.yaml",
+      "blob": "daf9f00fc8006704119e1c76c043ebbad4459d74",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/04_tcl/01_manual_recoveries/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "04_tcl/01_manual_recoveries/changelog.yaml",
+      "blob": "daf9f00fc8006704119e1c76c043ebbad4459d74",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/04_tcl/02_release_tags/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "04_tcl/02_release_tags/changelog.yaml",
+      "blob": "daf9f00fc8006704119e1c76c043ebbad4459d74",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/04_tcl/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "04_tcl/changelog.yaml",
+      "blob": "daf9f00fc8006704119e1c76c043ebbad4459d74",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/00_extensions/001_enable_uuid_extension.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/00_extensions/001_enable_uuid_extension.rollback.sql",
+      "blob": "8049120cead815da2d91733ef5663ba9d9f8060c",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/00_extensions/002_enable_btree_gist_extension.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/00_extensions/002_enable_btree_gist_extension.rollback.sql",
+      "blob": "eeb2581e7d144c7495f533b0ca1e9e6adbe4c9e3",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/01_schemas/001_create_schemas_rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/01_schemas/001_create_schemas_rollback.sql",
+      "blob": "76d792cf9cd27e3ec76ffe35cd9b0fbda582618d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/01_schemas/002_create_schemas_rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/01_schemas/002_create_schemas_rollback.sql",
+      "blob": "fa3433d6dd360956ccaec810d5b56ea846f3bd10",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/01_schemas/003_create_schemas.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/01_schemas/003_create_schemas.rollback.sql",
+      "blob": "d0561f63be59ef9984c664de2e43ef54c27c603c",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/01_schemas/004_create_schemas.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/01_schemas/004_create_schemas.rollback.sql",
+      "blob": "e137023ea4ae5cbbc3d7e8550c5ca5fcc4f8ba24",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/01_schemas/005_create_schemas.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/01_schemas/005_create_schemas.rollback.sql",
+      "blob": "46192997fc2f7cff89df1c337e56092f118a4fb7",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/01_schemas/006_create_schemas_rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/01_schemas/006_create_schemas_rollback.sql",
+      "blob": "bb8aed5558e3d6351030f34f1cbeeddd38f1a6df",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/01_schemas/007_create_schemas_rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/01_schemas/007_create_schemas_rollback.sql",
+      "blob": "001ac80fde33d56953ba402f4df0f3c48594e85b",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/01_schemas/008_create_schemas_rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/01_schemas/008_create_schemas_rollback.sql",
+      "blob": "466daeae609b7226df6cc5a3184916ee167be88b",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/03_tables/001_create_auth_tables_rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/03_tables/001_create_auth_tables_rollback.sql",
+      "blob": "eea37ca725c027388067a74724966778fae2464a",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/03_tables/002_create_homes_tables_rollbacks.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/03_tables/002_create_homes_tables_rollbacks.sql",
+      "blob": "421991105b20118449b808d7da5a6ec334d39d7d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/03_tables/003_create_devices_tables_rollbacks.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/03_tables/003_create_devices_tables_rollbacks.sql",
+      "blob": "3588866385eecbe5f6743dc31e5fc322b83aebac",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/03_tables/004_create_consumption_tables.rollbacks.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/03_tables/004_create_consumption_tables.rollbacks.sql",
+      "blob": "fdba93c58ddd4e4f9376989cad1f7cc6269e8464",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/03_tables/005_create_notifications_tables.rollbacks.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/03_tables/005_create_notifications_tables.rollbacks.sql",
+      "blob": "e8a8177bd3f0afb869a6b75cc102904473156613",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/03_tables/006_create_sync_tables.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/03_tables/006_create_sync_tables.rollback.sql",
+      "blob": "f05713727e0ce3cfeab15e0b087556f6dfbf69cb",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/03_tables/007_create_config_tables_rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/03_tables/007_create_config_tables_rollback.sql",
+      "blob": "fd77509f885487a43cc8f5b1d7fd693d6f81aae1",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/03_tables/008_create_audit_tables.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/03_tables/008_create_audit_tables.rollback.sql",
+      "blob": "be0d14d46aedc1b682a10b52c77070858a00a3be",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/04_alter/001_add_alter_auth.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/04_alter/001_add_alter_auth.rollback.sql",
+      "blob": "67c1fd9d03983958f0659fac600750e8bcd175d3",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/04_alter/002_add_alter_homes.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/04_alter/002_add_alter_homes.rollback.sql",
+      "blob": "230d7bd10b2359c409db58771c86ae25742804f2",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/04_alter/003_add_alter_devices.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/04_alter/003_add_alter_devices.rollback.sql",
+      "blob": "c91b0598ceda2d53afbae9800bedd4c8ef5df997",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/04_alter/004_add_alter_consumption.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/04_alter/004_add_alter_consumption.rollback.sql",
+      "blob": "2b5c6a3f2346494f84afb654e62009e59bd41de3",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/04_alter/005_add_alter_notifications.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/04_alter/005_add_alter_notifications.rollback.sql",
+      "blob": "bf00059d3fe2ca3c392796723d4ef3296d9b03b2",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/04_alter/006_add_alter_sync.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/04_alter/006_add_alter_sync.rollback.sql",
+      "blob": "6225983d7c9877123f5eb6791d168bd69235c75e",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/04_alter/007_add_alter_identity_audit.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/04_alter/007_add_alter_identity_audit.rollback.sql",
+      "blob": "0f6b5f3d7c668a5402b40148012de48f8271a7ca",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/04_alter/009_fix_device_active_name_uniqueness.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/04_alter/009_fix_device_active_name_uniqueness.rollback.sql",
+      "blob": "a37a3c075c25fb97861fe4ce1732863f36da2ea9",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/04_alter/010_align_device_lifecycle.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/04_alter/010_align_device_lifecycle.rollback.sql",
+      "blob": "b07ddd632725d24817626031e7fbbaccf50616a4",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/04_alter/011_add_user_session_version.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/04_alter/011_add_user_session_version.rollback.sql",
+      "blob": "e83f5bb939dbc5b42edc4a2176a966d43e1942b0",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/04_alter/012_create_refresh_token_table.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/04_alter/012_create_refresh_token_table.rollback.sql",
+      "blob": "0c714cad6251cb9414302dd14683ba4f3c5d5064",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/07_functions/001_update_functions_rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/07_functions/001_update_functions_rollback.sql",
+      "blob": "57990de094cc26286464c0d9e3d71c67d13b5889",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/07_functions/004_auth_security_functions.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/07_functions/004_auth_security_functions.rollback.sql",
+      "blob": "7830895cce6c71f90a97768af2b54993c9a01cc4",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/07_functions/005_consumption_partition_functions.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/07_functions/005_consumption_partition_functions.rollback.sql",
+      "blob": "52a7ff575e95102572946d521e1f7746b82fc3a3",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/07_functions/006_rls_security_functions.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/07_functions/006_rls_security_functions.rollback.sql",
+      "blob": "188955ee05a7af6c7b52a6fe98031d332d36e07f",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/07_functions/007_rls_device_security_functions.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/07_functions/007_rls_device_security_functions.rollback.sql",
+      "blob": "76591948428a1eca67fb162d155fc569e13a4e72",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/07_functions/008_rls_consumption_security_functions.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/07_functions/008_rls_consumption_security_functions.rollback.sql",
+      "blob": "e0b06b4df95f102db570fe6e08b736a4b57410bc",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/07_functions/009_rls_notification_security_functions.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/07_functions/009_rls_notification_security_functions.rollback.sql",
+      "blob": "b116cbde062d4bc734b6e44c1f1aad32288e1d8f",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/07_functions/010_align_device_lifecycle_security.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/07_functions/010_align_device_lifecycle_security.rollback.sql",
+      "blob": "e84877b72da37720ba9def848707c7cf4c914503",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/09_triggers/001_update_triggers.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/09_triggers/001_update_triggers.rollback.sql",
+      "blob": "fde68f848c03f3a346757d76c2227fc95f8a74e8",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/10_indexes/001_auth_indexes.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/10_indexes/001_auth_indexes.rollback.sql",
+      "blob": "ae64abbcd2359b0df040898e57ac07125dafee6d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/10_indexes/002_homes_indexes.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/10_indexes/002_homes_indexes.rollback.sql",
+      "blob": "68594faea4146592a55e3dc9302f4012af08da8e",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/10_indexes/003_devices_indexes.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/10_indexes/003_devices_indexes.rollback.sql",
+      "blob": "336b85963022e157016d0bbd1d6a53880a2d16c3",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/10_indexes/004_consumption_indexes.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/10_indexes/004_consumption_indexes.rollback.sql",
+      "blob": "a2b862e5a73287c8a97452a635974d0b4ce8b6b1",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/10_indexes/005_notifications_indexes.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/10_indexes/005_notifications_indexes.rollback.sql",
+      "blob": "3a5d0c3546e0f856d18af3aad0b19722d7750419",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/10_indexes/006_sync_indexes.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/10_indexes/006_sync_indexes.rollback.sql",
+      "blob": "269893d80f66172a8083bcda18a874b9dced1a4d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/10_indexes/007_config_indexes.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/10_indexes/007_config_indexes.rollback.sql",
+      "blob": "68b5351b10a07a61add2d0405038d854f3ef532e",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/10_indexes/008_audit_indexes.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/10_indexes/008_audit_indexes.rollback.sql",
+      "blob": "8ef9c7677657d291884e28594d7778706a94591d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/11_refactors/001_remove_device_type.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/11_refactors/001_remove_device_type.rollback.sql",
+      "blob": "fb13d94ce863a1f72991ac3e6da355cd457fa65c",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/11_refactors/002_fix_device_lifecycle_permissions.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/11_refactors/002_fix_device_lifecycle_permissions.rollback.sql",
+      "blob": "99c51cdcaae95e30b97b9a32752edfc668b9f3fe",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/11_refactors/003_allow_iot_home_recipient_read.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/11_refactors/003_allow_iot_home_recipient_read.rollback.sql",
+      "blob": "605c28704829c82ba9cf2c50f146fd71255a0e13",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/11_refactors/004_allow_iot_alert_read.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/11_refactors/004_allow_iot_alert_read.rollback.sql",
+      "blob": "65f73e295772a4e7298011b95c7bcb9955b28015",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/11_refactors/005_allow_iot_notification_returning.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/11_refactors/005_allow_iot_notification_returning.rollback.sql",
+      "blob": "36f03c2630bb52b9ef11bee0e48d10c4044097ce",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/01_ddl/11_refactors/006_add_device_last_seen_at.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/01_ddl/11_refactors/006_add_device_last_seen_at.rollback.sql",
+      "blob": "8830eaac33bad6cf05518d3c90a59e6091bec92f",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/02_dml/00_inserts/001_insert_roles.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/02_dml/00_inserts/001_insert_roles.rollback.sql",
+      "blob": "6716b32c78644d1191deaf173acac6f0aed28892",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/02_dml/00_inserts/004_insert_tipos_dispositivos.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/02_dml/00_inserts/004_insert_tipos_dispositivos.rollback.sql",
+      "blob": "cb16a27950988307ee5c781f4a930bde16dc3675",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/00_roles/001_create_roles.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/00_roles/001_create_roles.rollback.sql",
+      "blob": "79e8d05451ce522ab3b2806a40d02dde2d68f560",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/01_grants/001_grants_auth.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/01_grants/001_grants_auth.rollback.sql",
+      "blob": "947a165b9bd0db0ef3ac43ede86c02e4066d1988",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/01_grants/002_grants_homes.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/01_grants/002_grants_homes.rollback.sql",
+      "blob": "89f34d61d0cac50d0d42fff466dffbc9c0075606",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/01_grants/003_grants_devices.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/01_grants/003_grants_devices.rollback.sql",
+      "blob": "83b5a944172b33f1cae5ae3eb916e8a95e82eaaa",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/01_grants/004_grants_consumption.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/01_grants/004_grants_consumption.rollback.sql",
+      "blob": "3fb24b3e9a5132af27402e4061e33e23b01ee2b0",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/01_grants/005_grants_notifications.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/01_grants/005_grants_notifications.rollback.sql",
+      "blob": "9ab35ab20deec5951b51c4106f6fbfcb9e364aea",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/01_grants/006_grants_sync.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/01_grants/006_grants_sync.rollback.sql",
+      "blob": "fd2b0843d6efe649e9c963da9dfdea446e0f9186",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/01_grants/007_grants_config.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/01_grants/007_grants_config.rollback.sql",
+      "blob": "ffc4612f7d05c026c33f26a6e6d2f3149a4caa1e",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/01_grants/008_grants_audit.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/01_grants/008_grants_audit.rollback.sql",
+      "blob": "9c46580b2ef749086b53fcceefa8e6c107e81a89",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/01_grants/009_grants_rls_helpers.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/01_grants/009_grants_rls_helpers.rollback.sql",
+      "blob": "8580a555963616a8e6e5f015330f6c50c12a3f00",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/01_grants/010_grants_refresh_token.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/01_grants/010_grants_refresh_token.rollback.sql",
+      "blob": "a394265f94fd85ac7c7cb742855c9c4cd47c5d9a",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/02_policies/001_rls_homes.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/02_policies/001_rls_homes.rollback.sql",
+      "blob": "4760cc765cfaf9d1c51bbc9d0399baf7fea3659f",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/02_policies/002_rls_devices.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/02_policies/002_rls_devices.rollback.sql",
+      "blob": "906ed020b31dc40cd67b1da119480d59d589a723",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/02_policies/003_rls_consumption.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/02_policies/003_rls_consumption.rollback.sql",
+      "blob": "3a95d732e80379238be3b0656ca12b2a9451e160",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/02_policies/004_rls_notifications.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/02_policies/004_rls_notifications.rollback.sql",
+      "blob": "ca0255d3d4b174f524ff7f94c11ef41fc0617950",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/02_policies/005_rls_config.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/02_policies/005_rls_config.rollback.sql",
+      "blob": "7eb9bf217004f14113aa807ff0af357bd5cae914",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/02_policies/006_rls_sync.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/02_policies/006_rls_sync.rollback.sql",
+      "blob": "71e9e70dfc0d6c9699771da4fbff5b5837749cf7",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/02_policies/007_rls_identity_audit.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/02_policies/007_rls_identity_audit.rollback.sql",
+      "blob": "5fc0808b64155ec4fa793523bbd97cac31e2d355",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/02_policies/008_fix_home_select_policy_initial_owner.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/02_policies/008_fix_home_select_policy_initial_owner.rollback.sql",
+      "blob": "5c558675bb6099c5b2150e22ecb4590968329f2e",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/05_rollbacks/03_dcl/02_policies/009_fix_zone_select_policy_soft_delete.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "05_rollbacks/03_dcl/02_policies/009_fix_zone_select_policy_soft_delete.rollback.sql",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/liquibase.properties",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "liquibase.properties",
+      "blob": "e52aacc05e22d857998c5c2eaf570337421bfa52",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/009_session_schema/001_session_schema.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/009_session_schema/001_session_schema.sql",
+      "blob": "9cbc701c66ec7fad794cb29a0fa45bedd5eb67ed",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/009_session_schema/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/009_session_schema/changelog.yaml",
+      "blob": "16203cc57046e450ed703bdf6c5bb128674d663d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/011_mqtt_identity_events/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/011_mqtt_identity_events/changelog.yaml",
+      "blob": "c9158cba6186c882fa7ba0ad48cdc3ebe0dd30f4",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/011_mqtt_identity_events/mqtt-identity-events.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/011_mqtt_identity_events/mqtt-identity-events.rollback.sql",
+      "blob": "fa285c8a3434afc5103f314e2027b38b1f7a2b0a",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/011_mqtt_identity_events/mqtt-identity-events.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/011_mqtt_identity_events/mqtt-identity-events.sql",
+      "blob": "f4194d35422f0f37135fac92311c0814b7b325bc",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/011_mqtt_revocation/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/011_mqtt_revocation/changelog.yaml",
+      "blob": "4976d7f8d35f54cd7a619fe303fc89820e223ac2",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/011_mqtt_revocation/mqtt-revocation.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/011_mqtt_revocation/mqtt-revocation.rollback.sql",
+      "blob": "77a086eabfd590bb9ee3ef5ee4bdb0ea48ec0b37",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/011_mqtt_revocation/mqtt-revocation.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/011_mqtt_revocation/mqtt-revocation.sql",
+      "blob": "a96465261522d46eb848a853f442eebea930d8d7",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/016_consumption_access/001_consumption_access.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/016_consumption_access/001_consumption_access.rollback.sql",
+      "blob": "ac851a960cefa85344761e72e1783c05b3041ef7",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/016_consumption_access/001_consumption_access.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/016_consumption_access/001_consumption_access.sql",
+      "blob": "784ceb0a6d278f4b888c526547b14756d7517d3a",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/016_consumption_access/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/016_consumption_access/changelog.yaml",
+      "blob": "ea0f9677ae4af7ba9a1269ff49fe797242d77daf",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/018_household_permissions/001_household_permissions.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/018_household_permissions/001_household_permissions.rollback.sql",
+      "blob": "4e8b7b02fe1347f7e71bd2de0d42e6f5bc61a17e",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/018_household_permissions/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/018_household_permissions/changelog.yaml",
+      "blob": "41bf56537861399714e8196c95fad3184bd064da",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/019_device_pairing_sessions/001_device_pairing_sessions.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/019_device_pairing_sessions/001_device_pairing_sessions.rollback.sql",
+      "blob": "8312676330b33bf2e71efc343526e11cc152576f",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/019_device_pairing_sessions/001_device_pairing_sessions.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/019_device_pairing_sessions/001_device_pairing_sessions.sql",
+      "blob": "c6d10e2312e21991cf67298244febfee58da247a",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/019_device_pairing_sessions/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/019_device_pairing_sessions/changelog.yaml",
+      "blob": "6b3bc4957ec2b213593a6cba0fcae876d431e214",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/020_lan_pairing_method/001_lan_pairing_method.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/020_lan_pairing_method/001_lan_pairing_method.rollback.sql",
+      "blob": "6a819ea405ca75183706dcda6923ecc597c4c5ea",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/020_lan_pairing_method/001_lan_pairing_method.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/020_lan_pairing_method/001_lan_pairing_method.sql",
+      "blob": "1e2072a545330226157f8520f1cd2f8384834fab",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/020_lan_pairing_method/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/020_lan_pairing_method/changelog.yaml",
+      "blob": "8b96bd7ffcc8efa258c3032cd2f2e9ae651d6f93",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/020a_device_schema_reconciliation/001_device_home_integrity.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/020a_device_schema_reconciliation/001_device_home_integrity.rollback.sql",
+      "blob": "9e54b7dc6b839575c59f7ed4c0489c2615795665",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/020a_device_schema_reconciliation/001_device_home_integrity.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/020a_device_schema_reconciliation/001_device_home_integrity.sql",
+      "blob": "63965af191b5cf54621a78c8f98fb3433c589471",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/020a_device_schema_reconciliation/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/020a_device_schema_reconciliation/changelog.yaml",
+      "blob": "128b86e0ddd4600b307bb3ba0719d46f9b6861ca",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/021_shelly_device_repairing/001_shelly_device_repairing.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/021_shelly_device_repairing/001_shelly_device_repairing.rollback.sql",
+      "blob": "60499b82c72d27b0bd6f90bdae8d0c718c8c3cd1",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/021_shelly_device_repairing/001_shelly_device_repairing.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/021_shelly_device_repairing/001_shelly_device_repairing.sql",
+      "blob": "935410f81d16d3ee446e6f31eaa77dd71e949a52",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/021_shelly_device_repairing/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/021_shelly_device_repairing/changelog.yaml",
+      "blob": "78a31375275012e7de7851ef39b1cfb27bd6c829",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/022_mqtt_pairing_operation/001_mqtt_pairing_operation.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/022_mqtt_pairing_operation/001_mqtt_pairing_operation.rollback.sql",
+      "blob": "80d322bdaa50ca78fdb94d2d94ceea6567c55643",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/022_mqtt_pairing_operation/001_mqtt_pairing_operation.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/022_mqtt_pairing_operation/001_mqtt_pairing_operation.sql",
+      "blob": "7b8c2786a69c480977eb742dc19404a6cef040f7",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/022_mqtt_pairing_operation/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/022_mqtt_pairing_operation/changelog.yaml",
+      "blob": "056f2493aeb19e6490dc7847613a25e6992a9a6e",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/023_mqtt_identity_repairing/001_mqtt_identity_repairing.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/023_mqtt_identity_repairing/001_mqtt_identity_repairing.rollback.sql",
+      "blob": "a276247e4baf9e3acab3060fe311cf082fbf7192",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/023_mqtt_identity_repairing/001_mqtt_identity_repairing.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/023_mqtt_identity_repairing/001_mqtt_identity_repairing.sql",
+      "blob": "4dd6bb754a1c80ebe3aa5ae865dc4137ccdee4ea",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/023_mqtt_identity_repairing/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/023_mqtt_identity_repairing/changelog.yaml",
+      "blob": "c380111c0474505bdba0ae45227c395982d666eb",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/024_mqtt_pairing_state_guards/001_mqtt_pairing_state_guards.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/024_mqtt_pairing_state_guards/001_mqtt_pairing_state_guards.rollback.sql",
+      "blob": "34a84f5416c80140c6d69e68a73b3ba41a8a702d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/024_mqtt_pairing_state_guards/001_mqtt_pairing_state_guards.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/024_mqtt_pairing_state_guards/001_mqtt_pairing_state_guards.sql",
+      "blob": "e189263620332e0ff5057d21fd9dfef92d72953b",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/024_mqtt_pairing_state_guards/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/024_mqtt_pairing_state_guards/changelog.yaml",
+      "blob": "70d9b403dcb5f1dc9be35beec9bab30cc27772c4",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/025_mqtt_lease_fencing/001_mqtt_lease_fencing.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/025_mqtt_lease_fencing/001_mqtt_lease_fencing.rollback.sql",
+      "blob": "ac213c67be9237d7942e018d176b59a9306a87fe",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/025_mqtt_lease_fencing/001_mqtt_lease_fencing.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/025_mqtt_lease_fencing/001_mqtt_lease_fencing.sql",
+      "blob": "1a3b91f1a61f803dd34a1d5726f757e2e2dd2a6d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/025_mqtt_lease_fencing/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/025_mqtt_lease_fencing/changelog.yaml",
+      "blob": "661d496ff07a48a9521d840db258618f85206039",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/026_mqtt_rpc_challenge/001_mqtt_rpc_challenge.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/026_mqtt_rpc_challenge/001_mqtt_rpc_challenge.rollback.sql",
+      "blob": "2cd345911bb0d1a0c6695a1f77b2ba8c49e974db",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/026_mqtt_rpc_challenge/001_mqtt_rpc_challenge.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/026_mqtt_rpc_challenge/001_mqtt_rpc_challenge.sql",
+      "blob": "8898754f5f789f2d419b77efedf692ab4a976617",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/026_mqtt_rpc_challenge/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/026_mqtt_rpc_challenge/changelog.yaml",
+      "blob": "4cc73409f4352968f80e9b54c994bdf81ff13c08",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/027_mqtt_pairing_prepared_confirmation/001_mqtt_pairing_prepared_confirmation.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/027_mqtt_pairing_prepared_confirmation/001_mqtt_pairing_prepared_confirmation.rollback.sql",
+      "blob": "37c6d92448cbb9b3dd455d1091e421c5b462d983",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/027_mqtt_pairing_prepared_confirmation/001_mqtt_pairing_prepared_confirmation.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/027_mqtt_pairing_prepared_confirmation/001_mqtt_pairing_prepared_confirmation.sql",
+      "blob": "6d97a5dbfdb669b14cc81b21cc3087790d2b6404",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/027_mqtt_pairing_prepared_confirmation/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/027_mqtt_pairing_prepared_confirmation/changelog.yaml",
+      "blob": "354ddcf2361bf96a583e03048cdf66a63cbef64f",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/028_mqtt_preparation_secret/001_mqtt_preparation_secret.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/028_mqtt_preparation_secret/001_mqtt_preparation_secret.rollback.sql",
+      "blob": "b298915df68f9f22e0974990d77998a9067c323c",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/028_mqtt_preparation_secret/001_mqtt_preparation_secret.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/028_mqtt_preparation_secret/001_mqtt_preparation_secret.sql",
+      "blob": "9e9ffcf6d12bcbe3074dd0c2e11307ec266d0974",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/028_mqtt_preparation_secret/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/028_mqtt_preparation_secret/changelog.yaml",
+      "blob": "832625da91a3ab7e0b20740b851722a481ddcb5d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/029_mqtt_authenticated_pairing/001_mqtt_authenticated_pairing.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/029_mqtt_authenticated_pairing/001_mqtt_authenticated_pairing.rollback.sql",
+      "blob": "febd877852d6e265437495494ef582b6bdf2af74",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/029_mqtt_authenticated_pairing/001_mqtt_authenticated_pairing.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/029_mqtt_authenticated_pairing/001_mqtt_authenticated_pairing.sql",
+      "blob": "5923bed30a3713750315bbeabebae8426fb98dcf",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/029_mqtt_authenticated_pairing/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/029_mqtt_authenticated_pairing/changelog.yaml",
+      "blob": "ad86d929b99ae8e8d8630aa1bb23a5a915b38243",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/030_mqtt_enable_fencing/001_mqtt_enable_fencing.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/030_mqtt_enable_fencing/001_mqtt_enable_fencing.sql",
+      "blob": "fea032be5a07731da61b186f86de2985182435ea",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/030_mqtt_enable_fencing/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/030_mqtt_enable_fencing/changelog.yaml",
+      "blob": "bfccfb11a0de8850e6f6c9fc87a484d4346f015b",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/031_mqtt_bootstrap_authorization/001_mqtt_bootstrap_authorization.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/031_mqtt_bootstrap_authorization/001_mqtt_bootstrap_authorization.sql",
+      "blob": "c37b910b928c812856eae209ac65ee5065aad6cc",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/031_mqtt_bootstrap_authorization/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/031_mqtt_bootstrap_authorization/changelog.yaml",
+      "blob": "e066c4c22ef229621e0f98f73f760fb66bc9339a",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/032_mqtt_pairing_revocation/001_mqtt_pairing_revocation.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/032_mqtt_pairing_revocation/001_mqtt_pairing_revocation.rollback.sql",
+      "blob": "f0e8921cbbd500ba2406b2e635280c747cb08e3e",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/032_mqtt_pairing_revocation/001_mqtt_pairing_revocation.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/032_mqtt_pairing_revocation/001_mqtt_pairing_revocation.sql",
+      "blob": "6f0d91064f14d9718744e1254482f58949ad8a31",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/032_mqtt_pairing_revocation/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/032_mqtt_pairing_revocation/changelog.yaml",
+      "blob": "a9ab67f4e4137438583f1d45513ef93d427bbd90",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/033_mqtt_ingest_realtime/001_mqtt_ingest_realtime.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/033_mqtt_ingest_realtime/001_mqtt_ingest_realtime.rollback.sql",
+      "blob": "826ece4f05d24e8fa970a4d8e55b3ad5ea334516",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/033_mqtt_ingest_realtime/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/033_mqtt_ingest_realtime/changelog.yaml",
+      "blob": "6a93f6768eac567fb364e5c30cc677a234f7d313",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/034_energy_tariff_budget/001_energy_tariff_budget.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/034_energy_tariff_budget/001_energy_tariff_budget.rollback.sql",
+      "blob": "ed9b2f1f1d2ac06fc717e406b9aee29f856ad256",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/034_energy_tariff_budget/001_energy_tariff_budget.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/034_energy_tariff_budget/001_energy_tariff_budget.sql",
+      "blob": "33cc9481641f58c69ea50f3b74fdf37e6ea1cf1b",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/034_energy_tariff_budget/002_energy_goal_optional_budget.rollback.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/034_energy_tariff_budget/002_energy_goal_optional_budget.rollback.sql",
+      "blob": "f4e5fd10a05a08fff1aa3e60eb09c83c40efca26",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/034_energy_tariff_budget/002_energy_goal_optional_budget.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/034_energy_tariff_budget/002_energy_goal_optional_budget.sql",
+      "blob": "e0298b81d96dac1931d1c359118b253721e1ea5d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/034_energy_tariff_budget/changelog.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "releases/034_energy_tariff_budget/changelog.yaml",
+      "blob": "9c8a24f59ebeb7e0ea7db497199026dd16829b22",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/audit-mqtt-revocation.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "scripts/audit-mqtt-revocation.sql",
+      "blob": "8e953306cf9a503bada01df9d654a9c69e2206bd",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/audit-runtime-roles.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "scripts/audit-runtime-roles.sql",
+      "blob": "27b7bf86c62185edcf44c39877aeff8d723115cd",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/consumption-access-fixture.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "scripts/consumption-access-fixture.sql",
+      "blob": "b72f321020bc0333a21a6833a5c140d11eb3bd37",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/provision-runtime-roles.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "scripts/provision-runtime-roles.sql",
+      "blob": "df4dfee60e1460158e88cb2c2295969d462104ff",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/session-security-fixture.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "scripts/session-security-fixture.sql",
+      "blob": "7cf2b361d4d5e5335670fa62210c619079373910",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/test-runtime-roles.ps1",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "scripts/test-runtime-roles.ps1",
+      "blob": "c76a72d967faba7030cf9cf784422acfd7717d77",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/test-sql034-energy-rls.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "scripts/test-sql034-energy-rls.sql",
+      "blob": "06061fc3d735f7f172b360a85814504570445417",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/test-sql034-optional-budget.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "scripts/test-sql034-optional-budget.sql",
+      "blob": "e6fb5de8dbdd3584286d98438ca31de0f07cd28c",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/update.bat",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "scripts/update.bat",
+      "blob": "69f15ed03db0517c9b07ac0496d8bf6b1dfe3a4c",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/update.ps1",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "scripts/update.ps1",
+      "blob": "e1e62f523b05d935b445ff470f07c33d29d34019",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/validate.bat",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "scripts/validate.bat",
+      "blob": "c9ce17e8e953eb2065cf844917314ffad8316aef",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/validate.ps1",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "scripts/validate.ps1",
+      "blob": "c6639d0af3f3b3d96771dd150975ea8b4c3ce7e7",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/tests/mqtt/hu10-baseline.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "tests/mqtt/hu10-baseline.yaml",
+      "blob": "ea8149914fc776fafcfae1154fa81943f59194dd",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/tests/mqtt/hu11-revocation-baseline.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "tests/mqtt/hu11-revocation-baseline.yaml",
+      "blob": "910052b4d1c28fe2f221bdd7f85cf3f6ef7b0189",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/tests/mqtt/mosquitto.conf",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "tests/mqtt/mosquitto.conf",
+      "blob": "c4653eef7ddd2e78e08b73528dcf89698782b209",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/tests/mqtt/sql032-reconciliation-null-retry.sql",
+      "repository": "nataliachala1/smarthome-database",
+      "commit": "6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878",
+      "path": "tests/mqtt/sql032-reconciliation-null-retry.sql",
+      "blob": "1c8561fc37a978fc3acf3e9cdd17b61216c3d82d",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved and path/blob verified in complete Git tree; static documentation review, no SQL execution."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/src/modules/devices/infrastructure/persistence/pg-mqtt-reservation.port.ts",
+      "repository": "nataliachala1/smarthome-backend",
+      "commit": "1cbaca28e9e152d5cb5ff7643560fdfa65857486",
+      "path": "src/modules/devices/infrastructure/persistence/pg-mqtt-reservation.port.ts",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved at fixed commit for selective database-contract comparison."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/src/modules/devices/infrastructure/secrets/pg-mqtt-secret-lab039.gateway.ts",
+      "repository": "nataliachala1/smarthome-backend",
+      "commit": "1cbaca28e9e152d5cb5ff7643560fdfa65857486",
+      "path": "src/modules/devices/infrastructure/secrets/pg-mqtt-secret-lab039.gateway.ts",
+      "checked_on": "2026-10-29",
+      "evidence": "File retrieved at fixed commit for selective database-contract comparison."
+    },
+    {
+      "url": "https://www.postgresql.org/docs/16/ddl-rowsecurity.html",
+      "publisher": "PostgreSQL",
+      "checked_on": "2026-10-29",
+      "evidence": "Official PostgreSQL 16 page accessed and read for RLS semantics."
+    },
+    {
+      "url": "https://www.postgresql.org/docs/16/sql-createfunction.html",
+      "publisher": "PostgreSQL",
+      "checked_on": "2026-10-29",
+      "evidence": "Official PostgreSQL 16 page accessed and read for function/security-definer semantics."
     }
   ]
 }
