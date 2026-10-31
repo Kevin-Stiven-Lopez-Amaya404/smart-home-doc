@@ -73,6 +73,10 @@ No se inspeccionaron secretos ni ejecuciones y no se afirma que haya desplegado.
 
 OpenAPI generado; firmware y ACL del broker; versiones desplegadas; cookies Android/iOS; autoridad de requisitos y roles; responsables nominales; consolidación de antecedentes y revisión visual DOCX. No se inventaron ADR aceptados, endpoints, variables o resultados para cubrir estos vacíos.
 
+## E14 — Revisión técnica de base de datos
+
+Se amplió el análisis a los 332 archivos de smarthome-database dev 6caed6b: 42 changelogs y 96 changesets localizados. La [referencia central](../10-arquitectura/base-de-datos/README.md) documenta modelo, contratos SQL y configuración. Los [hallazgos DB01–DB12](../10-arquitectura/base-de-datos/hallazgos-y-pendientes.md) registran diferencias de README, rollback, SQL028, wrappers, CI, diagnóstico y permisos. No se ejecutó la base ni se modificó su checkout local.
+
 ## Cierre de un pendiente
 
 Añadir revisión/commit, evidencia ejecutada, componentes contrastados, resultado y persona/rol que acuerda el cierre. Modificar el estado solo cuando exista esa evidencia.

@@ -18,7 +18,7 @@ Estas convenciones organizan los archivos de este repositorio. Su adopción como
 | Arquitectura global | [Síntesis](docs/10-arquitectura/arquitectura-general.md), código y ADR aceptados cuando existan | Explicar límites y registrar acuerdos |
 | Backend | Código, pruebas y configuración de smarthome-backend | [Resumen y referencia de una instantánea](docs/10-arquitectura/backend.md) |
 | API REST | Controladores, DTO, servicios y OpenAPI generado del backend | [Navegación y generación](docs/20-contratos/api-rest/README.md) |
-| Esquema y migraciones | Changelog y SQL de smarthome-database | [Modelo general](docs/10-arquitectura/persistencia-y-datos.md); sin copiar migraciones |
+| Esquema y migraciones | Changelog y SQL de smarthome-database | [Modelo y referencia técnica](docs/10-arquitectura/base-de-datos/README.md); sin copiar migraciones |
 | Web y móvil | Código y configuración de sus repositorios | [Web](docs/10-arquitectura/frontend-web.md) y [móvil](docs/10-arquitectura/aplicacion-movil.md) |
 | MQTT y realtime | Acuerdo compartido y productores/consumidores contrastados | [Contratos descriptivos](docs/20-contratos/README.md); aprobación conjunta pendiente |
 | Desarrollo | Scripts reales de cada implementación | [Recorrido local](docs/30-desarrollo/README.md) |
@@ -32,6 +32,7 @@ Los enlaces concretos y revisiones están en el [mapa](docs/00-contexto/mapa-de-
 1. Localizar el documento canónico antes de crear otro. Cada identificador `canonical_for` es único.
 2. Mantener README e instrucciones particulares junto al código. La central enlaza los detalles.
 3. Una copia descriptiva solo se admite con propósito, commit, fecha, límites y mecanismo de actualización. La [referencia técnica del backend](docs/10-arquitectura/backend/referencia-tecnica.md) es una instantánea fija de consulta; actualizarla exige repetir el análisis y cambiar su revisión, nunca editar contratos para simular coincidencia.
+   La [referencia de datos](docs/10-arquitectura/base-de-datos/README.md) sigue el mismo criterio: commit fijo, límites y repetición del análisis para actualizar modelo, diccionario, contratos e inventario. Los artefactos de extracción describen código, no un catálogo instalado.
 4. Mantener migraciones en base de datos y generar OpenAPI desde el backend.
 5. Registrar discrepancias con ambas fuentes, impacto y validación pendiente. No modificar unilateralmente contratos compartidos.
 6. Los cambios de comportamiento requieren revisar documentación y componentes afectados.

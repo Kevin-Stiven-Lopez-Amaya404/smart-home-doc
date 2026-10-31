@@ -11,7 +11,7 @@ canonical_for:
 
 ## Identidad central
 
-Repositorio: [Kevin-Stiven-Lopez-Amaya404/smart-home-doc](https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-doc). Rama predeterminada e inicial inspeccionada: main. Rama local de trabajo actual: docs/organizacion, creada desde ese main conservando los cambios locales. Commit inicial inspeccionado: `dfe55be09e1a3237cc75490569969eff6b7c9586`. Único archivo previo: README.md con el nombre del repositorio. Sin cambios locales al comenzar. El inventario y el estado limpio inicial se comprobaron antes de preparar el primer commit documental.
+Repositorio: [Kevin-Stiven-Lopez-Amaya404/smart-home-doc](https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-doc). Rama predeterminada e inicial inspeccionada: main. La organización inicial se integró mediante PR #1. Para la documentación de datos se creó docs/db desde origin/main c5ba34a1f99ecaab3717fe9fe7028192262dae96, que contiene esa integración. Commit inicial inspeccionado: `dfe55be09e1a3237cc75490569969eff6b7c9586`. Único archivo previo: README.md con el nombre del repositorio. Sin cambios locales al comenzar. El inventario y el estado limpio inicial se comprobaron antes de preparar el primer commit documental.
 
 La carpeta de trabajo es `S:\Datos\Imagenes\smart-home-doc`. Se comprobaron remoto, estado y rama antes de editar. El repositorio en plural es independiente y se usa solo como antecedente.
 
@@ -62,12 +62,12 @@ La carpeta de trabajo es `S:\Datos\Imagenes\smart-home-doc`. Se comprobaron remo
 
 En las inspecciones remotas, main de backend, base de datos y web contenía un README mínimo; se eligió dev por su implementación. En móvil la rama predeterminada era dev. Esto no identifica ramas de liberación aprobadas. Los enlaces técnicos se fijan a commits para evitar cambios silenciosos.
 
-El backend local está en 13-dev con cambios previos del usuario y difiere de la instantánea remota. Se preservó sin modificarlo. Se encontraron carpetas locales de base de datos y web, pero su presencia no acredita igualdad con los commits remotos. No se presupone una raíz común para todos los proyectos.
+El backend local está en 13-dev con cambios previos del usuario y difiere de la instantánea remota. Se preservó sin modificarlo. La base de datos local está en 03-dev (e18b2d0) con cambios previos; se preservó. Su dev local también difiere del dev remoto 6caed6b. La presencia de carpetas locales no acredita igualdad con los commits inspeccionados. No se presupone una raíz común para todos los proyectos.
 
 ## Documentación local y fuentes
 
 - Backend: [referencia detallada fija](../10-arquitectura/backend/referencia-tecnica.md), derivada de código y configuraciones; no sustituye la fuente.
-- Base de datos: [arquitectura de despliegue](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docs/deployment/ARCHITECTURE.md) y [backup y restauración](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docs/deployment/BACKUP_AND_RESTORE.md).
+- Base de datos: [documentación técnica central](../10-arquitectura/base-de-datos/README.md); fuentes de implementación: [arquitectura de despliegue](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docs/deployment/ARCHITECTURE.md) y [backup y restauración](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docs/deployment/BACKUP_AND_RESTORE.md).
 - Web: [configuración y proxy](https://github.com/nataliachala1/smarthome-frontend-web/blob/8dad6e1f805db958e1e650379ae1dd6cce3c4d57/web/vite.config.ts) y [scripts](https://github.com/nataliachala1/smarthome-frontend-web/blob/8dad6e1f805db958e1e650379ae1dd6cce3c4d57/web/package.json).
 - Móvil: [conexión backend](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/blob/bb87f62c0727f22f376e56632c22bea66128a04a/docs/BACKEND_CONNECTION.md); contiene apartados de pairing rezagados frente al servicio, registrados como discrepancia.
 

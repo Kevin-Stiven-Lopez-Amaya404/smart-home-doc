@@ -25,6 +25,11 @@ Repositorio central: **smart-home-doc**, en singular. Se conserva la identidad d
 - [Archivo](docs/99-archivo/README.md): retiro de documentos.
 - [Índice completo](docs/README.md).
 
+## Referencias técnicas detalladas
+
+- [Backend: arquitectura, endpoints, estructura y configuración](docs/10-arquitectura/backend/referencia-tecnica.md).
+- [Base de datos: modelo, contratos SQL, migraciones, seguridad y operación](docs/10-arquitectura/base-de-datos/README.md).
+
 ## Repositorios
 
 | Repositorio | Responsabilidad | Rama inspeccionada |

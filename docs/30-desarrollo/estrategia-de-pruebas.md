@@ -32,6 +32,10 @@ Pendiente de ejecutar y acordar con el equipo:
 
 La prueba e2e inicial del backend espera GET /, pero AppController no está registrado: hay una discrepancia estática, no un fallo de ejecución declarado aquí. Los informes DOCX de pruebas son antecedentes históricos y no sustituyen resultados actuales.
 
+## Pruebas de datos
+
+Consultar [pruebas y verificación SQL](../10-arquitectura/base-de-datos/pruebas-y-verificacion.md): auditorías, fixtures, suites SQL034 y regresión SQL032. La revisión actual recorrió 96 changesets; los resultados históricos sobre 64 no se reproducen automáticamente ni sustituyen una ejecución nueva. No se ejecutaron esas pruebas en esta entrega.
+
 ## Resultado de esta entrega
 
 Se ejecutan únicamente las [validaciones documentales](calidad-documental.md); resultados en el [registro](../00-contexto/validacion-documental.md). No se ejecutaron las suites de implementación.

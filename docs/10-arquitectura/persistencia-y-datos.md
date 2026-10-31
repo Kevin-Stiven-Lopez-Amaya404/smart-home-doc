@@ -9,24 +9,35 @@ canonical_for:
 
 # Persistencia y datos
 
-## Fuente canónica
+## Documentación técnica central
 
-[changelog maestro](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/changelog/changelog-master.yaml) incluye DDL, DML, DCL y releases. Las migraciones permanecen en smarthome-database; esta página no replica el esquema.
+La [documentación completa de smarthome-database](base-de-datos/README.md) vive en este repositorio junto a la [referencia del backend](backend/referencia-tecnica.md).
 
-El backend usa PostgreSQL mediante Prisma y SQL para funciones, permisos y operaciones de ingestión. Hay credenciales separadas por responsabilidad; consultar la configuración, sin reutilizar automáticamente un rol administrador para la aplicación.
+| Necesidad | Documento |
+| --- | --- |
+| Comprender organización y versiones | [Arquitectura y estructura](base-de-datos/arquitectura-y-estructura.md) |
+| Consultar entidades, columnas y relaciones | [Modelo](base-de-datos/modelo-de-datos.md) y [diccionario](base-de-datos/diccionario-de-datos.md) |
+| Integrar contratos SQL | [Funciones y flujos](base-de-datos/funciones-y-flujos.md) |
+| Revisar autorización | [Roles, permisos y RLS](base-de-datos/seguridad-y-permisos.md) |
+| Evolucionar esquema | [Migraciones y rollbacks](base-de-datos/migraciones-y-rollbacks.md) |
+| Preparar entorno | [Configuración y ejecución](base-de-datos/configuracion-y-ejecucion.md) |
+| Operar o probar | [Mantenimiento](base-de-datos/operacion-y-mantenimiento.md) y [pruebas](base-de-datos/pruebas-y-verificacion.md) |
+| Revisar diferencias y cobertura | [Hallazgos](base-de-datos/hallazgos-y-pendientes.md) e [inventario](base-de-datos/inventario-de-archivos.md) |
 
-## Modelo observado
+## Fuente de verdad
 
-Hogares y membresías determinan acceso a dispositivos y consultas de consumo. Las funciones SQL distinguen acceso al hogar, consumo básico, detalle y control por dispositivo. No basta un rol global USER para autorizar acceso a un hogar.
+Implementación: [changelog maestro](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/changelog/changelog-master.yaml) y SQL referenciado, commit `6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878` de dev. main de datos solo contiene README. El checkout local 03-dev tiene cambios previos y se conservó.
 
-La [release 018](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/018_household_permissions/001_household_permissions.sql) define permisos de hogar y excepciones por dispositivo. La [release 033](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/033_mqtt_ingest_realtime/001_mqtt_ingest_realtime.sql) incorpora destinatarios realtime. Su existencia en Git no acredita que hayan sido aplicadas al entorno activo.
+El recorrido estático localiza 96 changesets, 33 nombres de tabla incluida DEFAULT y contratos de permisos/pairing. No acredita una base instalada. Las migraciones y scripts ejecutables se mantienen en smarthome-database; la explicación técnica y la navegación se mantienen aquí.
 
-## Entornos
+## Modelo y seguridad
 
-El Compose local declara PostgreSQL 16; el Compose productivo referencia una base existente y un contenedor de herramientas PostgreSQL 18 para roles, sin crear el servidor. Esto no demuestra la versión real del servidor productivo.
+Ocho esquemas separan identidad, hogares, dispositivos, consumo, notificaciones, configuración, metadata de copias y auditoría. El historial añade permisos por hogar/dispositivo, sesiones e identidades MQTT y SQL034 para tarifa referencial/meta mensual. device_type se elimina después de crearse en el baseline.
 
-Fuentes: [Compose local](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docker-compose.yml), [Compose de producción](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docker-compose.production.yml), [referencia backend](backend/referencia-tecnica.md).
+Los roles funcionales y técnicos son distintos. RLS depende de privilegios y contexto transaccional; no está habilitado en todas las tablas. Revisar LOGIN, propietarios y contratos SQL antes de asumir aislamiento.
 
-## Pendientes
+## Entornos y pendientes
 
-Comparar historial Liquibase instalado, propietario/roles, extensiones y compatibilidad servidor/herramientas. Reconciliar permisos de consultas y destinatarios de eventos antes de afirmar equivalencia de acceso. Ver [roles](../60-producto-procesos/roles-y-permisos.md) y [copias](../40-operacion/copias-de-seguridad.md).
+Local declara PostgreSQL 16; CI usa 18; producción utiliza un servidor existente de versión no comprobada. No se ejecutaron migraciones, SQL de prueba o restauraciones.
+
+Resolver SQL028 incluida aunque se comenta como propuesta separada, ausencia de rollback en 030/031, diferencias de wrappers/CI y permisos de detalle frente a realtime. Fuentes y criterios de cierre en [hallazgos](base-de-datos/hallazgos-y-pendientes.md).

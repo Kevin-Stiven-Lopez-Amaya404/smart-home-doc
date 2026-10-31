@@ -103,6 +103,10 @@ Se enumeraron documentos Markdown/PDF/DOCX en los árboles completos de los cuat
 | [docs/components/profile.md](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/blob/bb87f62c0727f22f376e56632c22bea66128a04a/docs/components/profile.md) | Pendiente de validar | Ruta enumerada; contenido/vigencia no evaluados. |
 | [docs/components/settings.md](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/blob/bb87f62c0727f22f376e56632c22bea66128a04a/docs/components/settings.md) | Pendiente de validar | Ruta enumerada; contenido/vigencia no evaluados. |
 
+## Ampliación de base de datos
+
+La [referencia central de datos](../10-arquitectura/base-de-datos/README.md) incorpora la explicación técnica revisada. El [inventario de sus 332 archivos](../10-arquitectura/base-de-datos/inventario-de-archivos.md) refina el tratamiento de los 24 Markdown locales y distingue documentación transversal de scripts/migraciones que permanecen junto al código. No se trasladaron originales.
+
 ## Pendientes comunes
 
 No existe evidencia suficiente para trasladar o retirar automáticamente estos documentos. Las descripciones compartidas de roles, MQTT y sesiones deben reconciliarse con SQL, productores y consumidores. Los informes de auditoría o pruebas no se consideran resultados reproducidos aquí.
