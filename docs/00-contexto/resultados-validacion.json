@@ -1,14 +1,14 @@
 {
   "ok": true,
-  "markdown": 60,
-  "relativeLinks": 323,
-  "anchors": 13,
-  "externalLinks": 911,
+  "markdown": 65,
+  "relativeLinks": 348,
+  "anchors": 15,
+  "externalLinks": 974,
   "jsonExamples": 6,
   "jsonFiles": 3,
-  "mermaidBlocks": 3,
-  "directories": 15,
-  "canonicalKeys": 60,
-  "verifiedExternalReferences": 495,
+  "mermaidBlocks": 4,
+  "directories": 16,
+  "canonicalKeys": 65,
+  "verifiedExternalReferences": 532,
   "errors": []
 }
