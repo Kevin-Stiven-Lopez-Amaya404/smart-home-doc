@@ -9,7 +9,7 @@ canonical_for:
 
 # Archivo del backend
 
-Documentos históricos trasladados desde `nataliachala1/smarthome-backend` (commit `1cbaca2`, contenido idéntico en `dev` `3bfce85`). Registran decisiones y resultados de su fecha y están marcados como `obsoleto`; no describen el estado actual del backend.
+Copia archivada de documentos históricos de `nataliachala1/smarthome-backend` (commit `1cbaca2`, contenido idéntico en `dev` `3bfce85`). Registran decisiones y resultados de su fecha y están marcados como `obsoleto`; no describen el estado actual del backend.
 
 ## Documentos
 
@@ -23,7 +23,8 @@ Documentos históricos trasladados desde `nataliachala1/smarthome-backend` (comm
 ## Criterio del traslado
 
 - Clasificados como pendientes de validar en el [inventario de implementaciones](../../00-contexto/inventario-implementaciones.md#nataliachala1smarthome-backend); se archivan por ser informes con fecha de corte, no por antigüedad.
-- Contenido conservado sin cambios; solo los enlaces relativos se fijaron al commit de origen y se agregó una nota de estado.
+- Contenido conservado sin cambios; se agregó una nota de estado y los enlaces relativos se fijaron al último commit que modificó cada documento (`dc1cbfc` para el informe 01, `bc9d3ec` para HU09), de modo que los rangos de líneas citados correspondan al código de su fecha.
+- Es una copia: los originales siguen en `smarthome-backend` (`dev` `3bfce85`). Retirarlos allí o reemplazarlos por un enlace a este archivo requiere acuerdo con el responsable del backend; no se modificó ese repositorio.
 - Los demás documentos de `docs/` del backend se mantienen junto al código y se enlazan desde esta documentación.
 - No existe un documento sustituto equivalente; para el estado actual consultar la [arquitectura del backend](../../10-arquitectura/backend.md).
 

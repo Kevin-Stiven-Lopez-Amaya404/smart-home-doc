@@ -2,7 +2,7 @@
 title: Registro de validación documental
 status: borrador
 owner: documentacion
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-03
 canonical_for:
   - resultados-validacion
 ---
@@ -47,6 +47,18 @@ Resultados estáticos ejecutados:
 La primera comprobación de la ampliación detectó un formato incorrecto al incorporar referencias al manifiesto. Se corrigió y se volvió a ejecutar el validador con resultado satisfactorio. El [inventario estructural](../10-arquitectura/base-de-datos/inventario-estructural.json) registra alcance y límites; no representa un catálogo PostgreSQL instalado.
 
 Los resultados JSON enlazados al inicio corresponden a la última ejecución, no a la organización inicial. La comprobación git diff --check cubre archivos seguidos; el validador recorre también los nuevos.
+
+## Archivo del backend
+
+Revisión del 2026-11-03 sobre la rama docs/backend-archivo, con Node.js v22.23.4. Se copiaron cuatro informes históricos de smarthome-backend al [archivo](../99-archivo/backend/README.md) y se registró el tratamiento en [E15](evidencias-y-pendientes.md#e15--copia-archivada-de-informes-del-backend).
+
+- Contenido comparado por diff con los originales en `1cbaca2`: coincide salvo la nota de estado y los enlaces relativos.
+- 30 rutas del backend comprobadas en `dc1cbfc` y `bc9d3ec`, y 14 rutas de base de datos en `6caed6b` y `f097a0a`, todas presentes en los árboles Git.
+- 65 Markdown, 348 enlaces internos y 15 referencias a anclas; 532 referencias externas únicas registradas.
+- 3 archivos JSON y 6 ejemplos JSON válidos; cuatro bloques Mermaid contabilizados, sin renderizar.
+- git diff --check ejecutado sin errores.
+
+Una referencia externa, la página de configuración de NestJS, figura en el manifiesto sin lectura comprobada; ver E15.
 
 ## Estado registrado antes del primer commit
 

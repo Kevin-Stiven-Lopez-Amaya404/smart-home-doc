@@ -13,7 +13,7 @@ Retiro de referencias con preservación de historial.
 
 ## Documentos
 
-- [Archivo del backend](backend/README.md): cuatro informes históricos trasladados desde `smarthome-backend` el 2026-11-03.
+- [Archivo del backend](backend/README.md): copia archivada de cuatro informes históricos de `smarthome-backend`, del 2026-11-03. Los originales permanecen en el backend.
 
 ## Fuentes y pendientes
 

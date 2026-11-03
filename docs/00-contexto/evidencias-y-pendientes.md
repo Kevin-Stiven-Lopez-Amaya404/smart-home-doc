@@ -2,7 +2,7 @@
 title: Evidencias, discrepancias y pendientes
 status: borrador
 owner: documentacion
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-03
 canonical_for:
   - registro-evidencias
 ---
@@ -76,6 +76,16 @@ OpenAPI generado; firmware y ACL del broker; versiones desplegadas; cookies Andr
 ## E14 — Revisión técnica de base de datos
 
 Se amplió el análisis a los 332 archivos de smarthome-database dev 6caed6b: 42 changelogs y 96 changesets localizados. La [referencia central](../10-arquitectura/base-de-datos/README.md) documenta modelo, contratos SQL y configuración. Los [hallazgos DB01–DB12](../10-arquitectura/base-de-datos/hallazgos-y-pendientes.md) registran diferencias de README, rollback, SQL028, wrappers, CI, diagnóstico y permisos. No se ejecutó la base ni se modificó su checkout local.
+
+## E15 — Copia archivada de informes del backend
+
+El 2026-11-03 se copiaron al [archivo del backend](../99-archivo/backend/README.md) cuatro informes con fecha de corte de smarthome-backend `1cbaca2`, idénticos en `dev` `3bfce85`. Se comprobó por diff que el contenido coincide con el original salvo la nota de estado y los enlaces relativos.
+
+**Pendiente de coordinación:** los originales permanecen en el backend. Retirarlos o reemplazarlos por un enlace a la copia requiere acuerdo con el responsable de ese repositorio; no se modificó. Mientras tanto ambas versiones coexisten y la del backend es la de origen.
+
+**Verificado, límite registrado:** los enlaces relativos del informe 01 se fijaron a `dc1cbfc` y los de HU09 a `bc9d3ec`, últimos commits que modificaron cada documento, porque en `1cbaca2` varios archivos citados por rango de líneas cambiaron de tamaño. Los enlaces a `../smarthome-database/` apuntaban a una copia local anidada sin commit identificable; se fijaron a `6caed6b` y sus rangos de líneas son aproximados.
+
+**Pendiente de verificación:** la página oficial de configuración de NestJS enlazada desde la [implementación HU09](../99-archivo/backend/implementacion-hu09.md) no pudo consultarse desde el entorno de revisión. Se conserva como parte del texto histórico y figura en el manifiesto sin evidencia de lectura.
 
 ## Cierre de un pendiente
 

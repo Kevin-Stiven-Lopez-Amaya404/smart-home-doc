@@ -11,7 +11,7 @@ canonical_for:
 
 > **Estado documental:** obsoleto (histórico). **Corte original:** 2026-10-14. Reporte de avance con fecha de corte; no acredita resultados actuales. Este documento registra decisiones de su fecha y no certifica que todas las limitaciones o migraciones descritas sigan vigentes. Consultar los contratos y la rama `dev` actuales antes de implementar.
 >
-> **Origen:** [`docs/REPORTE_AVANCE_HU09_2026-10-14.md`](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/docs/REPORTE_AVANCE_HU09_2026-10-14.md) en `nataliachala1/smarthome-backend`, commit `1cbaca2`. **Sustituto:** no hay un documento equivalente; para el estado actual consultar la [arquitectura del backend](../../10-arquitectura/backend.md). Archivado el 2026-11-03; el contenido se conserva sin cambios salvo los enlaces relativos, que se fijaron al commit de origen.
+> **Origen:** [`docs/REPORTE_AVANCE_HU09_2026-10-14.md`](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/docs/REPORTE_AVANCE_HU09_2026-10-14.md) en `nataliachala1/smarthome-backend`, commit `1cbaca2`. **Sustituto:** no hay un documento equivalente; para el estado actual consultar la [arquitectura del backend](../../10-arquitectura/backend.md). Copia archivada el 2026-11-03; el original permanece en el backend y su retiro allí está pendiente de coordinación. El contenido se conserva sin cambios salvo los enlaces relativos, fijados a `bc9d3ec`, último commit que modificó el documento.
 
 **Fecha de corte:** 14 de octubre de 2026.
 
@@ -19,13 +19,13 @@ canonical_for:
 
 **Estado:** primer incremento implementado, probado y publicado. HU09 continúa abierta.
 
-**Actualización posterior:** el segundo incremento incorpora límites de solicitudes HTTP. Sus cambios, pruebas y pendientes se registran en [HU09 — límites de solicitudes](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/docs/HU09_RATE_LIMITING.md). Las tablas de este reporte conservan el corte del primer incremento.
+**Actualización posterior:** el segundo incremento incorpora límites de solicitudes HTTP. Sus cambios, pruebas y pendientes se registran en [HU09 — límites de solicitudes](https://github.com/nataliachala1/smarthome-backend/blob/bc9d3eceff8db04b260f8d3a18a860894ea536c1/docs/HU09_RATE_LIMITING.md). Las tablas de este reporte conservan el corte del primer incremento.
 
-El tercer incremento incorpora [seguridad de sesiones y eventos Socket.IO](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/docs/HU09_REALTIME_SECURITY.md), con su evidencia y pendientes de integración.
+El tercer incremento incorpora [seguridad de sesiones y eventos Socket.IO](https://github.com/nataliachala1/smarthome-backend/blob/bc9d3eceff8db04b260f8d3a18a860894ea536c1/docs/HU09_REALTIME_SECURITY.md), con su evidencia y pendientes de integración.
 
-El cuarto incremento incorpora [logout individual y familias de sesión](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/docs/HU09_SESSION_FAMILIES.md), con pruebas de concurrencia y flujo HTTP/Socket.IO sobre PostgreSQL desechable.
+El cuarto incremento incorpora [logout individual y familias de sesión](https://github.com/nataliachala1/smarthome-backend/blob/bc9d3eceff8db04b260f8d3a18a860894ea536c1/docs/HU09_SESSION_FAMILIES.md), con pruebas de concurrencia y flujo HTTP/Socket.IO sobre PostgreSQL desechable.
 
-Avance posterior en `16-dev`: [resumen GUEST, permisos e históricos con RLS y camino Liquibase](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/docs/HU16_CONSUMPTION_ACCESS.md), incluida la corrección de la dependencia de esquema de sesiones descubierta en las pruebas desde cero.
+Avance posterior en `16-dev`: [resumen GUEST, permisos e históricos con RLS y camino Liquibase](https://github.com/nataliachala1/smarthome-backend/blob/bc9d3eceff8db04b260f8d3a18a860894ea536c1/docs/HU16_CONSUMPTION_ACCESS.md), incluida la corrección de la dependencia de esquema de sesiones descubierta en las pruebas desde cero.
 
 Este reporte registra el trabajo realizado después de la autorización para construir y publicar avances mediante commits. Complementa el [Informe 01 de auditoría, con corte al 12/10/2026](informe-01-auditoria-backend-bd-2026-10-12.md); no sustituye su evidencia histórica ni constituye una certificación de producción.
 
