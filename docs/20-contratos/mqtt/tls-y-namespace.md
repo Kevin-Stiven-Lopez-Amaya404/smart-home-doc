@@ -9,9 +9,11 @@ canonical_for:
 
 # HU10 — MQTT con TLS y namespace: primer incremento
 
-> **Estado documental:** implementación documentada. **Corte original:** 2026-10-15. Documento migrado el 2026-11-03 desde [`docs/HU10_MQTT_TLS_NAMESPACE.md`](https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/HU10_MQTT_TLS_NAMESPACE.md) de `nataliachala1/smarthome-backend` (`dev` `fea0254`). Registra decisiones y resultados de su fecha; no certifica que sigan vigentes ni equivale a un contrato aprobado.
+> **Estado documental:** implementación documentada. **Corte original:** 2026-10-15. Copia creada el 2026-11-03 de [`docs/HU10_MQTT_TLS_NAMESPACE.md`](https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/HU10_MQTT_TLS_NAMESPACE.md) en `nataliachala1/smarthome-backend` (`dev` `fea0254`). Registra decisiones y resultados de su fecha; no certifica que sigan vigentes ni equivale a un contrato aprobado. Mientras exista el original en el backend, este documento es una copia.
 >
 > Contenido conservado íntegro; solo cambian los enlaces relativos. Trazabilidad en la [matriz de migración](../../00-contexto/migracion-docs-backend.md).
+>
+> **Productor:** backend (publica órdenes y consume estado) a través del broker MQTT. **Consumidores:** dispositivos Shelly y el simulador local, que consumen órdenes y publican estado. Roles propuestos, sin aprobación conjunta acreditada.
 >
 > Relación: el [contrato MQTT](contrato-mqtt.md) es la referencia canónica de topics; este documento detalla la configuración TLS y de namespace. Las variantes DEV (VPS/flespi) no se presentan como arquitectura definitiva.
 

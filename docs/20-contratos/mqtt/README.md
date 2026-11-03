@@ -17,7 +17,7 @@ Pendientes: revisar firmware, ACL y configuración efectiva del broker, entrega,
 
 Documentos relacionados:
 
-- [MQTT con TLS y namespace (HU10)](tls-y-namespace.md), migrado desde el backend.
+- [MQTT con TLS y namespace (HU10)](tls-y-namespace.md), copia del documento del backend.
 - [Contrato local del backend (archivado)](../../99-archivo/backend/mqtt-contract-2026-10-15.md), conciliado en el contrato central.
 
 [Volver a contratos](../README.md).

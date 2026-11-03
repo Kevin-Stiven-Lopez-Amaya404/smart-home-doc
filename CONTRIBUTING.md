@@ -2,7 +2,7 @@
 title: Contribuir a la documentación
 status: borrador
 owner: documentacion
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-03
 canonical_for:
   - contribucion-documental
 ---
@@ -13,7 +13,7 @@ canonical_for:
 
 1. Revisar [índice](docs/README.md), [política](DOCUMENTATION_POLICY.md) e inventario antes de crear archivos.
 2. Usar contexto para alcance; arquitectura para componentes; contratos para interfaces; desarrollo para entorno local; operación para entornos; decisiones para ADR; producto para reglas y procesos.
-3. Actualizar primero el documento canónico. Las instrucciones particulares permanecen junto al código; enlazar rutas reales desde aquí.
+3. Actualizar primero el documento canónico. Las instrucciones de ejecución permanecen junto al código; enlazar rutas reales desde aquí. La documentación técnica del backend vive en este repositorio (regla 2 de la [política](DOCUMENTATION_POLICY.md)): si un PR del backend cambia comportamiento documentado, abrir aquí un PR enlazado.
 4. Registrar repositorio, rama, commit y archivos inspeccionados. Un README o historia de usuario no prueba aprobación ni comportamiento por sí solo.
 5. Registrar diferencias en [evidencias y pendientes](docs/00-contexto/evidencias-y-pendientes.md), citando ambas fuentes. No ajustar otros repositorios ni contratos unilateralmente.
 

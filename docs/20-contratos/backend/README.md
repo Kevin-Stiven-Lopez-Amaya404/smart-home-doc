@@ -9,7 +9,7 @@ canonical_for:
 
 # Contratos del backend
 
-Documentos de implementación migrados desde `nataliachala1/smarthome-backend` (`dev` `fea0254`) el 2026-11-03. Describen el comportamiento documentado por el backend en su fecha; no son contratos aprobados.
+Copias de los documentos de implementación de `nataliachala1/smarthome-backend` (`dev` `fea0254`) creadas el 2026-11-03; los originales siguen en el backend hasta su retiro. Describen el comportamiento documentado por el backend en su fecha; no son contratos aprobados.
 
 ## Documentos
 

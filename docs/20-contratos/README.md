@@ -17,7 +17,7 @@ Interfaces compartidas; su aprobación conjunta sigue pendiente.
 - [MQTT](mqtt/README.md)
 - [Eventos en tiempo real](eventos-realtime.md)
 - [Errores de API](errores-api.md)
-- [Backend](backend/README.md): límites HTTP, sesiones, acceso a consumo y roles migrados desde el backend
+- [Backend](backend/README.md): límites HTTP, sesiones, acceso a consumo y roles copiados desde el backend
 - [Shelly](shelly/README.md): sesiones de pairing LAN/AP
 
 ## Fuentes y pendientes

@@ -15,6 +15,6 @@ canonical_for:
 
 ## Fuentes y pendientes
 
-Migrado desde `nataliachala1/smarthome-backend` (`dev` `fea0254`) el 2026-11-03. Trazabilidad en la [matriz de migración](../../00-contexto/migracion-docs-backend.md). El contrato MQTT canónico está en [MQTT](../mqtt/README.md).
+Copia de `nataliachala1/smarthome-backend` (`dev` `fea0254`) el 2026-11-03. Trazabilidad en la [matriz de migración](../../00-contexto/migracion-docs-backend.md). El contrato MQTT canónico está en [MQTT](../mqtt/README.md).
 
 [Volver a contratos](../README.md).

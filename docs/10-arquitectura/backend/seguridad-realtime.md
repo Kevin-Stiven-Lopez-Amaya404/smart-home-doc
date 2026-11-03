@@ -9,7 +9,7 @@ canonical_for:
 
 # HU09 / BD-17 — Seguridad de sesiones y eventos Socket.IO
 
-> **Estado documental:** implementación documentada. **Corte original:** 2026-10-14. Documento migrado el 2026-11-03 desde [`docs/HU09_REALTIME_SECURITY.md`](https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/HU09_REALTIME_SECURITY.md) de `nataliachala1/smarthome-backend` (`dev` `fea0254`). Registra decisiones y resultados de su fecha; no certifica que sigan vigentes ni equivale a un contrato aprobado.
+> **Estado documental:** implementación documentada. **Corte original:** 2026-10-14. Copia creada el 2026-11-03 de [`docs/HU09_REALTIME_SECURITY.md`](https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/HU09_REALTIME_SECURITY.md) en `nataliachala1/smarthome-backend` (`dev` `fea0254`). Registra decisiones y resultados de su fecha; no certifica que sigan vigentes ni equivale a un contrato aprobado. Mientras exista el original en el backend, este documento es una copia.
 >
 > Contenido conservado íntegro; solo cambian los enlaces relativos. Trazabilidad en la [matriz de migración](../../00-contexto/migracion-docs-backend.md).
 >

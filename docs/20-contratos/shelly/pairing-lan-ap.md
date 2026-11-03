@@ -9,9 +9,11 @@ canonical_for:
 
 # HU16 — Sesiones backend Shelly LAN-first y AP
 
-> **Estado documental:** histórico / pendiente de confirmar. **Corte original:** 2026-10-19. Documento migrado el 2026-11-03 desde [`docs/HU16_PAIRING_AP_SESSIONS.md`](https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/HU16_PAIRING_AP_SESSIONS.md) de `nataliachala1/smarthome-backend` (`dev` `fea0254`). Registra decisiones y resultados de su fecha; no certifica que sigan vigentes ni equivale a un contrato aprobado.
+> **Estado documental:** histórico / pendiente de confirmar. **Corte original:** 2026-10-19. Copia creada el 2026-11-03 de [`docs/HU16_PAIRING_AP_SESSIONS.md`](https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/HU16_PAIRING_AP_SESSIONS.md) en `nataliachala1/smarthome-backend` (`dev` `fea0254`). Registra decisiones y resultados de su fecha; no certifica que sigan vigentes ni equivale a un contrato aprobado. Mientras exista el original en el backend, este documento es una copia.
 >
 > Contenido conservado íntegro; solo cambian los enlaces relativos. Trazabilidad en la [matriz de migración](../../00-contexto/migracion-docs-backend.md).
+>
+> **Productor:** backend (`smarthome-backend`). **Consumidores:** aplicación móvil Android, que se comunica localmente con el Shelly. Roles propuestos, sin aprobación conjunta acreditada.
 >
 > **Advertencia de vigencia:** desde el corte de este documento, `dev` incorpora componentes adicionales de pairing y MQTT individual (controladores `shelly-mqtt-*` y banderas `SHELLY_MQTT_VPS_DEV_*`). Que el backend coordine sesiones y que un Shelly ya registrado funcione por flespi **no acredita** el onboarding completo LAN/AP de un equipo nuevo, que sigue **pendiente de prueba física**.
 

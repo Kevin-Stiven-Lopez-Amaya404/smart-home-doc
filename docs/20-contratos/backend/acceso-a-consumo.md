@@ -9,9 +9,11 @@ canonical_for:
 
 # HU16 — Permisos de consumo, históricos y aislamiento real
 
-> **Estado documental:** implementación documentada. **Corte original:** 2026-10-14. Documento migrado el 2026-11-03 desde [`docs/HU16_CONSUMPTION_ACCESS.md`](https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/HU16_CONSUMPTION_ACCESS.md) de `nataliachala1/smarthome-backend` (`dev` `fea0254`). Registra decisiones y resultados de su fecha; no certifica que sigan vigentes ni equivale a un contrato aprobado.
+> **Estado documental:** implementación documentada. **Corte original:** 2026-10-14. Copia creada el 2026-11-03 de [`docs/HU16_CONSUMPTION_ACCESS.md`](https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/HU16_CONSUMPTION_ACCESS.md) en `nataliachala1/smarthome-backend` (`dev` `fea0254`). Registra decisiones y resultados de su fecha; no certifica que sigan vigentes ni equivale a un contrato aprobado. Mientras exista el original en el backend, este documento es una copia.
 >
 > Contenido conservado íntegro; solo cambian los enlaces relativos. Trazabilidad en la [matriz de migración](../../00-contexto/migracion-docs-backend.md).
+>
+> **Productor:** backend (`smarthome-backend`) con las políticas RLS de `smarthome-database`. **Consumidores:** clientes web y móvil. Roles propuestos, sin aprobación conjunta acreditada.
 >
 > Relación: el resumen de roles está en [roles y permisos del backend](roles-y-permisos.md) y en [roles y permisos observados](../../60-producto-procesos/roles-y-permisos.md).
 >

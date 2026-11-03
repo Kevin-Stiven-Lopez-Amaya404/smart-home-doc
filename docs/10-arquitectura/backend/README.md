@@ -15,9 +15,9 @@ Es una derivación de consulta con revisión fija, no una segunda fuente de impl
 
 Fuentes canónicas: [bootstrap](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/src/main.ts) y archivos enlazados en la referencia. No se compiló ni ejecutó el backend. Las limitaciones de la primera inspección quedan identificadas como históricas; consultar los [pendientes centrales](../../00-contexto/evidencias-y-pendientes.md).
 
-## Documentación migrada desde el backend
+## Copias de la documentación del backend
 
-El 2026-11-03 se migraron a este repositorio los nueve documentos que quedaban en `docs/` del backend (`dev` `fea0254`). Detalle y vigencia en la [matriz de migración](../../00-contexto/migracion-docs-backend.md).
+El 2026-11-03 se copiaron a este repositorio los nueve documentos que quedaban en `docs/` del backend (`dev` `fea0254`). Detalle y vigencia en la [matriz de migración](../../00-contexto/migracion-docs-backend.md).
 
 | N.º | Origen en el backend | Destino |
 | --- | --- | --- |

@@ -37,7 +37,7 @@ El [contrato local del backend](../../99-archivo/backend/mqtt-contract-2026-10-1
 
 ## Conciliación con el contrato local del backend
 
-El 2026-11-03 se migró `docs/MQTT_CONTRACT.md` del backend (`dev` `fea0254`, corte 2026-10-15). Este documento sigue siendo la **única referencia canónica** del contrato MQTT; la versión original se conserva íntegra en el [archivo](../../99-archivo/backend/mqtt-contract-2026-10-15.md). Contraste sección por sección con el código de `dev` `fea0254`:
+El 2026-11-03 se copió `docs/MQTT_CONTRACT.md` del backend (`dev` `fea0254`, corte 2026-10-15). Este documento sigue siendo la **única referencia canónica** del contrato MQTT; la versión original se conserva íntegra en el [archivo](../../99-archivo/backend/mqtt-contract-2026-10-15.md). Contraste sección por sección con el código de `dev` `fea0254`:
 
 | Sección del contrato local | Resultado de la conciliación |
 | --- | --- |

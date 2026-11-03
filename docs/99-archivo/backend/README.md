@@ -25,8 +25,8 @@ Copia archivada de documentos históricos de `nataliachala1/smarthome-backend` (
 
 - Clasificados como pendientes de validar en el [inventario de implementaciones](../../00-contexto/inventario-implementaciones.md#nataliachala1smarthome-backend); se archivan por ser informes con fecha de corte, no por antigüedad.
 - Contenido conservado sin cambios; se agregó una nota de estado y los enlaces relativos se fijaron al último commit que modificó cada documento (`dc1cbfc` para el informe 01, `bc9d3ec` para HU09), de modo que los rangos de líneas citados correspondan al código de su fecha.
-- Es una copia: los originales siguen en `smarthome-backend` (`dev` `3bfce85`). Retirarlos allí o reemplazarlos por un enlace a este archivo requiere acuerdo con el responsable del backend; no se modificó ese repositorio.
-- Los demás documentos de `docs/` del backend se mantienen junto al código y se enlazan desde esta documentación.
+- Los cuatro informes originales se retiraron de `smarthome-backend` en el PR #18 de `smarthome-backend` (commit `5615d37`, merge `fea0254` en `dev`), revisado y fusionado por la responsable del backend; estas copias son la única versión ([E15](../../00-contexto/evidencias-y-pendientes.md#e15--copia-archivada-de-informes-del-backend)).
+- El contrato MQTT local y los otros ocho documentos de `docs/` del backend tienen copia en este repositorio ([matriz](../../00-contexto/migracion-docs-backend.md)); sus originales siguen en el backend hasta el retiro registrado en [E16](../../00-contexto/evidencias-y-pendientes.md#e16--copia-de-los-nueve-documentos-restantes-del-backend).
 - No existe un documento sustituto equivalente; para el estado actual consultar la [arquitectura del backend](../../10-arquitectura/backend.md).
 
 Fuente: [árbol del backend en el commit de origen](https://github.com/nataliachala1/smarthome-backend/tree/1cbaca28e9e152d5cb5ff7643560fdfa65857486).
