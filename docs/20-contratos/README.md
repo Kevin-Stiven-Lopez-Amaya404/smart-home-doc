@@ -2,7 +2,7 @@
 title: Contratos
 status: borrador
 owner: documentacion
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-03
 canonical_for:
   - indice-20-contratos
 ---
@@ -17,6 +17,8 @@ Interfaces compartidas; su aprobación conjunta sigue pendiente.
 - [MQTT](mqtt/README.md)
 - [Eventos en tiempo real](eventos-realtime.md)
 - [Errores de API](errores-api.md)
+- [Backend](backend/README.md): límites HTTP, sesiones, acceso a consumo y roles migrados desde el backend
+- [Shelly](shelly/README.md): sesiones de pairing LAN/AP
 
 ## Fuentes y pendientes
 

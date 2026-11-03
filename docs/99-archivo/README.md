@@ -13,7 +13,7 @@ Retiro de referencias con preservación de historial.
 
 ## Documentos
 
-- [Archivo del backend](backend/README.md): copia archivada de cuatro informes históricos de `smarthome-backend`, del 2026-11-03. Los originales permanecen en el backend.
+- [Archivo del backend](backend/README.md): copia archivada de cuatro informes históricos de `smarthome-backend`, del 2026-11-03. Los originales permanecen en el backend. El 2026-11-03 se añadió el contrato MQTT local, conciliado en el contrato central.
 
 ## Fuentes y pendientes
 

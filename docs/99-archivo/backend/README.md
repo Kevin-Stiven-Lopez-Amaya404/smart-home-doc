@@ -19,6 +19,7 @@ Copia archivada de documentos históricos de `nataliachala1/smarthome-backend` (
 | [Implementación HU 09-dev](implementacion-hu09.md) | 2026-10-14 | [`docs/IMPLEMENTACION_HU09.md`](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/docs/IMPLEMENTACION_HU09.md) |
 | [Informe 01 de auditoría de backend y base de datos](informe-01-auditoria-backend-bd-2026-10-12.md) | 2026-10-12 | [`docs/INFORME_01_AUDITORIA_BACKEND_BD_2026-10-12.md`](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/docs/INFORME_01_AUDITORIA_BACKEND_BD_2026-10-12.md) |
 | [Reporte de avance HU09](reporte-avance-hu09-2026-10-14.md) | 2026-10-14 | [`docs/REPORTE_AVANCE_HU09_2026-10-14.md`](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/docs/REPORTE_AVANCE_HU09_2026-10-14.md) |
+| [Contrato MQTT local del backend](mqtt-contract-2026-10-15.md) | 2026-10-15 | [`docs/MQTT_CONTRACT.md`](https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/MQTT_CONTRACT.md) |
 
 ## Criterio del traslado
 
