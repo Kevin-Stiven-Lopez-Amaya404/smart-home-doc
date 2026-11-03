@@ -2,7 +2,7 @@
 title: Archivo
 status: borrador
 owner: documentacion
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-03
 canonical_for:
   - indice-99-archivo
 ---
@@ -13,7 +13,7 @@ Retiro de referencias con preservación de historial.
 
 ## Documentos
 
-No se retiraron documentos en este checkout.
+- [Archivo del backend](backend/README.md): cuatro informes históricos trasladados desde `smarthome-backend` el 2026-11-03.
 
 ## Fuentes y pendientes
 
