@@ -60,6 +60,18 @@ Revisión del 2026-11-03 sobre la rama docs/backend-archivo, con Node.js v22.23.
 
 Una referencia externa, la página de configuración de NestJS, figura en el manifiesto sin lectura comprobada; ver E15.
 
+## Copia de los nueve documentos restantes del backend
+
+Revisión del 2026-11-03 sobre la rama docs/fase1-migracion-final-backend. Se copiaron los nueve documentos que quedaban en `docs/` de smarthome-backend (`dev` `fea0254`) y se registró el tratamiento en la [matriz de migración](migracion-docs-backend.md) y en [E16](evidencias-y-pendientes.md#e16--copia-de-los-nueve-documentos-restantes-del-backend).
+
+- Contenido comparado línea a línea con los originales en `fea0254`: todas las líneas se conservan en orden, salvo los destinos de los enlaces relativos; en el worker de métricas se corrigió la codificación de caracteres.
+- Identificadores citados contrastados con el código de `dev` y con smarthome-database; rutas HTTP reconstruidas desde los decoradores de los controladores.
+- 78 Markdown, 469 enlaces internos y 36 referencias a anclas; 552 referencias externas únicas registradas.
+- 3 archivos JSON y 11 ejemplos JSON válidos; 4 bloques Mermaid contabilizados, sin renderizar; 19 directorios con README.
+- git diff --check ejecutado sin errores.
+
+Las páginas externas de Express, NestJS, Socket.IO, PostgreSQL, Prisma, MQTT.js y Shelly enlazadas desde los documentos copiados figuran en el manifiesto sin lectura comprobada en esta revisión.
+
 ## Estado registrado antes del primer commit
 
 Al terminar la construcción inicial, docs/organizacion y main apuntaban a dfe55be09e1a3237cc75490569969eff6b7c9586. Se comprobó que el cambio de rama conservó el estado y los hashes SHA-256 de los 51 archivos. En ese momento: README.md modificado y 50 archivos nuevos sin seguimiento; cero archivos movidos o eliminados. Durante esa fase no se hizo staging, commit, push ni merge. Este apartado conserva la inspección previa; el estado posterior debe consultarse en Git. El repositorio plural y el código de las implementaciones se conservaron.

@@ -2,7 +2,7 @@
 title: Pruebas y evidencia de verificación de datos
 status: borrador
 owner: datos
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-04
 canonical_for:
   - pruebas-base-datos
 ---
@@ -28,6 +28,7 @@ Los resultados se registran en [inventario estructural](inventario-estructural.j
 | [audit-mqtt-revocation.sql](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/audit-mqtt-revocation.sql) | Aislamiento del LOGIN de revocación y contratos permitidos/prohibidos | No demuestra revocación real en broker |
 | [regresión SQL032](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/tests/mqtt/sql032-reconciliation-null-retry.sql) | Ventana de reconciliación de operación incierta con retry_at nulo | Base desechable con SQL032; no prueba hardware |
 | [baseline HU10](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/tests/mqtt/hu10-baseline.yaml) y [baseline revocación](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/tests/mqtt/hu11-revocation-baseline.yaml) | Subconjuntos históricos para ensayos de actualización | No representan todo el maestro actual |
+| [mosquitto.conf](https://github.com/nataliachala1/smarthome-database/blob/39416a5c42d35f988689061ffca8a79f7fa21002/tests/mqtt/mosquitto.conf) | Broker Mosquitto TLS desechable con Dynamic Security y acceso anónimo deshabilitado, montado por el runner del backend | Fixture de prueba: no incorporar al Compose productivo; no prueba Shelly físico. Antecedente: [HU11 identidades](../../99-archivo/base-de-datos/originales/docs/hu11-mqtt-identities.md) |
 
 ## Integración que se ejecuta desde backend
 
@@ -54,3 +55,7 @@ No incluye la ejecución de las suites SQL034 ni de la regresión SQL032. En el 
 6. Ensayar upgrade desde una versión identificada y recuperación con copia restaurada.
 
 Los comandos disponibles de preparación están en [configuración](configuracion-y-ejecucion.md). No se incorpora una suite ficticia ni se trasladan fixtures ejecutables a la central.
+
+## Antecedente histórico: validación del baseline (2026-09-08)
+
+La [validación final del baseline](../../99-archivo/base-de-datos/originales/validacion-final.md) registra revisiones **estáticas** sobre los 60 changeSets del baseline anterior al modelo hogar → dispositivo: carga de YAML, includes y rollbacks, IDs únicos, ausencia de objetos retirados y coherencia de funciones RLS y grants. No incluyó ejecución en PostgreSQL ni Liquibase; el propio documento la deja pendiente. Es un antecedente: no valida el maestro actual ni sustituye el plan de verificación de esta página.

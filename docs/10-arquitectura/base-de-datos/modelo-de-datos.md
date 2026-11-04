@@ -2,7 +2,7 @@
 title: Modelo relacional de SmartHome
 status: borrador
 owner: datos
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-04
 canonical_for:
   - modelo-base-datos
 ---
@@ -60,6 +60,8 @@ recovery_token guarda token_hash, tipo, vencimiento y uso. refresh_token guarda 
 
 Fuentes: [auth](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/03_tables/001_create_auth_tables.sql), [refresh](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/04_alter/012_create_refresh_token_table.sql), [puente de sesión](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/009_session_schema/001_session_schema.sql).
 
+La rotación y la revocación de una misma familia se coordinan desde la aplicación: ambas adquieren `pg_advisory_xact_lock(hashtextextended(family_id::text, 0))` dentro de una transacción `READ COMMITTED`, de modo que un logout confirmado antes impide crear un sucesor y uno confirmado después lo incluye. El lock es transaccional y no se conserva en el pool; no deben mezclarse versiones del backend que omitan este protocolo. El LOGIN operativo debe poder ejecutar esas operaciones y adquirir el lock; no está verificado en una instalación real. Antecedente: [familias de sesión HU09](../../99-archivo/base-de-datos/originales/docs/hu09-session-families.md).
+
 ## Hogares, dispositivos y ciclo de vida
 
 home mantiene created_by y membresías separadas. home_member distingue OWNER/MEMBER/GUEST y PENDING/ACTIVE/REVOKED/LEFT; sus CHECK relacionan aceptación y fin.
@@ -67,6 +69,10 @@ home mantiene created_by y membresías separadas. home_member distingue OWNER/ME
 device pertenece a un hogar. DEACTIVATED con deleted_at nulo representa desactivación temporal; con deleted_at informado, borrado lógico. El nombre y fabricante tienen reglas de unicidad que cambian durante las migraciones. Release 021 permite reutilizar una identidad física cuando el registro anterior fue eliminado lógicamente, conservando los históricos. Release 023 hace lo equivalente para identidades MQTT ya revocadas.
 
 Fuentes: [hogares](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/03_tables/002_create_homes_tables.sql), [ciclo de vida](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/04_alter/010_align_device_lifecycle.sql), [re-pairing físico](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/021_shelly_device_repairing/001_shelly_device_repairing.sql), [identidad MQTT](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/023_mqtt_identity_repairing/001_mqtt_identity_repairing.sql).
+
+`devices.mqtt_identity_event` guarda un historial técnico append-only de la identidad MQTT (`REGISTERED`, `REVOKE_REQUESTED`, `ATTEMPT_STARTED`, `RETRY_SCHEDULED`, `REVOKED` y `BASELINE_SNAPSHOT` para identidades anteriores a la release), escrito por trigger en la misma transacción. No contiene secretos ni payloads, no tiene políticas RLS ni grants para los roles de ejecución y un guard rechaza UPDATE, DELETE y TRUNCATE; no protege frente a un administrador capaz de cambiar DDL. No hay retención automática. Antecedente: [historial HU11](../../99-archivo/base-de-datos/originales/docs/hu11-mqtt-identity-history.md).
+
+`devices.device_pairing_session` guarda hashes del `requestId` y del token de sesión, la identidad reportada, el estado y el dispositivo resultante; no guarda la contraseña Wi-Fi, credenciales MQTT ni tokens en claro. `CONNECTED` debe establecerlo un componente confiable con evidencia del broker, no el reporte del teléfono. La persistencia de sesiones no acredita un pairing físico completado; el método `LAN` es coordinación de contrato. Antecedente: [sesiones de vinculación HU16](../../99-archivo/base-de-datos/originales/docs/hu16-device-pairing-sessions.md).
 
 ## Consumo y unidades
 

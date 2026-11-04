@@ -2,7 +2,7 @@
 title: Contexto
 status: borrador
 owner: documentacion
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-03
 canonical_for:
   - indice-00-contexto
 ---
@@ -21,6 +21,7 @@ Propósito, alcance y fuentes verificables.
 - [Documentos de las implementaciones](inventario-implementaciones.md)
 - [Evidencias y pendientes](evidencias-y-pendientes.md)
 - [Validaciones ejecutadas](validacion-documental.md)
+- [Migración de la documentación del backend](migracion-docs-backend.md)
 
 ## Fuentes y pendientes
 

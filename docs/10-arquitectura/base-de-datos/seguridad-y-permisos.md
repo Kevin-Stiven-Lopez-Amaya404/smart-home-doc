@@ -2,7 +2,7 @@
 title: Seguridad, roles y políticas de datos
 status: borrador
 owner: datos
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-04
 canonical_for:
   - seguridad-base-datos
 ---
@@ -68,6 +68,17 @@ Las tablas home_member_permission y device_member_permission tampoco activan RLS
 Fuentes: [grants auth](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/01_grants/001_grants_auth.sql), [políticas base](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/03_dcl/02_policies/changelog.yaml), [permisos](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/018_household_permissions/001_household_permissions.sql).
 
 ## Permisos funcionales efectivos
+
+- OWNER y MEMBER con permiso conservan los históricos de consumo tras desactivar o retirar un dispositivo; se mantiene una excepción para OWNER de un hogar inactivo. El agregado básico no devuelve fila sin autorización y devuelve cero si no hay lecturas. Antecedente: [consumo por rol HU16](../../99-archivo/base-de-datos/originales/docs/hu16-consumption-access.md).
+- Al aplicar la release `018`, las membresías MEMBER y GUEST existentes reciben los valores base de su rol. Antecedente: [permisos de hogar HU16](../../99-archivo/base-de-datos/originales/docs/hu16-permisos-hogar.md).
+
+### Auditoría de conexiones reales
+
+[audit-runtime-roles.sql](https://github.com/nataliachala1/smarthome-database/blob/39416a5c42d35f988689061ffca8a79f7fa21002/scripts/audit-runtime-roles.sql) se ejecuta una vez por LOGIN (aplicación e ingesta), indicando el rol esperado con `--set=expected_role=…` y `psql -X --set=ON_ERROR_STOP=1`. Solo lee catálogos y termina con `ROLLBACK`. Para aceptar los permisos de runtime, todas las filas deben mostrar PASS; cualquier FAIL bloquea la aceptación. `ON_ERROR_STOP` solo detiene errores SQL: un consumidor automatizado debe comprobar las filas FAIL de forma explícita. No usar una conexión administrativa ni registrar URI, contraseñas o tokens. El resultado con fixtures del 14/10/2026 y el estado sin verificar de los LOGIN reales se conservan en el [antecedente HU09](../../99-archivo/base-de-datos/originales/docs/hu09-seguridad-runtime.md).
+
+[audit-mqtt-revocation.sql](https://github.com/nataliachala1/smarthome-database/blob/39416a5c42d35f988689061ffca8a79f7fa21002/scripts/audit-mqtt-revocation.sql) se ejecuta con el LOGIN real del revocador, sin `SET ROLE` ni cuenta migradora; ese LOGIN solo debe heredar `smarthome_mqtt_revoke` y todas las filas deben devolver `passed=true`. Antes de activar el trabajador se requiere un LOGIN dedicado sin privilegios adicionales, certificados y un client ID exclusivo por réplica. Antecedente: [trabajador de revocación HU11](../../99-archivo/base-de-datos/originales/docs/hu11-mqtt-revocation-runtime.md).
+
+En `devices.mqtt_identity`, `REGISTERED` indica una referencia registrada, no posesión ni conectividad comprobada. Cuando `devices.device.deleted_at` deja de ser nulo, un trigger pasa la identidad a `REVOKE_PENDING` en la misma transacción, sin llamar al broker; la desactivación temporal sin `deleted_at` no la revoca. Las funciones de reclamo y finalización de la release `011` ya no son el contrato del trabajador: SQL032 retiró su ejecución directa (ver [funciones](funciones-y-flujos.md)). Antecedente: [revocación HU11](../../99-archivo/base-de-datos/originales/docs/hu11-mqtt-revocation.md).
 
 - OWNER administra según helpers; las consultas históricas tienen reglas específicas.
 - MEMBER inicia con consulta y control habilitados, sujetos a cambios del propietario.

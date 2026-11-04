@@ -2,7 +2,7 @@
 title: Operación y mantenimiento de datos
 status: borrador
 owner: datos
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-04
 canonical_for:
   - operacion-base-datos
 ---
@@ -29,11 +29,13 @@ consumption.consumption conserva una DEFAULT. fn_ensure_consumption_partitions(2
 
 La guía local recomienda invocación al iniciar un worker y periódicamente. No se verificó un scheduler que la ejecute. La retención de telemetría cruda y auditoría se expresa en documentos, no en un job Liquibase de purga.
 
-Fuente: [función de particiones](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/07_functions/005_consumption_partition_functions.sql), [criterios documentados de operación](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/OPERACION_Y_RETENCION.md). Las recomendaciones de retención no se presentan como reglas de producto aprobadas.
+Valores de referencia del documento de origen, no aprobados como regla de producto ni aplicados por un job: retener `devices.device_telemetry_raw` 30 días en desarrollo y conservar `identity_audit.audit_log` al menos 12 meses antes de cualquier archivado o purga autorizada por infraestructura. Los roles de aplicación solo tienen SELECT e INSERT sobre `audit_log`, por lo que la tabla es append-only para ellos. EXECUTE sobre la función de particiones se concede a `smarthome_worker`; el origen indica ejecutarla antes de habilitar la ingesta.
+
+Fuente: [función de particiones](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/01_ddl/07_functions/005_consumption_partition_functions.sql), [criterios documentados de operación](../../99-archivo/base-de-datos/originales/operacion-y-retencion.md). Las recomendaciones de retención no se presentan como reglas de producto aprobadas.
 
 ## Backup y restauración
 
-sync.backup guarda metadata; no realiza pg_dump, snapshots o restauraciones. El procedimiento se consulta en [backup y restauración](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docs/deployment/BACKUP_AND_RESTORE.md); su propia advertencia indica que no hay restaurabilidad demostrada.
+sync.backup guarda metadata; no realiza pg_dump, snapshots o restauraciones. El procedimiento se conserva como antecedente en [backup y restauración](../../99-archivo/base-de-datos/originales/docs/deployment/backup-and-restore.md); su propia advertencia indica que no hay restaurabilidad demostrada.
 
 La [guía central de copias](../../40-operacion/copias-de-seguridad.md) registra pendientes de periodicidad, retención y RPO/RTO. No se fabricó una copia ni un resultado de restauración para completar la documentación.
 
@@ -57,7 +59,7 @@ Fuentes: [workflow](https://github.com/nataliachala1/smarthome-database/blob/6ca
 | Permiso denegado en worker MQTT | Rol de propósito correcto y función vigente; SQL032 retira acceso directo a funciones antiguas |
 | Guía pide logs de postgres productivo | Ese servicio no existe en el Compose de producción; la base es externa |
 
-La [guía local de diagnóstico](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docs/deployment/TROUBLESHOOTING.md) aún incluye postgres en un comando de logs productivo y menciona un broker específico sin demostrar que sea el configurado. Revisar esos apartados con el Compose y el backend actuales.
+La [guía local de diagnóstico](../../99-archivo/base-de-datos/originales/docs/deployment/troubleshooting.md) aún incluye postgres en un comando de logs productivo y menciona un broker específico sin demostrar que sea el configurado. Revisar esos apartados con el Compose y el backend actuales.
 
 ## Pendientes
 
