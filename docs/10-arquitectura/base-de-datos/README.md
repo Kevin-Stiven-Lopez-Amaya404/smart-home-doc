@@ -24,6 +24,7 @@ La documentación técnica de smarthome-database se mantiene aquí, en **smart-h
 9. [Pruebas y verificación](pruebas-y-verificacion.md).
 10. [Hallazgos y pendientes](hallazgos-y-pendientes.md).
 11. [Inventario de archivos](inventario-de-archivos.md).
+12. [Archivo de documentos migrados](../../99-archivo/base-de-datos/README.md).
 
 ## Revisión y autoridad
 

@@ -2,7 +2,7 @@
 title: Solución de problemas
 status: borrador
 owner: operacion
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-04
 canonical_for:
   - diagnostico
 ---
@@ -24,6 +24,12 @@ Anotar componente, rama/commit, perfil, ruta o evento, estado HTTP y momento del
 | Dispositivo sin actualizaciones | Broker, topic derivado, identidad, validación de payload y permisos; Socket.IO no prueba MQTT | [MQTT](../20-contratos/mqtt/contrato-mqtt.md) |
 | Eventos no llegan | Token del handshake, membresía activa, sesión revocada y acceso al hogar | [Realtime](../20-contratos/eventos-realtime.md) |
 | Móvil no conecta en LAN | URL accesible desde teléfono; localhost no es el equipo servidor | [guía móvil](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/blob/bb87f62c0727f22f376e56632c22bea66128a04a/docs/BACKEND_CONNECTION.md) |
+| Compose de producción no inicia | Variables requeridas en Dokploy y acceso a GHCR; no imprimir el entorno completo al compartir logs. El Compose no incluye un servicio `postgres` | [Despliegue](despliegue.md) |
+| Liquibase falla | Permisos del migrador, `POSTGRES_DB`, `DATABASECHANGELOG` y checksums; no borrar volúmenes, no usar `clear-checksums` ni marcar cambios como ejecutados sin revisar el SQL | [Migraciones](../10-arquitectura/base-de-datos/migraciones-y-rollbacks.md) |
+| Frontend responde 502 | Backend sano, red compartida con Nginx, ruta `/api/v1/` y dominio apuntando a `frontend:8080` | [Despliegue](despliegue.md) |
+| Dominio sin TLS o sin respuesta | DNS A/AAAA, puertos 80/443, dominio en Dokploy y logs de Traefik; un cambio de dominio requiere redeploy | [Despliegue](despliegue.md) |
+
+Procedimientos tomados de la [guía de 2026-10-22](../99-archivo/base-de-datos/originales/docs/deployment/troubleshooting.md), excluyendo el comando de logs de `postgres` y la suposición de un broker concreto (DB06).
 
 ## Escalar un hallazgo
 

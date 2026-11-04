@@ -2,7 +2,7 @@
 title: Variables de entorno y configuración segura
 status: borrador
 owner: operacion
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-04
 canonical_for:
   - variables-entorno
 ---
@@ -46,6 +46,8 @@ JWT_REFRESH_SECRET y JWT_REFRESH_EXPIRES_IN aparecen en ejemplos antiguos, pero 
 No asumir que MQTT_ENABLED=false desactiva MQTT en desarrollo ni que .env se carga antes de seleccionar rutas condicionales.
 
 ## Fuentes y pendientes
+
+En el Compose productivo de datos, `DATABASE_URL` corresponde al LOGIN `smarthome_app_login` (miembro de `smarthome_runtime_app`) y `DATABASE_IOT_URL` a `smarthome_ingest_login` (miembro de `smarthome_ingest`); el servicio `runtime-roles` los provisiona con `APP_DB_PASSWORD` e `IOT_DB_PASSWORD`, que deben ser distintas. Verificar que ambos LOGIN existen con los permisos correctos antes del primer despliegue. Los valores de `.env.production.example` son marcadores ficticios: no copiarlos. Codificar los caracteres reservados de las contraseñas dentro de las URL y no poner secretos en variables `VITE_*`, que se publican en el navegador. `TRUSTED_PROXY_CIDRS` vacío ignora las cabeceras de IP reenviadas, y `MQTT_TLS_CA_FILE` vacío usa las CA del sistema. Antecedente: [variables de producción](../99-archivo/base-de-datos/originales/docs/deployment/environment-variables.md).
 
 [validación general](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/src/config/runtime-config.ts), [validación MQTT](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/src/config/mqtt-config.ts), [web](https://github.com/nataliachala1/smarthome-frontend-web/blob/8dad6e1f805db958e1e650379ae1dd6cce3c4d57/web/.env.example), [móvil](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/blob/bb87f62c0727f22f376e56632c22bea66128a04a/app.config.js), [Compose productivo](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docker-compose.production.yml).
 

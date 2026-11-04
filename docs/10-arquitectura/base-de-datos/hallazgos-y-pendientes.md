@@ -45,7 +45,7 @@ Fuentes: [workflow](https://github.com/nataliachala1/smarthome-database/blob/6ca
 
 **Confirmado en archivos.** TROUBLESHOOTING pide logs de postgres, servicio ausente del Compose productivo, que usa PostgreSQL externo. También presupone un broker específico; la configuración actual solo declara una URL y flags que deben auditarse.
 
-Fuentes: [guía](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docs/deployment/TROUBLESHOOTING.md), [Compose](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docker-compose.production.yml). Resolver instrucciones después de identificar la instalación real.
+Fuentes: [guía](../../99-archivo/base-de-datos/originales/docs/deployment/troubleshooting.md), [Compose](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docker-compose.production.yml). Resolver instrucciones después de identificar la instalación real.
 
 ## DB07 — Permisos de consumo frente a destinatarios realtime
 
@@ -69,7 +69,7 @@ Fuentes: [schema.prisma](https://github.com/nataliachala1/smarthome-backend/blob
 
 **Confirmado en alcance.** Las guías de consumo describen 64 changesets y ensayos anteriores. El maestro actual contiene 96. El runner backend usa el maestro recibido y rollback-count de un changeset; no se debe describir como una prueba congelada de la antigua release.
 
-Fuentes: [informe](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docs/HU16_CONSUMPTION_ACCESS.md), [runner backend](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/scripts/test-consumption-access.ps1). Repetir con revisión identificada.
+Fuentes: [informe](../../99-archivo/base-de-datos/originales/docs/hu16-consumption-access.md), [runner backend](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/scripts/test-consumption-access.ps1). Repetir con revisión identificada.
 
 ## DB11 — Configuración de refresh aún exigida por Compose
 

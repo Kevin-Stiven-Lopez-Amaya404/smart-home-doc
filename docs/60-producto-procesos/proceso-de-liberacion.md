@@ -2,7 +2,7 @@
 title: Proceso de liberación
 status: borrador
 owner: operacion
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-04
 canonical_for:
   - proceso-liberacion
 ---
@@ -11,7 +11,7 @@ canonical_for:
 
 ## Evidencia disponible
 
-Hay configuraciones de construcción y despliegue en los repositorios de implementación. La [guía CI/CD](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docs/deployment/CICD.md) describe publicación de imágenes y un gate de despliegue deshabilitado, condicionado a auditoría y restauración. El código contradice parcialmente esa guía: [backend](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/.github/workflows/ci-deploy.yml) no tiene if: false y puede disparar deploy si hay secretos; [web](https://github.com/nataliachala1/smarthome-frontend-web/blob/8dad6e1f805db958e1e650379ae1dd6cce3c4d57/.github/workflows/ci-deploy.yml) y [datos](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/.github/workflows/ci-deploy.yml) sí lo bloquean explícitamente. No se comprobaron secretos ni ejecuciones y no se afirma una liberación activa.
+El CI de datos ejecuta Liquibase `validate`, aplica los changesets en un PostgreSQL 18 efímero de GitHub Actions, ejecuta `status` y valida el Compose; no accede al VPS. Su job de despliegue tiene `if: ${{ false }}` en [ci-deploy.yml](https://github.com/nataliachala1/smarthome-database/blob/39416a5c42d35f988689061ffca8a79f7fa21002/.github/workflows/ci-deploy.yml), línea 93. La guía del 2026-10-22 afirmaba que el gate estaba deshabilitado en los tres repositorios, pero el código lo contradice parcialmente: [backend](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/.github/workflows/ci-deploy.yml) no tiene `if: false` y puede disparar deploy si hay secretos. Esa guía proponía un único workflow coordinador antes de habilitar el gate, recuperar la aplicación con la etiqueta SHA de imagen anterior y recordaba que el workflow no revierte esquema ni datos. Antecedente: [CI/CD](../99-archivo/base-de-datos/originales/docs/deployment/cicd.md). [Web](https://github.com/nataliachala1/smarthome-frontend-web/blob/8dad6e1f805db958e1e650379ae1dd6cce3c4d57/.github/workflows/ci-deploy.yml) conserva su referencia existente. No se comprobaron secretos ni ejecuciones.
 
 [eas.json](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/blob/bb87f62c0727f22f376e56632c22bea66128a04a/eas.json) declara perfiles development, preview y production. Su presencia no prueba builds firmados, distribución ni publicación en tiendas.
 

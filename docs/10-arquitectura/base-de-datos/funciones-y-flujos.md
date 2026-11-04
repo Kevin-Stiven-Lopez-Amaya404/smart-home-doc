@@ -2,7 +2,7 @@
 title: Funciones y contratos SQL
 status: borrador
 owner: datos
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-04
 canonical_for:
   - funciones-base-datos
 ---
@@ -28,6 +28,8 @@ La firma y el retorno se transcriben del archivo fuente por commit; las concesio
 Fuentes principales: [permisos](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/018_household_permissions/001_household_permissions.sql), [autenticación MQTT](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/029_mqtt_authenticated_pairing/001_mqtt_authenticated_pairing.sql), [revocación](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/032_mqtt_pairing_revocation/001_mqtt_pairing_revocation.sql).
 
 ## Estados MQTT y concurrencia
+
+Los estados `ENABLED`/`DISABLED` que observa el administrador del broker no son valores de `devices.mqtt_identity.state` ni estados de pairing. El historial de identidades de la release `011` registra operaciones SQL, no las llamadas administrativas al broker; la evidencia del broker se conserva en los objetos de atestación y revocación posteriores (`029`, `032`). Antecedente: [preparación de credenciales HU11](../../99-archivo/base-de-datos/originales/docs/hu11-mqtt-credential-preparation.md), que describe el estado del 2026-10-15, anterior a la reserva (`022`) y al sobre cifrado (`028`).
 
 device_pairing_session distingue PENDING, DEVICE_IDENTIFIED, WAITING_FOR_MQTT, CONNECTED, COMPLETED y salidas EXPIRED/CANCELLED/FAILED. SQL020 permite AP, BLE y LAN en el esquema; eso no acredita un flujo BLE implementado en todos los clientes.
 
