@@ -2,7 +2,7 @@
 title: Evidencias, discrepancias y pendientes
 status: borrador
 owner: documentacion
-last_reviewed: 2026-11-03
+last_reviewed: 2026-11-04
 canonical_for:
   - registro-evidencias
 ---
@@ -100,6 +100,10 @@ El 2026-11-03 se copiaron al [archivo del backend](../99-archivo/backend/README.
 El 2026-11-03 se copiaron a este repositorio los nueve documentos que quedaban en `docs/` de smarthome-backend (`dev` `fea0254`). La [matriz de migración](migracion-docs-backend.md) registra origen, destino, vigencia, conservación, enlaces, contradicciones y revisión de secretos.
 
 **Pendiente de revisión:** mientras existan los originales, los destinos son copias. Cada documento requiere aprobación (`APROBADO PARA RETIRO` o `BLOQUEADO`) antes de retirar los originales del backend. Hasta entonces ambas versiones coexisten.
+
+## E17 — Broker MQTT de producción
+
+**Pendiente de contraste:** el antecedente HU11 de la base de datos (2026-10-15) registra EMQX Cloud Serverless como proveedor confirmado para producción; el backend se probó con Mosquitto Dynamic Security y `dev` de la base de datos incluye releases de ingesta flespi (`035`, `036`). No se decide aquí el broker de producción. Las decisiones de producto que enumera ese antecedente (vinculación solo OWNER, recuperación en el mismo hogar, transferencia entre hogares bloqueada en el MVP, conservación de históricos, sin apagado físico automático) no tienen aprobación acreditada. Fuente: [antecedente HU11](../99-archivo/base-de-datos/originales/docs/hu11-emqx-serverless-pairing-readiness.md).
 
 ## Cierre de un pendiente
 

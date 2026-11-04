@@ -2,7 +2,7 @@
 title: Contrato MQTT descriptivo
 status: borrador
 owner: integracion
-last_reviewed: 2026-11-03
+last_reviewed: 2026-11-04
 canonical_for:
   - contrato-mqtt
 ---
@@ -62,6 +62,16 @@ Fuente: [contrato local en el commit de origen](https://github.com/nataliachala1
 El backend distingue estado interno, estado de switch y eventos RPC Shelly; no trata cualquier JSON como consumo válido. Los campos, validaciones, unidad energética y publicación de órdenes se describen en la [referencia técnica](../../10-arquitectura/backend/referencia-tecnica.md). Esa referencia está fijada al mismo commit para evitar dos tablas de payload independientes.
 
 No se copian credenciales de broker a este contrato. La autorización, namespace y configuración de cada identidad deben contrastarse con las ACL reales.
+
+## Base de datos: namespace y proveedor de broker
+
+### Persistencia frente a namespace y TLS
+
+Para la base de datos, el namespace MQTT identifica una instalación o entorno; no es un permiso de hogar ni existe una tabla de tópicos. El identificador persistido sigue siendo `manufacturer_device_id` sin prefijo. El prefijo de tópicos no impide que una identidad publique por otra: la autenticación, la ACL individual y la revocación dependen del broker y de los objetos de identidad de HU11. HU10 no modificó SQL, RLS ni el historial Liquibase. Antecedente: [HU10 en la base de datos](../../99-archivo/base-de-datos/originales/docs/hu10-mqtt-tls-namespace.md).
+
+### Proveedor de broker: antecedente HU11
+
+Un registro del 2026-10-15 indica que se eligió EMQX Cloud Serverless para producción y que su API pública, consultada entonces, no ofrecía altas y bajas automatizadas de credenciales o ACL; el trabajador de revocación del backend de esa fecha solo admitía Mosquitto Dynamic Security. No se ha verificado cuál es el broker vigente en DEV ni en producción, y no debe tomarse ese antecedente como decisión actual. Si el trabajador de revocación está desactivado, el estado SQL no equivale a una revocación ejecutada en el broker. Antecedente: [HU11 EMQX Serverless](../../99-archivo/base-de-datos/originales/docs/hu11-emqx-serverless-pairing-readiness.md). Pendiente: [registro de evidencias](../../00-contexto/evidencias-y-pendientes.md).
 
 ## Seguridad y verificación pendiente
 

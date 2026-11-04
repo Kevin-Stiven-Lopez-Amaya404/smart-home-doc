@@ -23,7 +23,7 @@ canonical_for:
 | Rama de trabajo doc | `docs/fase1-migracion-smarthome-database` |
 | Inventario | 23 documentos (21 en `docs/` + 2 en la raíz), comprobado el 2026-11-03 |
 | Ramas con cambios documentales en BD | `13-dev` (PR #6, `HU13_SHELLY_LOCAL_RPC.md`) y `15-dev` (PR #8, `HU15_CICD_STAGING.md`); no fusionadas |
-| Páginas centrales bloqueadas por el PR #5 (backend) | `DOCUMENTATION_POLICY.md`, `00-contexto/evidencias-y-pendientes.md`, `00-contexto/inventario-implementaciones.md`, `20-contratos/mqtt/*`, `40-operacion/README.md`, `60-producto-procesos/roles-y-permisos.md`, `99-archivo/README.md` |
+| Páginas centrales que estuvieron bloqueadas por el PR #5 (backend) | `DOCUMENTATION_POLICY.md`, `00-contexto/inventario-implementaciones.md`, `40-operacion/README.md` |
 
 ## Páginas centrales que citan los 23 documentos (actualizar en B.6)
 
@@ -178,12 +178,12 @@ Las páginas de `10-arquitectura/base-de-datos/` se basan en el snapshot `6caed6
 | 2. Fecha, propósito, HU, baseline y estado | Único commit `9b9742b` (2026-10-15, Kevin). HU10, primer incremento. Rama `10-dev` desde `09-dev` `3e6e4b9`; backend base `6b033fe`, implementación `63f4bf5`. Solo documentación, sin SQL. Estado: **histórico** (incremento de rama; el propio texto advierte que no contiene HU16 y no es un esquema completo) |
 | 3. Dependencias ejecutables | Ninguna en BD (sin SQL). Objetos citados: `devices.device.manufacturer_device_id`, índice único de fabricante, filtros `status = ACTIVE` y `deleted_at IS NULL` de la consulta de ingestión (backend) |
 | 4. Referencias, enlaces e imágenes | Sin enlaces relativos ni imágenes. **Externo (registrar):** backend `commit/63f4bf56a203ddb514fb53e935dc5860944f2e0a`. Citado por README BD (línea 20) e `inventario-de-archivos.md:212` |
-| 5. Comparación con la página canónica | `contrato-mqtt.md` (en `main`) describe tópicos, TLS obligatorio y enlaza el **HU10 del backend** (otro archivo, `smarthome-backend/docs/HU10_MQTT_TLS_NAMESPACE.md`), no este. **Información única (persistencia):** el namespace identifica instalación/entorno, no un permiso de hogar; el ID persistido es `manufacturer_device_id` sin prefijo; no hay tablas de tópicos; el prefijo no impide que una identidad publique por otra (ACL/revocación dependen de HU11 y del broker); HU10 no cambió SQL, RLS ni Liquibase. **Solo archivo (backend):** 155 + 31 pruebas, bloqueo del provisioning LAN heredado. **Pendiente:** tu PR #5 añade `docs/20-contratos/mqtt/tls-y-namespace.md`; comprobar su `canonical_for` para no duplicar el tema y elegir allí o en `contrato-mqtt.md` el destino |
-| 6. Decisión | **Integrado en documento canónico** (destino final según el `canonical_for` de TLS/namespace tras fusionar el PR #5) + **archivado con referencia**. **Bloqueado para editar** hasta la fusión del PR #5 |
+| 5. Comparación con la página canónica | `contrato-mqtt.md` es la referencia canónica del contrato MQTT; `tls-y-namespace.md` (PR #5) es una copia íntegra del HU10 del backend y no se modifica; **información única integrada (persistencia):** el namespace identifica instalación/entorno, no un permiso de hogar; el ID persistido es `manufacturer_device_id` sin prefijo; no hay tablas de tópicos; el prefijo no impide que una identidad publique por otra (ACL/revocación dependen de HU11 y del broker); HU10 no cambió SQL, RLS ni Liquibase. **Solo archivo (backend):** 155 + 31 pruebas, bloqueo del provisioning LAN heredado |
+| 6. Decisión | **Integrado** en `contrato-mqtt.md` (sección «Base de datos: namespace y proveedor de broker», destino indicado por el plan) + **archivado con referencia** |
 | 7. Copia archivada y secretos | Destino: `99-archivo/base-de-datos/originales/docs/hu10-mqtt-tls-namespace.md`. Sin secretos: indica expresamente que no se usaron credenciales reales. Sin redacciones |
 | 8. Evidencia y enlaces | Pendiente: PR documental. Actualizar `inventario-de-archivos.md:212` |
 
-**Texto propuesto para integrar (B.5), no aplicar hasta fusionar el PR #5:**
+**Texto integrado en `contrato-mqtt.md`:**
 
 > ### Persistencia frente a namespace y TLS
 >
@@ -200,11 +200,11 @@ Las páginas de `10-arquitectura/base-de-datos/` se basan en el snapshot `6caed6
 | 3. Dependencias ejecutables | `devices.mqtt_identity` y su historial; `fn_register_mqtt_identity`; trabajador de revocación y sus nueve auditorías (`scripts/audit-mqtt-revocation.sql`); backend `scripts/test-mqtt-revocation.cjs` |
 | 4. Referencias, enlaces e imágenes | Sin enlaces relativos ni imágenes. **Externos (registrar):** 5 páginas de EMQX Cloud (`api/serverless.html`, `api/api_deployment.html`, `deployments/auth_overview.html`, `deployments/authz_overview.html`, `deployments/default_authz.html`) y `from_movil/tree/0dc85b0…`. Las rutas de informes del backend están en texto, no enlazadas. Citado por README BD (línea 16) e `inventario-de-archivos.md:213` |
 | 5. Comparación con la página canónica | `contrato-mqtt.md` no menciona proveedor de broker; `evidencias-y-pendientes.md` solo cita «firmware y ACL del broker» en E13. **Contradicciones:** (a) afirma «EMQX Cloud Serverless confirmado para producción», mientras el backend prueba con Mosquitto Dynamic Security y `dev` incluye releases `035_flespi_mqtt_ingest_idempotency`/`036_flespi_mqtt_event_order`: **no decidir el broker desde esta guía**; (b) dice que `fn_register_mqtt_identity` no es una reserva previa y que la reserva/leases se definirían «después»: las releases posteriores `022` (reserva), `025` (leases) y `027`–`032` ya lo abordan, así que esa parte está **superada** y no debe presentarse como estado actual. **Información única:** limitaciones de la API pública de EMQX Serverless consultadas el 2026-10-15; el estado SQL de revocación no equivale a revocación ejecutada en el broker si el trabajador está desactivado; decisiones de producto enumeradas (vinculación solo OWNER, recuperación en el mismo hogar con evidencia, transferencia entre hogares bloqueada en el MVP, históricos conservados, sin apagado físico automático, contraseña Wi-Fi fuera del backend), **sin aprobación acreditada**. **Solo archivo:** cifras de pruebas (317, 117, 62 → 63 → 64), estado del adaptador BLE móvil |
-| 6. Decisión | **Integrado** como antecedente en `contrato-mqtt.md` + **nuevo pendiente** en `evidencias-y-pendientes.md` + **archivado con referencia**. **Bloqueado para editar** hasta la fusión del PR #5 (ambas páginas) |
+| 6. Decisión | **Integrado** como antecedente en `contrato-mqtt.md` + **E17** en `evidencias-y-pendientes.md` + **archivado con referencia** |
 | 7. Copia archivada y secretos | Destino: `99-archivo/base-de-datos/originales/docs/hu11-emqx-serverless-pairing-readiness.md`. Sin secretos: menciona que no se tocaron credenciales ni `.env`. Sin redacciones |
-| 8. Evidencia y enlaces | Pendiente: PR documental. Actualizar `inventario-de-archivos.md:213`. Numerar la nueva entrada de evidencias después de las que añada el PR #5 |
+| 8. Evidencia y enlaces | Pendiente: PR documental. Actualizar `inventario-de-archivos.md:213`. La evidencia nueva se registró como E17 |
 
-**Textos propuestos para integrar (B.5), no aplicar hasta fusionar el PR #5:**
+**Textos integrados:**
 
 En `contrato-mqtt.md`:
 
@@ -419,12 +419,12 @@ En `migraciones-y-rollbacks.md`, «Cobertura de rollback»:
 | 2. Fecha, HU, baseline y estado | `c597a19`, `5d75ba4` (2026-10-16) y `08b88b5` (2026-10-22). Matriz funcional de roles de hogar. Estado: **vigente** en coherencia con el SQL de `018`; aprobación de producto no acreditada |
 | 3. Dependencias | `homes.fn_get_member_permissions`, `fn_set_member_permissions`, `fn_get_device_permissions`, `fn_set_device_permissions`; RLS de dispositivos y consumo |
 | 4. Enlaces | Sin enlaces. Citado por README BD (línea 14) e `inventario-de-archivos.md:223` |
-| 5. Comparación | `roles-y-permisos.md` tiene una tabla de comportamiento SQL y pide «acordar matriz funcional aprobada» y no mantener una segunda matriz independiente. **Único:** columna de administración (quién administra hogar, miembros, invitaciones y Shelly); «la consulta no concede control y el control no concede lectura»; las tablas internas no conceden DML directo a `smarthome_runtime_app`. **Sin contradicciones** con la tabla central. **Riesgo de duplicado:** el backend tiene su propio `docs/ROLES_Y_PERMISOS.md` y tu PR #5 modifica `roles-y-permisos.md`; consolidar en **una sola matriz** después de su fusión |
-| 6. Decisión | **Integrado** en `roles-y-permisos.md` (una sola matriz) + **archivado**. **Bloqueado para editar** hasta la fusión del PR #5 |
+| 5. Comparación | `roles-y-permisos.md` contiene la matriz canónica única. Se integró la columna de administración (quién administra hogar, miembros, invitaciones y Shelly), la independencia entre consulta y control, y la nota de que las tablas internas no conceden DML directo a `smarthome_runtime_app`. El documento backend enlaza la matriz canónica y conserva las reglas de implementación sin duplicarla. **Sin contradicciones** con la tabla central |
+| 6. Decisión | **Integrado** en `roles-y-permisos.md` (una sola matriz) + **archivado** |
 | 7. Copia y secretos | `originales/docs/roles-y-permisos.md`. Sin secretos |
 | 8. Evidencia | Pendiente. Actualizar `inventario-de-archivos.md:223` |
 
-**Texto propuesto (B.5, tras el PR #5).** Añadir a la tabla de `roles-y-permisos.md` la columna de administración del original (OWNER: administra hogar, miembros, invitaciones y dispositivos Shelly; MEMBER y GUEST: no administran) y esta frase:
+**Texto integrado en `roles-y-permisos.md`:** se añadió a la tabla la columna de administración del original (OWNER: administra hogar, miembros, invitaciones y dispositivos Shelly; MEMBER y GUEST: no administran), junto con la frase:
 
 > Consultar no concede control y controlar no concede lectura. OWNER gestiona los permisos mediante funciones SQL protegidas; las tablas internas no conceden DML directo a `smarthome_runtime_app`. Antecedente: [matriz de roles de la base de datos](originales/docs/roles-y-permisos.md).
 
@@ -588,8 +588,8 @@ git grep -n "if: false" -- .github/workflows/
 | 3 | Integrado + archivado | seguridad-y-permisos | No |
 | 4 | Integrado + archivado | modelo-de-datos | No |
 | 5 | Integrado + archivado | migraciones-y-rollbacks | No |
-| 6 | Integrado + archivado | contrato-mqtt o tls-y-namespace | **Sí** |
-| 7 | Integrado + pendiente + archivado | contrato-mqtt, evidencias-y-pendientes | **Sí** |
+| 6 | Integrado + archivado | contrato-mqtt | No |
+| 7 | Integrado + pendiente + archivado | contrato-mqtt, evidencias E17 | No |
 | 8 | Integrado + archivado | funciones-y-flujos | No |
 | 9 | Integrado + archivado | pruebas-y-verificacion | No |
 | 10 | Integrado + archivado | modelo-de-datos, migraciones-y-rollbacks | No |
@@ -599,7 +599,7 @@ git grep -n "if: false" -- .github/workflows/
 | 14 | Integrado + archivado | seguridad-y-permisos, migraciones-y-rollbacks | No |
 | 15 | Integrado + archivado | modelo-de-datos, migraciones-y-rollbacks | No |
 | 16 | Integrado + archivado | seguridad-y-permisos | No |
-| 17 | Integrado + archivado | roles-y-permisos | **Sí** |
+| 17 | Integrado + archivado | roles-y-permisos | No |
 | 18 | Integrado + archivado | despliegue | No |
 | 19 | Integrado + archivado | copias-de-seguridad | No |
 | 20 | Integrado + archivado | proceso-de-liberacion | No |

@@ -9,7 +9,7 @@ canonical_for:
 
 # Archivo de documentos de base de datos
 
-> **Histórico/no canónico.** Estas copias preservan las fuentes para trazabilidad; las páginas canónicas se enlazan en la tabla. Las fichas y decisiones siguen pendientes del PR documental.
+> **Histórico/no canónico.** Estas copias preservan las fuentes para trazabilidad; las páginas canónicas se enlazan en la tabla. Las fichas 6, 7 y 17 están integradas; las demás decisiones se mantienen según el manifiesto.
 
 | Ruta original | Copia archivada | Página canónica de destino | Estado de origen |
 | --- | --- | --- | --- |
