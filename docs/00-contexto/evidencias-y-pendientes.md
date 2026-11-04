@@ -37,7 +37,7 @@ La revisión no compiló ni ejecutó aplicaciones, migraciones, suites, brokers 
 
 ### E05 — Alertas y transacciones MQTT
 
-**Pendiente de reconciliación documental:** [contrato local MQTT](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/docs/MQTT_CONTRACT.md) describe evaluación de anomalías, actualización de métricas y emisión de alertas en un flujo transaccional. El análisis del suscriptor identifica helpers sin llamadas, notifications vacío y actualización de estado fuera de la transacción de consumo. No se afirma generación automática activa. Fuente de código y detalle: [referencia backend](../10-arquitectura/backend/referencia-tecnica.md).
+**Pendiente de reconciliación documental:** [contrato local MQTT](../99-archivo/backend/mqtt-contract-2026-10-15.md) describe evaluación de anomalías, actualización de métricas y emisión de alertas en un flujo transaccional. El análisis del suscriptor identifica helpers sin llamadas, notifications vacío y actualización de estado fuera de la transacción de consumo. No se afirma generación automática activa. Fuente de código y detalle: [referencia backend](../10-arquitectura/backend/referencia-tecnica.md). El 2026-11-03 la divergencia quedó registrada en la [conciliación del contrato MQTT](../20-contratos/mqtt/contrato-mqtt.md#conciliación-con-el-contrato-local-del-backend); sigue pendiente confirmarla con firmware y broker.
 
 ### E06 — Variables de refresh y despliegue
 
@@ -81,11 +81,25 @@ Se amplió el análisis a los 332 archivos de smarthome-database dev 6caed6b: 42
 
 El 2026-11-03 se copiaron al [archivo del backend](../99-archivo/backend/README.md) cuatro informes con fecha de corte de smarthome-backend `1cbaca2`, idénticos en `dev` `3bfce85`. Se comprobó por diff que el contenido coincide con el original salvo la nota de estado y los enlaces relativos.
 
-**Pendiente de coordinación:** los originales permanecen en el backend. Retirarlos o reemplazarlos por un enlace a la copia requiere acuerdo con el responsable de ese repositorio; no se modificó. Mientras tanto ambas versiones coexisten y la del backend es la de origen.
+**Pendiente de coordinación (cerrado, ver abajo):** los originales permanecían en el backend. Retirarlos o reemplazarlos por un enlace a la copia requiere acuerdo con el responsable de ese repositorio; no se modificó. Mientras tanto ambas versiones coexisten y la del backend es la de origen.
 
 **Verificado, límite registrado:** los enlaces relativos del informe 01 se fijaron a `dc1cbfc` y los de HU09 a `bc9d3ec`, últimos commits que modificaron cada documento, porque en `1cbaca2` varios archivos citados por rango de líneas cambiaron de tamaño. Los enlaces a `../smarthome-database/` apuntaban a una copia local anidada sin commit identificable; se fijaron a `6caed6b` y sus rangos de líneas son aproximados.
 
 **Pendiente de verificación:** la página oficial de configuración de NestJS enlazada desde la [implementación HU09](../99-archivo/backend/implementacion-hu09.md) no pudo consultarse desde el entorno de revisión. Se conserva como parte del texto histórico y figura en el manifiesto sin evidencia de lectura.
+
+**Cierre 2026-11-03.**
+
+- Revisión/commit: PR #18 de `smarthome-backend` (commit `5615d37`, merge `fea0254` en `dev`).
+- Evidencia ejecutada: `git diff --name-status 3bfce85 fea0254` en smarthome-backend muestra solo la eliminación de los cuatro informes y la modificación de `README.md`; `git cat-file -e fea0254:<ruta>` confirma que ninguno de los cuatro existe en `dev`.
+- Componentes contrastados: rama `dev` de smarthome-backend y el [archivo del backend](../99-archivo/backend/README.md).
+- Resultado: las copias archivadas son la única versión de los cuatro informes.
+- Acuerda el cierre: responsable del backend (`nataliachala1`), que revisó y fusionó el PR #18.
+
+## E16 — Copia de los nueve documentos restantes del backend
+
+El 2026-11-03 se copiaron a este repositorio los nueve documentos que quedaban en `docs/` de smarthome-backend (`dev` `fea0254`). La [matriz de migración](migracion-docs-backend.md) registra origen, destino, vigencia, conservación, enlaces, contradicciones y revisión de secretos.
+
+**Pendiente de revisión:** mientras existan los originales, los destinos son copias. Cada documento requiere aprobación (`APROBADO PARA RETIRO` o `BLOQUEADO`) antes de retirar los originales del backend. Hasta entonces ambas versiones coexisten.
 
 ## Cierre de un pendiente
 

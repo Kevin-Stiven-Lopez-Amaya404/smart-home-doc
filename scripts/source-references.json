@@ -4752,6 +4752,157 @@
       "evidence": "Path verified in complete Git tree at the commit that last modified the archived document"
     },
     {
+      "url": "https://docs.nestjs.com/security/rate-limiting",
+      "publisher": "NestJS",
+      "checked_on": "2026-11-03",
+      "evidence": "Link preserved from migrated document; external page not re-read in this review."
+    },
+    {
+      "url": "https://expressjs.com/en/guide/behind-proxies/",
+      "publisher": "Express",
+      "checked_on": "2026-11-03",
+      "evidence": "Link preserved from migrated document; external page not re-read in this review."
+    },
+    {
+      "url": "https://github.com/mqttjs/MQTT.js",
+      "publisher": "MQTT.js",
+      "checked_on": "2026-11-03",
+      "evidence": "Link preserved from migrated document; external page not re-read in this review."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/CONSUMPTION_METRICS_WORKER.md",
+      "repository": "nataliachala1/smarthome-backend",
+      "checked_on": "2026-11-03",
+      "commit": "fea02540ae12ed7501ae2b75f6216ab00411796a",
+      "path": "docs/CONSUMPTION_METRICS_WORKER.md",
+      "blob": "676b2e2bccf90cadca039204b862ef3574b890d2",
+      "evidence": "Path verified in complete Git tree at inspected commit"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/HU09_RATE_LIMITING.md",
+      "repository": "nataliachala1/smarthome-backend",
+      "checked_on": "2026-11-03",
+      "commit": "fea02540ae12ed7501ae2b75f6216ab00411796a",
+      "path": "docs/HU09_RATE_LIMITING.md",
+      "blob": "5e4dffbcd46a5822c825635c055a33804ecb7e81",
+      "evidence": "Path verified in complete Git tree at inspected commit"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/HU09_REALTIME_SECURITY.md",
+      "repository": "nataliachala1/smarthome-backend",
+      "checked_on": "2026-11-03",
+      "commit": "fea02540ae12ed7501ae2b75f6216ab00411796a",
+      "path": "docs/HU09_REALTIME_SECURITY.md",
+      "blob": "9f1c934020fb749668d370cbac22fa32bc2969fb",
+      "evidence": "Path verified in complete Git tree at inspected commit"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/HU09_SESSION_FAMILIES.md",
+      "repository": "nataliachala1/smarthome-backend",
+      "checked_on": "2026-11-03",
+      "commit": "fea02540ae12ed7501ae2b75f6216ab00411796a",
+      "path": "docs/HU09_SESSION_FAMILIES.md",
+      "blob": "a81494849e9c01bff4806814814a7a2948e79176",
+      "evidence": "Path verified in complete Git tree at inspected commit"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/HU10_MQTT_TLS_NAMESPACE.md",
+      "repository": "nataliachala1/smarthome-backend",
+      "checked_on": "2026-11-03",
+      "commit": "fea02540ae12ed7501ae2b75f6216ab00411796a",
+      "path": "docs/HU10_MQTT_TLS_NAMESPACE.md",
+      "blob": "430d11bb464edb1c947fe8e6aa81fe80129a755c",
+      "evidence": "Path verified in complete Git tree at inspected commit"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/HU16_CONSUMPTION_ACCESS.md",
+      "repository": "nataliachala1/smarthome-backend",
+      "checked_on": "2026-11-03",
+      "commit": "fea02540ae12ed7501ae2b75f6216ab00411796a",
+      "path": "docs/HU16_CONSUMPTION_ACCESS.md",
+      "blob": "f8ba0011caa1430f0bd15eb5c573a0b86e6f2e8b",
+      "evidence": "Path verified in complete Git tree at inspected commit"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/HU16_PAIRING_AP_SESSIONS.md",
+      "repository": "nataliachala1/smarthome-backend",
+      "checked_on": "2026-11-03",
+      "commit": "fea02540ae12ed7501ae2b75f6216ab00411796a",
+      "path": "docs/HU16_PAIRING_AP_SESSIONS.md",
+      "blob": "38429c6a130afce40f2d94a8828ca05484f85e28",
+      "evidence": "Path verified in complete Git tree at inspected commit"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/MQTT_CONTRACT.md",
+      "repository": "nataliachala1/smarthome-backend",
+      "checked_on": "2026-11-03",
+      "commit": "fea02540ae12ed7501ae2b75f6216ab00411796a",
+      "path": "docs/MQTT_CONTRACT.md",
+      "blob": "0755151e5ae33314e52ca7056fe9baeb74b4a4e2",
+      "evidence": "Path verified in complete Git tree at inspected commit"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/docs/ROLES_Y_PERMISOS.md",
+      "repository": "nataliachala1/smarthome-backend",
+      "checked_on": "2026-11-03",
+      "commit": "fea02540ae12ed7501ae2b75f6216ab00411796a",
+      "path": "docs/ROLES_Y_PERMISOS.md",
+      "blob": "b369f7d924322df4503d19f189db6cc5dae60e44",
+      "evidence": "Path verified in complete Git tree at inspected commit"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-backend/blob/fea02540ae12ed7501ae2b75f6216ab00411796a/src/modules/devices/infrastructure/messaging/mqtt-device-status.subscriber.ts",
+      "repository": "nataliachala1/smarthome-backend",
+      "checked_on": "2026-11-03",
+      "commit": "fea02540ae12ed7501ae2b75f6216ab00411796a",
+      "path": "src/modules/devices/infrastructure/messaging/mqtt-device-status.subscriber.ts",
+      "blob": "3f4854ab78cf7479dce3fa1bc74544b091af05be",
+      "evidence": "Path verified in complete Git tree at inspected commit"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-backend/tree/fea02540ae12ed7501ae2b75f6216ab00411796a",
+      "repository": "nataliachala1/smarthome-backend",
+      "checked_on": "2026-11-03",
+      "commit": "fea02540ae12ed7501ae2b75f6216ab00411796a",
+      "evidence": "Complete Git tree inspected"
+    },
+    {
+      "url": "https://shelly-api-docs.shelly.cloud/gen2/ComponentsAndServices/Mqtt/",
+      "publisher": "Shelly",
+      "checked_on": "2026-11-03",
+      "evidence": "Link preserved from migrated document; external page not re-read in this review."
+    },
+    {
+      "url": "https://shelly-api-docs.shelly.cloud/gen2/General/RPCChannels/",
+      "publisher": "Shelly",
+      "checked_on": "2026-11-03",
+      "evidence": "Link preserved from migrated document; external page not re-read in this review."
+    },
+    {
+      "url": "https://socket.io/docs/v4/handling-cors/",
+      "publisher": "Socket.IO",
+      "checked_on": "2026-11-03",
+      "evidence": "Link preserved from migrated document; external page not re-read in this review."
+    },
+    {
+      "url": "https://socket.io/docs/v4/middlewares/",
+      "publisher": "Socket.IO",
+      "checked_on": "2026-11-03",
+      "evidence": "Link preserved from migrated document; external page not re-read in this review."
+    },
+    {
+      "url": "https://www.postgresql.org/docs/16/explicit-locking.html",
+      "publisher": "PostgreSQL",
+      "checked_on": "2026-11-03",
+      "evidence": "Link preserved from migrated document; external page not re-read in this review."
+    },
+    {
+      "url": "https://www.prisma.io/docs/orm/fundamentals/transactions",
+      "publisher": "Prisma",
+      "checked_on": "2026-11-03",
+      "evidence": "Link preserved from migrated document; external page not re-read in this review."
+    },
+    {
       "url": "https://github.com/nataliachala1/smarthome-database/blob/39416a5c42d35f988689061ffca8a79f7fa21002/OPERACION_Y_RETENCION.md",
       "repository": "nataliachala1/smarthome-database",
       "checked_on": "2026-11-04",

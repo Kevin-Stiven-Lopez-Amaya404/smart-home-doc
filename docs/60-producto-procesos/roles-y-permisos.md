@@ -2,7 +2,7 @@
 title: Roles y permisos observados
 status: borrador
 owner: producto
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-03
 canonical_for:
   - roles-permisos
 ---
@@ -11,7 +11,7 @@ canonical_for:
 
 ## Fuente y autoridad
 
-Roles de hogar: OWNER, MEMBER y GUEST. No equivalen al rol global del usuario. La [regla documentada backend](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/docs/ROLES_Y_PERMISOS.md) y la [implementación SQL de permisos](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/018_household_permissions/001_household_permissions.sql) permiten contrastar reglas, sin acreditar aprobación formal de producto.
+Roles de hogar: OWNER, MEMBER y GUEST. No equivalen al rol global del usuario. La [regla documentada backend](../20-contratos/backend/roles-y-permisos.md) y la [implementación SQL de permisos](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/018_household_permissions/001_household_permissions.sql) permiten contrastar reglas, sin acreditar aprobación formal de producto.
 
 ## Comportamiento SQL identificado
 

@@ -2,7 +2,7 @@
 title: Operación
 status: borrador
 owner: documentacion
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-03
 canonical_for:
   - indice-40-operacion
 ---
@@ -18,6 +18,7 @@ Procedimientos y requisitos, sin acreditar servicios activos.
 - [Monitoreo y salud](monitoreo-y-salud.md)
 - [Copias de seguridad](copias-de-seguridad.md)
 - [Diagnóstico](solucion-de-problemas.md)
+- [Operación del backend](backend/README.md): worker de métricas de consumo
 
 ## Base de datos
 

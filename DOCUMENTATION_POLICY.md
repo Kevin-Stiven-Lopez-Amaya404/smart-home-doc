@@ -2,7 +2,7 @@
 title: Política documental y fuentes de verdad
 status: borrador
 owner: documentacion
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-03
 canonical_for:
   - politica-documental
 ---
@@ -30,7 +30,8 @@ Los enlaces concretos y revisiones están en el [mapa](docs/00-contexto/mapa-de-
 ## Reglas de mantenimiento
 
 1. Localizar el documento canónico antes de crear otro. Cada identificador `canonical_for` es único.
-2. Mantener README e instrucciones particulares junto al código. La central enlaza los detalles.
+2. Mantener README e instrucciones de ejecución junto al código. La central enlaza los detalles.
+   Excepción acordada en la Fase 1 (2026-11-03): la documentación técnica de smarthome-backend se centraliza en este repositorio y el backend no mantiene `docs/` ([matriz de migración](docs/00-contexto/migracion-docs-backend.md)). Cuando un cambio del backend altere comportamiento documentado, quien desarrolla el cambio actualiza el documento central en un PR enlazado al PR de código; la revisión documental la hace el rol de documentación.
 3. Una copia descriptiva solo se admite con propósito, commit, fecha, límites y mecanismo de actualización. La [referencia técnica del backend](docs/10-arquitectura/backend/referencia-tecnica.md) es una instantánea fija de consulta; actualizarla exige repetir el análisis y cambiar su revisión, nunca editar contratos para simular coincidencia.
    La [referencia de datos](docs/10-arquitectura/base-de-datos/README.md) sigue el mismo criterio: commit fijo, límites y repetición del análisis para actualizar modelo, diccionario, contratos e inventario. Los artefactos de extracción describen código, no un catálogo instalado.
 4. Mantener migraciones en base de datos y generar OpenAPI desde el backend.
