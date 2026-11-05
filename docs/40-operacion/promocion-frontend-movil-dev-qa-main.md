@@ -15,7 +15,7 @@ canonical_for:
 
 - `dev`: recibió el PR [#47](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/pull/47), que añade el check `Require dev to qa to main` y sus pruebas. Mobile CI aprobado.
 - `qa`: creada inicialmente desde `dev` en `075f69cff59d2523fd73f36807f76020ec06151a`; luego incorporó el PR [#48](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/pull/48) desde `dev` (commit merge `3b33d1057d6125dee37db8074fa2457670458196`). Confirmar el CI de la rama y pruebas físicas antes de aprobarla como versión candidata.
-- `main`: **no creada todavía**. Debe representar únicamente una versión validada. No crear una rama obsoleta que un sistema externo pueda desplegar accidentalmente.
+- `main`: **rama histórica provisional creada** desde el commit raíz `f1deb5331a07ef51dae213a20aa48c2a52fe1027` para abrir el PR de promoción `qa → main`; **no está lista ni desplegable como producción**. El [PR #49](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/pull/49) sigue **en borrador**. El CI del PR pasó, pero faltan pruebas físicas y la aprobación final.
 - PR históricos [#1](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/pull/1) y [#36](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/pull/36): abiertos, **no incluidos automáticamente**.
 - El workflow `Mobile CI` valida lint, TypeScript, suites funcionales y export Android JS; no sustituye APK nativa, backend real ni Shelly físico.
 
@@ -50,11 +50,11 @@ npx expo export --platform android --output-dir dist-qa
 
 No cambiar de rama si `git status` muestra trabajo no confirmado: guardar o respaldar los cambios antes. Los artefactos `dist-qa` no deben entrar en un PR; limpiar localmente o ignorarlos.
 
-## Primera creación de main (operación especial)
+## Creación de main (ya ejecutada como base histórica)
 
-No crear `main` desde `dev` para saltarse QA. Cuando QA cuente con **aprobación funcional y del responsable de release**, crear `main` usando un commit histórico antecesor verificado de `qa` únicamente si se necesita establecer la rama para abrir el PR `qa → main`. Antes de crearla, revisar dependencias de despliegue/automatizaciones que puedan dispararse al aparecer `main`. Un antecesor histórico no es un despliegue: no activar producción con ese árbol. Configurar Rulesets inmediatamente y promover `qa` por PR. No eliminar ni sobrescribir ramas.
+`main` se creó desde el primer commit `f1deb5331a07ef51dae213a20aa48c2a52fe1027` para abrir el [PR #49](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/pull/49). Se conservó toda la historia, sin push forzado ni promoción directa de `dev`. **No usar esta rama histórica para producir APK ni publicar OTA.** Debe completarse QA física, la revisión de EAS y la protección Rulesets antes de aprobar y fusionar `qa → main`. No eliminar ni sobrescribir ramas.
 
-## Configuración de protección en GitHub (pendiente)
+## Configuración de protección en GitHub (pendiente, incluso con PR #49 abierto)
 
 En `Settings → Rules → Rulesets`, aplicar a `qa` y `main`:
 

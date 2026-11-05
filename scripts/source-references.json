@@ -5387,6 +5387,12 @@
       "repository": "Kevin-Stiven-Lopez-Amaya404/from_movil",
       "checked_on": "2026-11-05",
       "evidence": "Open historical mobile QA document PR; excluded from automatic promotion"
+    },
+    {
+      "url": "https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/pull/49",
+      "repository": "Kevin-Stiven-Lopez-Amaya404/from_movil",
+      "checked_on": "2026-11-05",
+      "evidence": "Draft qa-to-main PR metadata verified, release-order and mobile CI checks successful; no physical QA or production deployment claimed"
     }
   ]
 }
