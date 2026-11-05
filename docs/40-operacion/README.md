@@ -14,6 +14,7 @@ Procedimientos y requisitos, sin acreditar servicios activos.
 ## Documentos
 
 - [Despliegue](despliegue.md)
+- [Promoción de ramas y liberación del frontend móvil](promocion-frontend-movil-dev-qa-main.md)
 - [Variables](variables-de-entorno.md)
 - [Monitoreo y salud](monitoreo-y-salud.md)
 - [Copias de seguridad](copias-de-seguridad.md)

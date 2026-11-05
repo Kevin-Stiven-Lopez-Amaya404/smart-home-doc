@@ -5363,6 +5363,30 @@
       "checked_on": "2026-11-04",
       "commit": "76ac5d0d1e73df086566cf610bf941d3efc8ccf1",
       "evidence": "Git tree inspected recursively (128 entries, not truncated)"
+    },
+    {
+      "url": "https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/pull/47",
+      "repository": "Kevin-Stiven-Lopez-Amaya404/from_movil",
+      "checked_on": "2026-11-05",
+      "evidence": "Merged mobile PR implementing the release promotion CI check; verified via GitHub PR metadata and CI"
+    },
+    {
+      "url": "https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/pull/48",
+      "repository": "Kevin-Stiven-Lopez-Amaya404/from_movil",
+      "checked_on": "2026-11-05",
+      "evidence": "Merged mobile dev-to-qa PR; verified via GitHub PR metadata and QA branch"
+    },
+    {
+      "url": "https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/pull/1",
+      "repository": "Kevin-Stiven-Lopez-Amaya404/from_movil",
+      "checked_on": "2026-11-05",
+      "evidence": "Open historical mobile PR; excluded from automatic promotion"
+    },
+    {
+      "url": "https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/pull/36",
+      "repository": "Kevin-Stiven-Lopez-Amaya404/from_movil",
+      "checked_on": "2026-11-05",
+      "evidence": "Open historical mobile QA document PR; excluded from automatic promotion"
     }
   ]
 }
