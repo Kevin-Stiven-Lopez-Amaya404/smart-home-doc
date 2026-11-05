@@ -22,6 +22,7 @@ canonical_for:
 
 - [Backend](10-arquitectura/backend/referencia-tecnica.md).
 - [Base de datos](10-arquitectura/base-de-datos/README.md).
+- [Archivo histórico del frontend móvil](99-archivo/movil/README.md).
 
 ## Fuentes y estado
 

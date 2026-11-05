@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "source_repository": "Kevin-Stiven-Lopez-Amaya404/from_movil",
+  "source_commit": "46845ffb908c11e250596368bc73651ba5ef56e7",
+  "archive_date": "2026-11-04",
+  "source_hash_type": "git-blob-sha1 (sha of original)",
+  "archive_transformation": "Replace known example e-mail/password matches with [DATO_DE_DEMOSTRACION_REDACTADO]; preserve remaining source text; .md sources saved as .txt; no Git history rewrite",
+  "files": [
+    {
+      "origen": "docs/README.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_README_md.txt",
+      "git_blob_origen": "640e23b0628a247edad3c6267a24154b3571cbb2",
+      "referencias_demo_redactadas": 2
+    },
+    {
+      "origen": "docs/ACTIVIDAD_IDENTIDAD_VISUAL_SMART_HOME.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_ACTIVIDAD_IDENTIDAD_VISUAL_SMART_HOME_md.txt",
+      "git_blob_origen": "e07113fea0be91091fd7f0ed006d17538d566fcf",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/DOCUMENTACION_CODIGO_PANTALLAS_SMART_HOME.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_DOCUMENTACION_CODIGO_PANTALLAS_SMART_HOME_md.txt",
+      "git_blob_origen": "a34b3c5052a44bdc363c2a34bcef40f69d6e1eaa",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/DOCUMENTACION_PROYECTO_SMART_HOME.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_DOCUMENTACION_PROYECTO_SMART_HOME_md.txt",
+      "git_blob_origen": "21bed4b6bc60407af820e52a50d27019bac8a0d7",
+      "referencias_demo_redactadas": 2
+    },
+    {
+      "origen": "docs/FLUJO_FINAL.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_FLUJO_FINAL_md.txt",
+      "git_blob_origen": "a51bf3ef6e2df3d45979d0c748e8137fecc1deff",
+      "referencias_demo_redactadas": 6
+    },
+    {
+      "origen": "docs/FLUJO_USUARIO.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_FLUJO_USUARIO_md.txt",
+      "git_blob_origen": "6f2fbf59cd96185a7b51e7c976cddcb28b1e56c1",
+      "referencias_demo_redactadas": 4
+    },
+    {
+      "origen": "docs/GUIA_RAPIDA.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_GUIA_RAPIDA_md.txt",
+      "git_blob_origen": "2b81051b5cab2db4b1d123a0ca220f3a1cbab41a",
+      "referencias_demo_redactadas": 4
+    },
+    {
+      "origen": "docs/MEJORAS_INSTRUCTOR.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_MEJORAS_INSTRUCTOR_md.txt",
+      "git_blob_origen": "d9aaa06f111cb82667517bd1ede1a3470674e145",
+      "referencias_demo_redactadas": 2
+    },
+    {
+      "origen": "docs/PROJECT_DOCUMENTATION.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_PROJECT_DOCUMENTATION_md.txt",
+      "git_blob_origen": "c034973c0cdb18e5bd9ad625da110b72da854e87",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/PROJECT_FLOW.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_PROJECT_FLOW_md.txt",
+      "git_blob_origen": "48ba3601a5bb5953efd141d0902c1df30b24d967",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/RESUMEN.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_RESUMEN_md.txt",
+      "git_blob_origen": "ff53edc45d9a72a7b5956c1c6655c46482a2ea4e",
+      "referencias_demo_redactadas": 2
+    },
+    {
+      "origen": "docs/auditoria/auditoria-componentes-fase-2.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_auditoria_auditoria-componentes-fase-2_md.txt",
+      "git_blob_origen": "a4ec7594c3d23fab1ebc68ad96e8bb77ad9b75de",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/auditoria/inventario-colores.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_auditoria_inventario-colores_md.txt",
+      "git_blob_origen": "7a0273b88301f59ec526def251aa96f2afbd4cb7",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/auditoria/mobile-frontend-audit.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_auditoria_mobile-frontend-audit_md.txt",
+      "git_blob_origen": "5e3106b73e504392296679181e16929a55c0424c",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/auditoria/secondary-screens-review.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_auditoria_secondary-screens-review_md.txt",
+      "git_blob_origen": "a15d3e0a574166cfc9840ecbbcb1c89ab32716b9",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/components/README.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_components_README_md.txt",
+      "git_blob_origen": "85d19f62b4ba1b8cd8d34045af6634a0f47c22bc",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/components/common.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_components_common_md.txt",
+      "git_blob_origen": "b9d938af44ee890707fed85f5a6df93f8c430811",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/components/dashboard.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_components_dashboard_md.txt",
+      "git_blob_origen": "0f5ac672daeba18d732ea9e0667f5beb2f9fb1b7",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/components/homes.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_components_homes_md.txt",
+      "git_blob_origen": "46b756b3fcd4bd530b1b7f7fed776bda35a31ada",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/components/icons.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_components_icons_md.txt",
+      "git_blob_origen": "d03222982e814a5d0a9ca80712e5a99d3dc32a07",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/components/navigation.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_components_navigation_md.txt",
+      "git_blob_origen": "3db6ce32aac6f04539631762bfb1dbb6e9983654",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/components/profile.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_components_profile_md.txt",
+      "git_blob_origen": "ce0094c47169c82b5c83154829e8c81b0868ea78",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/components/settings.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_components_settings_md.txt",
+      "git_blob_origen": "a26e4b92e1b58c42062bf32f9a6b45d96a0b8d08",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "app/(tabs)/README_PANTALLAS.md",
+      "archivo": "docs/99-archivo/movil/originales/app_tabs_README_PANTALLAS_md.txt",
+      "git_blob_origen": "36b20c3f8965ee5b74f8e45b498e134de2e5fc12",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/BACKEND_CONNECTION.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_BACKEND_CONNECTION_md.txt",
+      "git_blob_origen": "7d3171ab19328842066224affc471194ec97c8fb",
+      "referencias_demo_redactadas": 0
+    },
+    {
+      "origen": "docs/BLE_POC_ANDROID.md",
+      "archivo": "docs/99-archivo/movil/originales/docs_BLE_POC_ANDROID_md.txt",
+      "git_blob_origen": "4110bf5906f96350b0b8115da152bb65c984ceb5",
+      "referencias_demo_redactadas": 0
+    }
+  ]
+}
