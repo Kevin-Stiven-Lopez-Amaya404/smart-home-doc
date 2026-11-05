@@ -5329,6 +5329,40 @@
       "checked_on": "2026-11-04",
       "commit": "0dc85b0d0215ded9004c69881a095bb99461ebf5",
       "evidence": "Public repository tree opened in browser at the pinned commit; repository root listing loads"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-frontend-web/blob/76ac5d0d1e73df086566cf610bf941d3efc8ccf1/AUDITORIA_TECNICA_FRONTEND_2026-10-25.md",
+      "repository": "nataliachala1/smarthome-frontend-web",
+      "checked_on": "2026-11-04",
+      "commit": "76ac5d0d1e73df086566cf610bf941d3efc8ccf1",
+      "path": "AUDITORIA_TECNICA_FRONTEND_2026-10-25.md",
+      "blob": "42ac0148b14b5f6834fd78571c2ca9d79d42b1ce",
+      "evidence": "Path and blob verified from the complete dev Git tree; original retained until archival verification"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-frontend-web/blob/76ac5d0d1e73df086566cf610bf941d3efc8ccf1/FRONTEND_WEB_REFACTOR_PLAN.md",
+      "repository": "nataliachala1/smarthome-frontend-web",
+      "checked_on": "2026-11-04",
+      "commit": "76ac5d0d1e73df086566cf610bf941d3efc8ccf1",
+      "path": "FRONTEND_WEB_REFACTOR_PLAN.md",
+      "blob": "221bf4b4a78acdd3bffa1dc774a15084add890a8",
+      "evidence": "Path and blob verified from the complete dev Git tree; original retained until archival verification"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-frontend-web/blob/76ac5d0d1e73df086566cf610bf941d3efc8ccf1/Informe_Auditoria_SmartHome_Frontend_Backend_2026-10-08.md",
+      "repository": "nataliachala1/smarthome-frontend-web",
+      "checked_on": "2026-11-04",
+      "commit": "76ac5d0d1e73df086566cf610bf941d3efc8ccf1",
+      "path": "Informe_Auditoria_SmartHome_Frontend_Backend_2026-10-08.md",
+      "blob": "85afe8a8a52c7297d221b5b8dfb363857099fdfa",
+      "evidence": "Path and blob verified from the complete dev Git tree; original retained until archival verification"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-frontend-web/tree/76ac5d0d1e73df086566cf610bf941d3efc8ccf1",
+      "repository": "nataliachala1/smarthome-frontend-web",
+      "checked_on": "2026-11-04",
+      "commit": "76ac5d0d1e73df086566cf610bf941d3efc8ccf1",
+      "evidence": "Git tree inspected recursively (128 entries, not truncated)"
     }
   ]
 }
