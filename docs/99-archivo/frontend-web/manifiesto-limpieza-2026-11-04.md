@@ -2,7 +2,7 @@
 title: Manifiesto de limpieza documental del frontend web
 status: borrador
 owner: documentacion
-last_reviewed: 2026-11-04
+last_reviewed: 2026-11-05
 canonical_for:
   - manifiesto-limpieza-frontend-web
 ---
@@ -11,7 +11,7 @@ canonical_for:
 
 ## Alcance y base
 
-La aplicación fuente es `nataliachala1/smarthome-frontend-web` en `dev`, commit `76ac5d0d1e73df086566cf610bf941d3efc8ccf1`. Esta revisión no modifica el código, no acredita build ni prueba funcional y no autoriza borrar documentos antes de una copia verificada. Repositorio de destino: `Kevin-Stiven-Lopez-Amaya404/smart-home-doc`, rama base `main`.
+La aplicación fuente es `nataliachala1/smarthome-frontend-web` en `dev`, commit `76ac5d0d1e73df086566cf610bf941d3efc8ccf1`. El manifiesto registra acciones verificadas sin asumir que el traslado histórico esté completo. No autoriza borrar los tres informes originales antes de una copia verificada. Repositorio de destino: `Kevin-Stiven-Lopez-Amaya404/smart-home-doc`, rama base `main`.
 
 ## Clasificación comprobada
 
@@ -38,8 +38,17 @@ La aplicación fuente es `nataliachala1/smarthome-frontend-web` en `dev`, commit
 6. Desde `web/`, ejecutar `npm ci`, `npm run lint`, `npm run typecheck`, `npm run test:contracts` y `npm run build`; además validar imagen Docker y rutas.
 7. Abrir PR web contra `dev` y verificar CI antes de fusionar.
 
+## Avance verificado al 2026-11-05
+
+- En el fork `Kevin-Stiven-Lopez-Amaya404/smarthome-frontend-web` se creó `dev` desde el commit original `76ac5d0` y la rama `chore/limpieza-frontend-web-2026-11-05`.
+- PR del fork #1: retiró `AUDITORIA_FRONTEND_SMARTHOME.md`, el lockfile huérfano de raíz, la plantilla genérica de `web/guidelines/` y el CSS vacío; actualizó README.
+- El commit `503f188e` restringió publicación GHCR a pushes de `dev` del upstream original, para no publicar automáticamente desde el fork.
+- Validación del commit `503f188e`: GitHub Actions `validate` aprobó instalación npm, lint, typecheck, contratos, Vite build, Docker build y smoke test. Resultado: `41971736329`.
+- Los tres informes históricos de esta tabla siguen en el frontend; se publicaron fichas resumidas enlazadas al archivo original, **no copias íntegras**.
+- El PR #1 del fork y este PR documental continúan en borrador; no hay fusión a `nataliachala1/smarthome-frontend-web/dev`.
+
 ## Incidencias abiertas
 
 - La copia automática del documento histórico fue bloqueada; **originales intactos**.
-- No existe todavía un PR de limpieza del repositorio web ni resultados de pruebas posteriores.
+- El PR de limpieza del fork ya existe y su CI pasó; falta integración al upstream y completar la migración documental literal.
 - Los PR preexistentes del frontend no forman parte de este traslado; no fusionarlos por efecto colateral.

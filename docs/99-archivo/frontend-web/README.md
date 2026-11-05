@@ -2,7 +2,7 @@
 title: Archivo documental del frontend web
 status: borrador
 owner: documentacion
-last_reviewed: 2026-11-04
+last_reviewed: 2026-11-05
 canonical_for:
   - archivo-frontend-web
 ---
@@ -20,6 +20,14 @@ Este directorio prepara el traslado de informes históricos del repositorio [sma
 | [AUDITORIA_TECNICA_FRONTEND_2026-10-25.md](https://github.com/nataliachala1/smarthome-frontend-web/blob/76ac5d0d1e73df086566cf610bf941d3efc8ccf1/AUDITORIA_TECNICA_FRONTEND_2026-10-25.md) | Auditoría histórica | `42ac0148b14b5f6834fd78571c2ca9d79d42b1ce` |
 | [FRONTEND_WEB_REFACTOR_PLAN.md](https://github.com/nataliachala1/smarthome-frontend-web/blob/76ac5d0d1e73df086566cf610bf941d3efc8ccf1/FRONTEND_WEB_REFACTOR_PLAN.md) | Propuesta de refactorización (no implementación certificada) | `221bf4b4a78acdd3bffa1dc774a15084add890a8` |
 | [Informe_Auditoria_SmartHome_Frontend_Backend_2026-10-08.md](https://github.com/nataliachala1/smarthome-frontend-web/blob/76ac5d0d1e73df086566cf610bf941d3efc8ccf1/Informe_Auditoria_SmartHome_Frontend_Backend_2026-10-08.md) | Auditoría transversal histórica | `85afe8a8a52c7297d221b5b8dfb363857099fdfa` |
+
+## Fichas de lectura verificadas (no copias originales)
+
+- [Auditoría técnica de 2026-10-25](ficha-auditoria-tecnica-2026-10-25.md): alcance, hallazgos y estado histórico de PR.
+- [Propuesta de refactorización web](ficha-plan-refactorizacion.md): alcance y fases propuestas, sin considerarlas implementadas.
+- [Auditoría transversal de 2026-10-08](ficha-auditoria-transversal-2026-10-08.md): riesgos históricos de integración web/backend.
+
+Estas tres fichas preservan contexto y enlaces por commit; **no acreditan que se haya completado el traslado literal**.
 
 ## Procedimiento
 
