@@ -44,11 +44,15 @@ La aplicación fuente es `nataliachala1/smarthome-frontend-web` en `dev`, commit
 - PR del fork #1: retiró `AUDITORIA_FRONTEND_SMARTHOME.md`, el lockfile huérfano de raíz, la plantilla genérica de `web/guidelines/` y el CSS vacío; actualizó README.
 - El commit `503f188e` restringió publicación GHCR a pushes de `dev` del upstream original, para no publicar automáticamente desde el fork.
 - Validación del commit `503f188e`: GitHub Actions `validate` aprobó instalación npm, lint, typecheck, contratos, Vite build, Docker build y smoke test. Resultado: `41971736329`.
-- Los tres informes históricos de esta tabla siguen en el frontend; se publicaron fichas resumidas enlazadas al archivo original, **no copias íntegras**.
+- Los tres informes originales siguen en el frontend y sus copias completas están verificadas en el archivo documental.
 - El PR #1 del fork y este PR documental continúan en borrador; no hay fusión a `nataliachala1/smarthome-frontend-web/dev`.
 
 ## Incidencias abiertas
 
-- La copia automática del documento histórico fue bloqueada; **originales intactos**.
+- La copia directa por integración fue bloqueada; las copias completas se obtuvieron y verificaron mediante Git local.
 - El PR de limpieza del fork ya existe y su CI pasó; falta integración al upstream y completar la migración documental literal.
 - Los PR preexistentes del frontend no forman parte de este traslado; no fusionarlos por efecto colateral.
+
+## Preservacion completa verificada
+
+Los tres documentos se conservan en [originales/](originales/README.md), con hashes Git coincidentes. Los originales no se han eliminado.

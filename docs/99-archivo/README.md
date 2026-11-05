@@ -14,7 +14,7 @@ Retiro de referencias con preservación de historial.
 ## Documentos
 
 - [Archivo del backend](backend/README.md): copia archivada de cuatro informes históricos de `smarthome-backend`, del 2026-11-03. Los originales se retiraron del backend en el PR #18 (merge `fea0254`). También contiene una copia del contrato MQTT local, conciliado en el contrato central; su original sigue en el backend hasta el retiro registrado en E16.
-- [Archivo del frontend web](frontend-web/README.md): inventario de documentos históricos, origen verificado y manifiesto de limpieza; copias íntegras aún pendientes.
+- [Archivo del frontend web](frontend-web/README.md): inventario de documentos históricos, origen verificado y manifiesto de limpieza; copias completas verificadas en esta rama.
 - [Archivo de frontend móvil](movil/README.md): copias sanitizadas de 26 documentos de `from_movil` con manifiesto, fecha y hash de origen.
 - [Archivo de base de datos](base-de-datos/README.md): copias archivadas y manifiesto de migración de `smarthome-database`.
 

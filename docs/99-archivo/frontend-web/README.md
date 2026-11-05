@@ -13,7 +13,7 @@ Este directorio prepara el traslado de informes históricos del repositorio [sma
 
 ## Estado real
 
-**Pendiente de copia íntegra.** Los archivos enumerados se han localizado en el commit fuente, pero **no** han sido copiados aquí ni eliminados del repositorio web. Un intento de copia por integración fue rechazado. No considerar completada la migración ni cerrar los pasos de preservación.
+**Copias completas verificadas.** Los tres informes se conservan en [originales/](originales/README.md), con hashes Git idénticos a los de origen. Los originales permanecen en el frontend.
 
 | Origen (rama dev, commit fijo) | Clasificación | Blob Git de origen |
 | --- | --- | --- |
