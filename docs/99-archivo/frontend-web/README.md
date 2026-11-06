@@ -9,7 +9,7 @@ canonical_for:
 
 # Archivo documental del frontend web
 
-Este directorio prepara el traslado de informes históricos del repositorio [smarthome-frontend-web](https://github.com/nataliachala1/smarthome-frontend-web/tree/76ac5d0d1e73df086566cf610bf941d3efc8ccf1) a **smart-home-doc** (singular). La arquitectura web vigente ya se describe en [frontend-web.md](../../10-arquitectura/frontend-web.md); no reemplazarla por informes históricos.
+Este directorio prepara el traslado de informes históricos del repositorio [smarthome-frontend-web](https://github.com/nataliachala1/smarthome-frontend-web/tree/76ac5d0d1e73df086566cf610bf941d3efc8ccf1) a **smart-home-doc** (singular). La arquitectura web vigente ya se describe en [frontend-web.md](../../10-arquitectura/web/README.md); no reemplazarla por informes históricos.
 
 ## Estado real
 

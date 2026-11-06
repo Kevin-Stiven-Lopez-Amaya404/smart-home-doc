@@ -31,4 +31,4 @@ Sus apartados examinan arquitectura y carpetas, rutas, componentes, API, Socket.
 
 Es una **propuesta histórica**. Las rutas, carpetas y descripciones de problemas que enumera necesitan contrastarse con `dev` vigente antes de usarse como tareas; no indican que esos defectos persistan o que las acciones estén aprobadas. Esta ficha no introduce nuevos requisitos ni modifica código.
 
-Ver [arquitectura web](../../10-arquitectura/frontend-web.md) y [manifiesto de limpieza](manifiesto-limpieza-2026-11-04.md).
+Ver [arquitectura web](../../10-arquitectura/web/README.md) y [manifiesto de limpieza](manifiesto-limpieza-2026-11-04.md).

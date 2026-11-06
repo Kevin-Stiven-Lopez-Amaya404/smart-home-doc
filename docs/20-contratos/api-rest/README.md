@@ -2,7 +2,7 @@
 title: Contrato de API REST
 status: borrador
 owner: backend
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-05
 canonical_for:
   - contrato-rest
 ---
@@ -11,11 +11,15 @@ canonical_for:
 
 ## Fuente de implementación
 
-El backend fija las rutas en controladores y valida DTO mediante ValidationPipe con whitelist, forbidNonWhitelisted y transform. Los servicios y adaptadores determinan respuestas y errores. La [referencia técnica](../../10-arquitectura/backend/referencia-tecnica.md#2-endpoints-y-contratos-de-api) recoge las **71 declaraciones de rutas de aplicación identificadas: 67 ordinarias y 4 condicionales**, con parámetros, cabeceras, respuestas, códigos y ejemplos deducibles del código. No es un resultado de solicitudes ejecutadas.
+El backend fija las rutas en controladores y valida DTO mediante ValidationPipe con whitelist, forbidNonWhitelisted y transform. Los servicios y adaptadores determinan respuestas y errores. El corte actual `dev` `60297c3` declara 77 handlers: 71 ordinarios de `/api/v1`, dos de salud fuera de ese prefijo y cuatro MQTT condicionales. El `GET /` del controlador raíz sigue excluido porque no se registra en `AppModule`. El detalle estático no acredita solicitudes ejecutadas.
 
 El GET / del AppController no registrado queda excluido. Las rutas de salud están fuera de /api/v1. No todas las rutas declaradas están disponibles en cualquier perfil.
 
-Fuentes: [bootstrap y Swagger](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/src/main.ts), [inventario de endpoints](../../10-arquitectura/backend/referencia-tecnica.md#2-endpoints-y-contratos-de-api).
+Fuentes: [bootstrap y Swagger histórico](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/src/main.ts), [AppModule actual](https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/app.module.ts), [inventario base de endpoints](../../10-arquitectura/backend/referencia-tecnica.md#2-endpoints-y-contratos-de-api) y [contrato REST de energía](energia.md).
+
+## Contratos específicos
+
+- [Energía del hogar](energia.md): resumen, tarifas vigentes e históricas, presupuesto y meta mensual.
 
 ## OpenAPI: generación pendiente
 

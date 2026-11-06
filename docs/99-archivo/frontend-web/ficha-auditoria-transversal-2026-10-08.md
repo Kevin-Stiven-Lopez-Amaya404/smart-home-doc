@@ -28,4 +28,4 @@ El documento además recoge rutas públicas y privadas, una matriz de integraci�
 
 **No se puede afirmar que H1–H14 sigan presentes** sin volver a contrastar el código actual. El propio informe distinguía riesgos de efectos demostrados y no certificó una instalación productiva. Sus referencias a secretos de ejemplo requieren revisión antes de publicar copias literales; no reproducimos valores de configuración en esta ficha.
 
-Ver [arquitectura web](../../10-arquitectura/frontend-web.md), [archivo web](README.md) y [manifiesto](manifiesto-limpieza-2026-11-04.md).
+Ver [arquitectura web](../../10-arquitectura/web/README.md), [archivo web](README.md) y [manifiesto](manifiesto-limpieza-2026-11-04.md).

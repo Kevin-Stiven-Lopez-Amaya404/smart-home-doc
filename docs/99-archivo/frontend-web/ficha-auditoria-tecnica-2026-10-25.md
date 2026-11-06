@@ -25,4 +25,4 @@ Fuente íntegra: [AUDITORIA_TECNICA_FRONTEND_2026-10-25.md](https://github.com/n
 
 El documento fue escrito el 2026-10-25 y cita commits, PR y resultados de CI de ese corte. **Sus afirmaciones de estado no son un informe actual del proyecto**. No utilizar sus listados históricos como prueba de que una vulnerabilidad sigue abierta, de que un PR sigue en Draft o de que una corrección está fusionada hoy.
 
-Fuente de verdad para comportamiento actual: código y pruebas del repositorio web; arquitectura central en [frontend-web.md](../../10-arquitectura/frontend-web.md). El retiro del original sigue pendiente según [manifiesto](manifiesto-limpieza-2026-11-04.md).
+Fuente de verdad para comportamiento actual: código y pruebas del repositorio web; arquitectura central en [frontend-web.md](../../10-arquitectura/web/README.md). El retiro del original sigue pendiente según [manifiesto](manifiesto-limpieza-2026-11-04.md).

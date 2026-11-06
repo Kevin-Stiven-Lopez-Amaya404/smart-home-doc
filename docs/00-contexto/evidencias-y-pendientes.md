@@ -2,7 +2,7 @@
 title: Evidencias, discrepancias y pendientes
 status: borrador
 owner: documentacion
-last_reviewed: 2026-11-04
+last_reviewed: 2026-11-05
 canonical_for:
   - registro-evidencias
 ---
@@ -41,7 +41,7 @@ La revisión no compiló ni ejecutó aplicaciones, migraciones, suites, brokers 
 
 ### E06 — Variables de refresh y despliegue
 
-**Pendiente de configuración coordinada:** JWT_REFRESH_SECRET y JWT_REFRESH_EXPIRES_IN en ejemplos no determinan el refresh opaco actual; el Compose productivo todavía exige JWT_REFRESH_SECRET. Usar consumidores reales y revisar antes del despliegue. Fuentes: [catálogo](../40-operacion/variables-de-entorno.md), [Compose](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docker-compose.production.yml).
+**Actualización:** `JWT_REFRESH_SECRET` y `JWT_REFRESH_EXPIRES_IN` siguen en el ejemplo backend y no determinan el refresh opaco actual. El Compose actual de base de datos ya no requiere esas variables: ejecuta Liquibase `validate` contra PostgreSQL existente y no configura el backend. Revisar el entorno real del backend por separado antes de desplegar. Fuentes: [catálogo](../40-operacion/variables-de-entorno.md), [Compose productivo actual](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/docker-compose.production.yml).
 
 ### E07 — Permisos HTTP/SQL frente a realtime
 
@@ -57,9 +57,7 @@ La revisión no compiló ni ejecutó aplicaciones, migraciones, suites, brokers 
 
 ### E10 — Gate de despliegue contradictorio
 
-**Riesgo verificado en configuración:** [guía CI/CD](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docs/deployment/CICD.md) afirma que los tres jobs de deploy están deshabilitados. Los workflows de [datos](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/.github/workflows/ci-deploy.yml) y [web](https://github.com/nataliachala1/smarthome-frontend-web/blob/8dad6e1f805db958e1e650379ae1dd6cce3c4d57/.github/workflows/ci-deploy.yml) tienen if: false. El [workflow backend](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/.github/workflows/ci-deploy.yml) no lo tiene: después de validar/publicar puede llamar al webhook si están configurados DOKPLOY_DEPLOY_WEBHOOK y DEPLOYMENT_HEALTH_URL; si faltan, omite el despliegue.
-
-No se inspeccionaron secretos ni ejecuciones y no se afirma que haya desplegado. Resolver coordinación antes de publicar cambios a ramas que disparen esos jobs. Un grupo concurrency homónimo no coordina repositorios distintos.
+**Actualización al 2026-11-05:** el workflow backend `ci-deploy.yml` fue retirado y `ci-dev.yml`/`pr-validate-dev.yml` validan sin publicar imagen ni desplegar. Base de datos reemplazó su workflow por `ci-dev.yml`, que valida y aplica a PostgreSQL 18 desechable en CI, pero no despliega. Web permite promoción `dev -> qa -> main`, valida y publica imagen solo desde push a `main`; el job `deploy` sigue con `if: false`. No se inspeccionaron secretos ni ejecuciones, y no se afirma que haya desplegado. Fuentes: [backend CI DEV](https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/.github/workflows/ci-dev.yml), [database CI DEV](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/.github/workflows/ci-dev.yml) y [workflow web](https://github.com/nataliachala1/smarthome-frontend-web/blob/7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac/.github/workflows/ci-deploy.yml).
 
 ### E11 — Salud y backup insuficientes para declarar operación
 
@@ -75,25 +73,21 @@ OpenAPI generado; firmware y ACL del broker; versiones desplegadas; cookies Andr
 
 ## E14 — Revisión técnica de base de datos
 
-Se amplió el análisis a los 332 archivos de smarthome-database dev 6caed6b: 42 changelogs y 96 changesets localizados. La [referencia central](../10-arquitectura/base-de-datos/README.md) documenta modelo, contratos SQL y configuración. Los [hallazgos DB01–DB12](../10-arquitectura/base-de-datos/hallazgos-y-pendientes.md) registran diferencias de README, rollback, SQL028, wrappers, CI, diagnóstico y permisos. No se ejecutó la base ni se modificó su checkout local.
+La revisión anterior cubrió 332 archivos de smarthome-database `dev` `6caed6b`: 42 changelogs y 96 changesets. El corte `3b20c91` añade SQL035–SQL037 y llega a 45 changelogs/99 changesets, con `consumption.mqtt_ingest_dedup`. La [referencia central](../10-arquitectura/base-de-datos/README.md) actualiza migraciones y modelo; el JSON estructural sigue siendo snapshot `6caed6b`. No se ejecutó la base ni se modificó un checkout de implementación.
 
 ## E15 — Copia archivada de informes del backend
 
 El 2026-11-03 se copiaron al [archivo del backend](../99-archivo/backend/README.md) cuatro informes con fecha de corte de smarthome-backend `1cbaca2`, idénticos en `dev` `3bfce85`. Se comprobó por diff que el contenido coincide con el original salvo la nota de estado y los enlaces relativos.
 
-**Pendiente de coordinación (cerrado, ver abajo):** los originales permanecían en el backend. Retirarlos o reemplazarlos por un enlace a la copia requiere acuerdo con el responsable de ese repositorio; no se modificó. Mientras tanto ambas versiones coexisten y la del backend es la de origen.
+**Pendiente de coordinación:** los originales permanecen en el backend. Retirarlos o reemplazarlos por un enlace a la copia requiere acuerdo con el responsable de ese repositorio; no se modificó. Mientras tanto ambas versiones coexisten y la del backend es la de origen.
 
 **Verificado, límite registrado:** los enlaces relativos del informe 01 se fijaron a `dc1cbfc` y los de HU09 a `bc9d3ec`, últimos commits que modificaron cada documento, porque en `1cbaca2` varios archivos citados por rango de líneas cambiaron de tamaño. Los enlaces a `../smarthome-database/` apuntaban a una copia local anidada sin commit identificable; se fijaron a `6caed6b` y sus rangos de líneas son aproximados.
 
 **Pendiente de verificación:** la página oficial de configuración de NestJS enlazada desde la [implementación HU09](../99-archivo/backend/implementacion-hu09.md) no pudo consultarse desde el entorno de revisión. Se conserva como parte del texto histórico y figura en el manifiesto sin evidencia de lectura.
 
-**Cierre 2026-11-03.**
+## Cierre de un pendiente
 
-- Revisión/commit: PR #18 de `smarthome-backend` (commit `5615d37`, merge `fea0254` en `dev`).
-- Evidencia ejecutada: `git diff --name-status 3bfce85 fea0254` en smarthome-backend muestra solo la eliminación de los cuatro informes y la modificación de `README.md`; `git cat-file -e fea0254:<ruta>` confirma que ninguno de los cuatro existe en `dev`.
-- Componentes contrastados: rama `dev` de smarthome-backend y el [archivo del backend](../99-archivo/backend/README.md).
-- Resultado: las copias archivadas son la única versión de los cuatro informes.
-- Acuerda el cierre: responsable del backend (`nataliachala1`), que revisó y fusionó el PR #18.
+Añadir revisión/commit, evidencia ejecutada, componentes contrastados, resultado y persona/rol que acuerda el cierre. Modificar el estado solo cuando exista esa evidencia.
 
 ## E16 — Copia de los nueve documentos restantes del backend
 
@@ -105,8 +99,10 @@ El 2026-11-03 se copiaron a este repositorio los nueve documentos que quedaban e
 
 **Pendiente de contraste:** el antecedente HU11 de la base de datos (2026-10-15) registra EMQX Cloud Serverless como proveedor confirmado para producción; el backend se probó con Mosquitto Dynamic Security y `dev` de la base de datos incluye releases de ingesta flespi (`035`, `036`). No se decide aquí el broker de producción. Las decisiones de producto que enumera ese antecedente (vinculación solo OWNER, recuperación en el mismo hogar, transferencia entre hogares bloqueada en el MVP, conservación de históricos, sin apagado físico automático) no tienen aprobación acreditada. Fuente: [antecedente HU11](../99-archivo/base-de-datos/originales/docs/hu11-emqx-serverless-pairing-readiness.md).
 
-## Cierre de un pendiente
+## E18 — Revisión de alineación 2026-11-05
 
-Añadir revisión/commit, evidencia ejecutada, componentes contrastados, resultado y persona/rol que acuerda el cierre. Modificar el estado solo cuando exista esa evidencia.
+Se contrastaron los cortes backend `60297c3`, database `3b20c91` y web `7b9acdf`. Se documentan seis rutas REST nuevas de energía, los modelos SQL034, el ledger SQL035–037, el modo MQTT Flespi DEV, los flujos de CI y la reducción del Compose productivo de datos a inspección de Liquibase. El cliente web implementa las seis operaciones de energía; dependencias y `.env` web no cambiaron en la comparación. La rama móvil reporta HEAD `6b5fe36`, pero no se pudo leer su código; su última evidencia detallada sigue fijada a `bb87f62`.
+
+El checkout local de smart-home-doc está en `e1168c8` y `origin/main` en `c9054ab`, 21 commits adelante. Un fast-forward falló por permiso denegado al escribir `.git/ORIG_HEAD`; no se cambió metadata Git. El código de `from_movil` tampoco pudo leerse: falló el conector GitHub y el acceso Git por red está restringido. Ver [revisión de alineación y acciones por componente](revision-alineacion-implementaciones-2026-11-05.md). No se ejecutaron pruebas, API, migraciones ni workflows.
 
 Fuentes generales: [mapa](mapa-de-repositorios.md), [inventarios](inventario-documental.md) y [validaciones](validacion-documental.md).

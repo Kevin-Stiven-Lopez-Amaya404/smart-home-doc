@@ -4,7 +4,7 @@ status: borrador
 owner: backend
 canonical_for:
   - referencia-backend-1cbaca28
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-05
 repository: nataliachala1/smarthome-backend
 inspected_branch: dev
 inspected_commit: 1cbaca28e9e152d5cb5ff7643560fdfa65857486
@@ -12,7 +12,7 @@ inspected_commit: 1cbaca28e9e152d5cb5ff7643560fdfa65857486
 
 # Documentación técnica del backend SmartHome
 
-> Referencia descriptiva de versión fija, incorporada a la central el 2026-10-29. Su autoridad técnica es el código enlazado, no esta copia. Para actualizarla se debe repetir el análisis sobre un commit identificado y revisar productores y consumidores. Las limitaciones de la inspección individual inicial se conservan como registro histórico; la revisión central posterior sí pudo comprobar el Git local y consultar SQL. Consulte [el resumen actual de alcance](../backend.md), [datos](../persistencia-y-datos.md) y [evidencias](../../00-contexto/evidencias-y-pendientes.md). No se ejecutaron aquí aplicaciones ni pruebas funcionales.
+> Referencia descriptiva del snapshot `1cbaca2`, incorporada a la central el 2026-10-29. En la revisión del 2026-11-05 se contrastó el backend `dev` en `60297c3`: el inventario base conserva la evidencia histórica y los cambios posteriores de energía/MQTT se enlazan en el [contrato energético](../../20-contratos/api-rest/energia.md) y la [revisión de alineación](../../00-contexto/revision-alineacion-implementaciones-2026-11-05.md). Las secciones de inventario de archivos/configuración no se regeneraron para el nuevo commit. Consulte [resumen actual de alcance](arquitectura.md), [datos](../persistencia-y-datos.md) y [evidencias](../../00-contexto/evidencias-y-pendientes.md). No se ejecutaron aquí aplicaciones ni pruebas funcionales.
 
 Documento obtenido mediante revisión estática del código, las configuraciones y el árbol de GitHub. Los ejemplos son ilustrativos: no proceden de solicitudes ejecutadas contra un servidor.
 
@@ -163,7 +163,7 @@ Fuentes: [gateway](https://github.com/nataliachala1/smarthome-backend/blob/1cbac
 
 ### 2.1 Reglas comunes y alcance del inventario
 
-Se identificaron **67 handlers HTTP de registro ordinario y cuatro handlers MQTT condicionales**. `AppController.getHello` declara un `GET /` adicional, pero `AppController` y `AppService` no están registrados en `AppModule`: no se incluye como endpoint operativo.
+En el snapshot descrito aquí se contaron **67 handlers HTTP ordinarios y cuatro handlers MQTT condicionales**. En `dev` `60297c3`, el recuento estático actual es 77: 71 handlers ordinarios bajo `/api/v1`, dos rutas de salud (`/health` y `/health/ready`) fuera del prefijo y cuatro handlers MQTT condicionales. `AppController.getHello` declara `GET /`, pero `AppController` y `AppService` no se registran en `AppModule`, por lo que se excluye.
 
 Las rutas incluyen literalmente `api/v1` en sus decoradores; no hay `setGlobalPrefix`. Salud usa `/health`. Swagger se configura en `/api/docs` cuando está habilitado, mediante `SwaggerModule.createDocument`; no hay un `openapi.json` versionado ni se generó uno durante este análisis. Las rutas auxiliares del middleware Swagger no se cuentan como handlers propios del backend.
 
@@ -647,6 +647,10 @@ Con permiso exclusivamente básico, el código devuelve solo `homeId`, `from`, `
 
 
 <a id="3-estructura-de-carpetas-y-archivos"></a>
+
+### 2.13 Energía (extensión del corte `60297c3`)
+
+El backend actual registra `EnergyModule` e incorpora seis rutas para resumen mensual, historial/consulta/alta de tarifas y lectura/escritura de metas. Las validaciones, roles, modelos JSON y precisión decimal están en el [contrato REST de energía](../../20-contratos/api-rest/energia.md). No se copia aquí el detalle de los controladores agregados después del snapshot `1cbaca2`.
 
 ## 3. Estructura de carpetas y archivos
 

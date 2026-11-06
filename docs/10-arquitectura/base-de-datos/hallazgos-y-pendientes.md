@@ -2,89 +2,77 @@
 title: Hallazgos y pendientes de base de datos
 status: borrador
 owner: datos
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-05
 canonical_for:
   - hallazgos-base-datos
 ---
 
 # Hallazgos y pendientes de base de datos
 
-Cada hallazgo corresponde a la instantánea dev `6caed6b`. Las diferencias estáticas no se presentan como fallos reproducidos ni se corrigen modificando otro repositorio.
+Esta revisión toma como referencia la rama `dev` del repositorio de base de datos en `3b20c9177a9aabfcc285043a6d85048bb1b95b7a`, el backend en `60297c361e4acac6e98161337ef8e149e069d441` y el frontend web en `7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac`. Los puntos descritos como históricos pertenecen a la revisión anterior del 29 de octubre y no se presentan como hallazgos revalidados.
 
-## DB01 — README rezagado frente a SQL034
+## DB01 — README y modelo de energía
 
-**Confirmado en archivos; consolidación pendiente.** El README excluye tarifas, pero el maestro incluye dos changesets de tarifas/metas. monthly_budget_cop termina siendo opcional con al menos un presupuesto o target_kwh presente.
+**Cerrado en la rama revisada.** El [README actual](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/README.md) ya incluye tarifas y metas incorporadas por SQL034. La documentación central y el contrato REST describen por separado el esquema y los endpoints disponibles; SQL por sí solo no acredita una API.
 
-Fuentes: [README](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/README.md), [SQL034](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/034_energy_tariff_budget/changelog.yaml). La central describe el [modelo derivado](modelo-de-datos.md), sin afirmar soporte REST o facturación.
+## DB02 — Cobertura de rollback
 
-## DB02 — Cobertura incompleta de rollback
+**Confirmado.** SQL035 y SQL036 declaran rollback. SQL037 no lo declara, al igual que SQL030 y SQL031. De los 99 changesets actuales, 95 tienen rollback declarado y uno usa `SELECT 1` como rollback intencional sin revertir esquema. No documentar cobertura completa: indicar la excepción y acordar recuperación para los tres changesets sin rollback.
 
-**Confirmado en changelogs.** README afirma rollback de todos los changesets activos, pero 030 y 031 no lo declaran. 009 usa SELECT 1 intencional, no una reversión de esquema.
+Fuentes: [SQL035](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/035_flespi_mqtt_ingest_idempotency/changelog.yaml), [SQL036](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/036_flespi_mqtt_event_order/changelog.yaml), [SQL037](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/037_mqtt_lease_quarantine_least_privilege/changelog.yaml), [SQL030](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/030_mqtt_enable_fencing/changelog.yaml) y [SQL031](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/031_mqtt_bootstrap_authorization/changelog.yaml).
 
-Fuentes: [030](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/030_mqtt_enable_fencing/changelog.yaml), [031](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/031_mqtt_bootstrap_authorization/changelog.yaml), [009](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/009_session_schema/changelog.yaml). Cierre: definir recuperación/compatibilidad y verificarla en aislamiento; no crear rollback ficticio.
+## DB03 — Uso productivo de SQL028
 
-## DB03 — SQL028 se comenta separada pero se incluye en maestro
+**Pendiente de validar contra el entorno.** La documentación de la release SQL028 la presenta como propuesta y su inclusión en el maestro no prueba que haya sido aplicada o aprobada para producción. Antes de describir su estado operativo, contrastar la release con el historial de la base desplegada y su gate de aprobación.
 
-**Riesgo de operación pendiente de decisión.** El encabezado indica propuesta, separación y no ejecución productiva; el maestro la incluye en el recorrido normal. La implementación está presente, pero no acredita aprobación para aplicarla a producción.
+Fuente: [SQL028](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/028_mqtt_preparation_secret/001_mqtt_preparation_secret.sql).
 
-Fuentes: [SQL028](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/028_mqtt_preparation_secret/001_mqtt_preparation_secret.sql), [maestro](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/changelog/changelog-master.yaml). Verificar gate y propósito de la release antes de una migración.
+## DB04 — Wrapper de actualización
 
-## DB04 — Wrappers de actualización distintos
+**Corregido en la rama revisada.** `scripts/update.ps1` valida configuración y migraciones y solo aplica cambios con `-Apply` más la confirmación `APLICAR-LOCAL`; comprueba `LASTEXITCODE`. La guía debe presentar ese flujo protegido y no el comportamiento observado en la instantánea anterior.
 
-**Diferencia estática.** update.ps1 ejecuta validate/update-sql/update sin comprobar LASTEXITCODE entre comandos. update.bat comprueba errorlevel, pero no muestra update-sql. No se garantiza la misma interrupción/inspección del plan.
+Fuente: [scripts/update.ps1](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/scripts/update.ps1).
 
-Fuentes: [PowerShell](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/update.ps1), [BAT](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/update.bat). Revisar comportamiento en el entorno de ejecución; no se probó un fallo nativo para afirmar un resultado concreto.
+## DB05 — CI y alcance de sus comprobaciones
 
-## DB05 — CI no reproduce todas las pruebas ni asegura el mismo diagnóstico
+**Actualizado.** El workflow de `dev` aplica las migraciones en una base PostgreSQL 18 desechable y audita roles y SQL037. Es validación de CI, no despliegue de producción ni comprobación de la instalación real. Documentar ese alcance sin atribuirle pruebas que el workflow no ejecuta.
 
-**Revisión pendiente.** CI aplica migraciones y ejecuta auditoría de roles, pero no corre suites SQL034 o regresión SQL032. La invocación psql de auditoría no fija ON_ERROR_STOP y no valida que haya nueve resultados, a diferencia del runner PowerShell. Revisar cómo se propagan errores SQL o una salida vacía.
+Fuente: [workflow ci-dev](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/.github/workflows/ci-dev.yml).
 
-Fuentes: [workflow](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/.github/workflows/ci-deploy.yml), [runner](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/test-runtime-roles.ps1). No se declara un fallo de pipeline observado ni una ejecución aprobada.
+## DB06 — Compose de producción
 
-## DB06 — Guía de diagnóstico y Compose productivo no coinciden
+**La guía debe describir inspección, no despliegue.** El Compose actual solo define Liquibase en el perfil `database-inspection`, monta configuración en modo de solo lectura y valida el changelog. No crea PostgreSQL, no aprovisiona roles y no despliega los servicios de aplicación. La base de producción es externa a este Compose.
 
-**Confirmado en archivos.** TROUBLESHOOTING pide logs de postgres, servicio ausente del Compose productivo, que usa PostgreSQL externo. También presupone un broker específico; la configuración actual solo declara una URL y flags que deben auditarse.
+Fuente: [docker-compose.production.yml](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/docker-compose.production.yml).
 
-Fuentes: [guía](../../99-archivo/base-de-datos/originales/docs/deployment/troubleshooting.md), [Compose](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docker-compose.production.yml). Resolver instrucciones después de identificar la instalación real.
+## DB07 y DB08 — Permisos realtime y cobertura de auditoría
 
-## DB07 — Permisos de consumo frente a destinatarios realtime
+Estos dos riesgos proceden de la revisión anterior basada en `6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878`. Se conservan como pendientes de una revisión transversal con pruebas de autorización positivas y negativas; esta revisión documental no afirma que sean fallos explotables ni que hayan sido resueltos.
 
-**Riesgo pendiente de prueba entre componentes.** Los helpers de detalle aplican permiso por dispositivo; fn_mqtt_realtime_recipients devuelve propietario/miembros activos sin ese filtro. El backend agrega restricciones de membresía, pero no expresa allí el mismo control por dispositivo.
+Fuentes históricas: [helpers de permisos](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/018_household_permissions/001_household_permissions.sql), [destinatarios realtime](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/033_mqtt_ingest_realtime/001_mqtt_ingest_realtime.sql) y [auditoría de roles](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/audit-runtime-roles.sql).
 
-Fuentes: [permisos](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/018_household_permissions/001_household_permissions.sql), [destinatarios](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/033_mqtt_ingest_realtime/001_mqtt_ingest_realtime.sql), [registro transversal E07](../../00-contexto/evidencias-y-pendientes.md). No se afirma una explotación comprobada.
+## DB09 — Prisma y catálogo SQL
 
-## DB08 — Auditoría general no cubre todos los nuevos objetos
+**Alcance documentado.** El inventario estático actual contiene 34 tablas y 301 columnas; la nueva tabla `consumption.mqtt_ingest_dedup` se añade en SQL035 y `device_event_ts` se incorpora al flujo de orden en SQL036. El modelo Prisma del backend no representa necesariamente todos los objetos SQL porque parte del acceso MQTT usa SQL directo. Mantener separados el inventario físico, los modelos ORM y los contratos de API.
 
-**Límite confirmado.** audit-runtime-roles evalúa aplicación/ingesta y ocho tablas. Hay 13 roles de grupo, contratos de propósito y tablas nuevas. No generalizar su PASS a toda la base o a corrección semántica de cada política.
+Fuentes: [SQL035](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/035_flespi_mqtt_ingest_idempotency/001_mqtt_ingest_dedup.sql), [SQL036](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/036_flespi_mqtt_event_order/001_flespi_event_order.sql) y [schema Prisma](https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/prisma/schema.prisma).
 
-Fuente: [auditoría](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/scripts/audit-runtime-roles.sql). Usar también la auditoría de revocación y definir cobertura faltante con pruebas positivas/negativas.
+## DB10 — Inventario y evidencia de pruebas
 
-## DB09 — Modelo Prisma y DDL no son equivalentes completos
+El maestro revisado tiene 99 changesets. Los informes históricos que describen 64 o 96 changesets son evidencia de otras revisiones, no una descripción del maestro actual. El conteo estructural de esta documentación debe actualizarse solo desde un commit identificado y no implica ejecución de pruebas en el entorno desplegado.
 
-**Diferencia de alcance.** Se localizaron 18 modelos Prisma en el backend revisado y 33 nombres de tabla en el recorrido SQL, incluida DEFAULT. Hay acceso SQL directo a objetos MQTT; esto no prueba incompatibilidad por sí solo. SQL034 tampoco demuestra endpoints disponibles.
+Fuente: [maestro de changelogs](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/changelog/changelog-master.yaml).
 
-Fuentes: [schema.prisma](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/prisma/schema.prisma), [catálogo de funciones](funciones-y-flujos.md). Contrastar firma, permisos y consumidores por flujo.
+## DB11 — Variables de JWT en Compose
 
-## DB10 — Evidencia histórica de pruebas no representa el maestro actual
+La revisión actual de `docker-compose.production.yml` ya no muestra la exigencia `JWT_REFRESH_SECRET` señalada en la instantánea anterior. Mantener la fuente central de variables enlazada a los ejemplos vigentes de cada servicio.
 
-**Confirmado en alcance.** Las guías de consumo describen 64 changesets y ensayos anteriores. El maestro actual contiene 96. El runner backend usa el maestro recibido y rollback-count de un changeset; no se debe describir como una prueba congelada de la antigua release.
+## DB12 — Estado de la instalación real
 
-Fuentes: [informe](../../99-archivo/base-de-datos/originales/docs/hu16-consumption-access.md), [runner backend](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/scripts/test-consumption-access.ps1). Repetir con revisión identificada.
-
-## DB11 — Configuración de refresh aún exigida por Compose
-
-**Pendiente ya registrado transversalmente.** JWT_REFRESH_SECRET se exige en Compose, mientras el backend utiliza refresh opaco. Configuración y validador deben reconciliarse por sus propietarios.
-
-Fuentes: [Compose](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docker-compose.production.yml), [variables centrales](../../40-operacion/variables-de-entorno.md).
-
-## DB12 — Instalación, roles y servicios no verificados
-
-El checkout local está en 03-dev con modificaciones previas; no se usó como espejo de dev ni se modificó. Se encontraron referencias de worktree antiguas; no se podaron ni repararon. No se inspeccionaron .env, copias privadas o reportes temporales de infraestructura.
-
-Falta comprobar versión PostgreSQL real, historial aplicado, propietarios y LOGIN, ACL broker, montaje de certificados, mantenimiento periódico y restauración. Las fuentes canónicas siguen siendo código y configuración más evidencia del entorno real.
+No se verificó el estado de una instalación desplegada: versión PostgreSQL efectiva, historial aplicado, propietarios y roles `LOGIN`, ACL del broker, certificados, tareas periódicas o restauración. Para cerrar este pendiente se requiere evidencia del entorno, con commit, fecha y procedimiento registrados.
 
 ## Criterio de cierre
 
-Registrar commit, entorno aislado, procedimiento, resultados reales y acuerdo cuando corresponda. Un documento no se promueve a vigente por resolver enlaces, ni se acepta un ADR a partir de estos hallazgos.
+Registrar commit, entorno aislado, procedimiento y resultados reales. Una corrección documental no equivale a una migración aplicada, una autorización aprobada ni un ADR aceptado.
 
-[Pruebas](pruebas-y-verificacion.md). [Índice](README.md).
+[Pruebas y verificación](pruebas-y-verificacion.md). [Índice](README.md).

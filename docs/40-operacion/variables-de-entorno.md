@@ -2,7 +2,7 @@
 title: Variables de entorno y configuración segura
 status: borrador
 owner: operacion
-last_reviewed: 2026-11-04
+last_reviewed: 2026-11-05
 canonical_for:
   - variables-entorno
 ---
@@ -23,7 +23,7 @@ Los validadores y consumidores del código son la referencia efectiva; un .env.e
 | Backend | CORS_ALLOWED_ORIGINS, FRONTEND_URL, TRUSTED_PROXY_CIDRS | Orígenes y proxy de confianza; sin rutas en los orígenes |
 | Backend | SWAGGER_ENABLED | Registro de Swagger |
 | Backend | EMAIL_ENABLED, SMTP_USER, SMTP_APP_PASSWORD, SMTP_FROM | Envío de correo; no documentar valores |
-| Backend | MQTT_ENABLED, MQTT_BROKER_URL, MQTT_USERNAME, MQTT_PASSWORD | Transporte y autenticación del broker |
+| Backend | MQTT_ENABLED, MQTT_BROKER_PROVIDER, MQTT_FLESPI_DEVICE_ID, MQTT_BROKER_URL, MQTT_USERNAME, MQTT_PASSWORD | Transporte y proveedor; Flespi restringido a un dispositivo en VPS DEV |
 | Backend | MQTT_TLS_CA_FILE, MQTT_TLS_REJECT_UNAUTHORIZED | CA y verificación TLS; desactivar verificación no está permitido |
 | Backend | MQTT_CLIENT_ID, MQTT_STATUS_CLIENT_ID, MQTT_TOPIC_NAMESPACE, MQTT_SHELLY_SWITCH_ID, MQTT_SHELLY_RPC_SOURCE | Identidades distintas y topics derivados |
 | Backend | CONSUMPTION_METRICS_WORKER_ENABLED, DATABASE_METRICS_URL | Worker opcional y conexión dedicada |
@@ -37,18 +37,24 @@ Los validadores y consumidores del código son la referencia efectiva; un .env.e
 
 Las variables MQTT de provisión/roles privilegiados, cifrado y perfiles DEV tienen consumidores específicos: usar el catálogo exhaustivo y sus validadores, sin habilitar flags por ensayo.
 
+## Modo Flespi y credenciales de propósito
+
+El proveedor predeterminado es `mosquitto`. `MQTT_BROKER_PROVIDER=flespi` solo se admite cuando `NODE_ENV=production`, `APP_ENV=development` y `MQTT_ENABLED=true`; requiere `MQTT_BROKER_URL=mqtts://mqtt.flespi.io:8883`, `MQTT_FLESPI_DEVICE_ID` para un Shelly, `MQTT_USERNAME` con el token ACL y `MQTT_PASSWORD` vacío. Es una configuración VPS DEV con TLS y topic namespace limitado a un dispositivo; no es configuración de producción.
+
+El código consume `MQTT_FLESPI_DEVICE_ID`, pero no aparece en el `.env.example` actual. El worker opt-in de reconciliación de estado también consume `SHELLY_FLESPI_STATE_SYNC_SINGLE_REPLICA` y `SHELLY_FLESPI_STATE_SYNC_INTERVAL_SECONDS` (por defecto 30 segundos, rango 15–300); ambos faltan en el ejemplo. Añadirlos a la plantilla o documentar su provisión externa antes de activar ese worker.
+
+Las conexiones privilegiadas de pairing MQTT usan URLs distintas por responsabilidad: `MQTT_RESERVER_DATABASE_URL`, `MQTT_LEASE_DATABASE_URL`, `MQTT_CONFIRMER_DATABASE_URL`, `MQTT_SECRET_DATABASE_URL`, `MQTT_RPC_DATABASE_URL`, `MQTT_AUTH_DATABASE_URL` y `MQTT_REVOCATION_DATABASE_URL`. No son intercambiables con `DATABASE_URL`/`DATABASE_IOT_URL`; cada usuario LOGIN recibe un rol funcional limitado. `MQTT_DYNSEC_ADMIN_URL`, `MQTT_DYNSEC_ADMIN_USERNAME`, `MQTT_DYNSEC_ADMIN_PASSWORD` y `MQTT_DYNSEC_ADMIN_CA_FILE` configuran administración de Mosquitto Dynamic Security. `MQTT_PREPARATION_AES_KEY_B64URL` y `MQTT_PREPARATION_AES_KEY_ID` protegen secretos temporales de pairing. Los nombres `SHELLY_MQTT_PRODUCTION_*` permanecen apagados por defecto en el ejemplo.
+
 El [detalle de configuración de datos](../10-arquitectura/base-de-datos/configuracion-y-ejecucion.md) relaciona liquibase.properties, Compose local/productivo, variables de conexión y scripts. No copiar sus plantillas al backend sin revisar consumidores.
 
 ## Discrepancias
 
-JWT_REFRESH_SECRET y JWT_REFRESH_EXPIRES_IN aparecen en ejemplos antiguos, pero no son la autoridad de duración/firma del refresh opaco actual. LOG_LEVEL y LOCAL_DEVICE_DISCOVERY_ENABLED no tienen consumidor identificado en el análisis backend. El Compose productivo aún exige JWT_REFRESH_SECRET.
+`JWT_REFRESH_SECRET` y `JWT_REFRESH_EXPIRES_IN` aparecen en `.env.example`, pero no son la autoridad de duración/firma del refresh opaco actual. El Compose productivo actual del repositorio de datos es solo un servicio Liquibase de inspección y no consume esas variables. `LOG_LEVEL` y `LOCAL_DEVICE_DISCOVERY_ENABLED` no tenían consumidor identificado en el snapshot base; su uso requiere volver a contrastar el código actual.
 
 No asumir que MQTT_ENABLED=false desactiva MQTT en desarrollo ni que .env se carga antes de seleccionar rutas condicionales.
 
 ## Fuentes y pendientes
 
-En el Compose productivo de datos, `DATABASE_URL` corresponde al LOGIN `smarthome_app_login` (miembro de `smarthome_runtime_app`) y `DATABASE_IOT_URL` a `smarthome_ingest_login` (miembro de `smarthome_ingest`); el servicio `runtime-roles` los provisiona con `APP_DB_PASSWORD` e `IOT_DB_PASSWORD`, que deben ser distintas. Verificar que ambos LOGIN existen con los permisos correctos antes del primer despliegue. Los valores de `.env.production.example` son marcadores ficticios: no copiarlos. Codificar los caracteres reservados de las contraseñas dentro de las URL y no poner secretos en variables `VITE_*`, que se publican en el navegador. `TRUSTED_PROXY_CIDRS` vacío ignora las cabeceras de IP reenviadas, y `MQTT_TLS_CA_FILE` vacío usa las CA del sistema. Antecedente: [variables de producción](../99-archivo/base-de-datos/originales/docs/deployment/environment-variables.md).
-
-[validación general](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/src/config/runtime-config.ts), [validación MQTT](https://github.com/nataliachala1/smarthome-backend/blob/1cbaca28e9e152d5cb5ff7643560fdfa65857486/src/config/mqtt-config.ts), [web](https://github.com/nataliachala1/smarthome-frontend-web/blob/8dad6e1f805db958e1e650379ae1dd6cce3c4d57/web/.env.example), [móvil](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/blob/bb87f62c0727f22f376e56632c22bea66128a04a/app.config.js), [Compose productivo](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/docker-compose.production.yml).
+[validación general](https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/config/runtime-config.ts), [validación MQTT](https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/config/mqtt-config.ts), [.env.example backend](https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/.env.example), [worker Flespi](https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/modules/devices/infrastructure/messaging/flespi-shelly-state-sync.worker.ts), [web](https://github.com/nataliachala1/smarthome-frontend-web/blob/7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac/web/.env.example), [móvil en el último corte verificable](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/blob/bb87f62c0727f22f376e56632c22bea66128a04a/app.config.js), [Compose productivo actual](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/docker-compose.production.yml).
 
 Pendiente: revisar variables efectivas y permisos del entorno real sin extraer valores; corregir las discrepancias mediante cambios coordinados en sus repositorios.

@@ -2,7 +2,7 @@
 title: Migraciones, orden y rollbacks
 status: borrador
 owner: datos
-last_reviewed: 2026-11-04
+last_reviewed: 2026-11-05
 canonical_for:
   - migraciones-base-datos
 ---
@@ -11,7 +11,7 @@ canonical_for:
 
 ## Fuente y recorrido
 
-Fuente única de evolución: [changelog maestro](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/changelog/changelog-master.yaml). La revisión estática recorrió **42 changelogs, 96 changesets y 96 referencias SQL de avance**. Todas sus rutas de avance y rollback referenciado existen; no se detectaron ciclos ni id repetido en el mismo archivo.
+Fuente única de evolución: [changelog maestro](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/changelog/changelog-master.yaml). El corte anterior recorría 42 changelogs y 96 changesets. El maestro actual incorpora SQL035–SQL037: **45 changelogs, 99 changesets y 99 rutas SQL de avance**. Esta cifra describe los archivos del repositorio, no la aplicación en una instancia.
 
 No es un resultado de liquibase validate/update, una comparación de checksums instalados o una aprobación de migración productiva. El [inventario estructural](inventario-estructural.json) conserva secuencia e identificadores.
 
@@ -54,30 +54,25 @@ Los includes DDL/DCL tienen labels/contextFilter. Revisar los filtros del comand
 | 93 | [032_mqtt_pairing_revocation](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/032_mqtt_pairing_revocation/changelog.yaml) | Revocación con evidencia broker y cercado reforzado. |
 | 94 | [033_mqtt_ingest_realtime](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/033_mqtt_ingest_realtime/changelog.yaml) | Permiso de hogar en lectura de consumo y destinatarios encapsulados. |
 | 95–96 | [034_energy_tariff_budget](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/releases/034_energy_tariff_budget/changelog.yaml) | Tarifas y objetivos; segundo changeset permite presupuesto opcional. |
+| 97 | [035_flespi_mqtt_ingest_idempotency](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/035_flespi_mqtt_ingest_idempotency/changelog.yaml) | Ledger durable `(id_device,event_key)` con RLS para deduplicación de eventos; no altera la tabla particionada de consumo. |
+| 98 | [036_flespi_mqtt_event_order](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/036_flespi_mqtt_event_order/changelog.yaml) | Permiso SELECT por columna e índice para ordenar por timestamp de origen. |
+| 99 | [037_mqtt_lease_quarantine_least_privilege](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/037_mqtt_lease_quarantine_least_privilege/changelog.yaml) | Revoca al worker de lease el permiso de ejecutar la función de cuarentena no usada por ese adaptador. |
 
 ## Cobertura de rollback
 
-- 93 changesets referencian SQL de rollback localizado.
+- 95 changesets referencian SQL de rollback localizado en el corte actual.
 - El puente 009 declara SQL inline SELECT 1 y conserva intencionalmente tablas/datos/grants de sesión.
-- 030 y 031 **no declaran rollback**; no afirmar cobertura total de reversión.
+- 030, 031 y 037 **no declaran rollback**; no afirmar cobertura total de reversión.
 - Un archivo de rollback existente no acredita ejecución correcta ni conservación de datos. Hay DROP de objetos; revisar dependencias y alcance antes de usarlo.
 - No se ejecutó rollback ni se propone una orden genérica contra producción.
-- El rollback de `011_mqtt_identity_events` exige historial vacío y aborta con `MQTT_IDENTITY_HISTORY_ROLLBACK_REQUIRES_EMPTY_HISTORY` si hay eventos u observaciones.
-- El rollback de `011_mqtt_revocation` aborta si existe alguna identidad registrada; no vaciar la tabla para forzarlo. Con el registro vacío conserva los roles NOLOGIN.
-- El rollback de `016_consumption_access` restaura el acceso detallado de GUEST del contrato anterior: es un retroceso de seguridad y no debe aplicarse como corrección aislada.
-- `019_device_pairing_sessions` falla antes de crear objetos si existen identificadores de fabricante que solo difieren en mayúsculas; su rollback se niega si hay historial de pairing. El rollback de `020_lan_pairing_method` se niega si existen sesiones `LAN`; corregir hacia adelante.
 
-El README del repositorio afirma rollback para todos los changesets activos; requiere actualizarse frente a esos dos casos.
+El inventario estructural adjunto conserva el corte `6caed6b` y no incluye los tres changesets nuevos; no editarlo como si fuera una introspección del maestro actual.
 
 ## SQL sin efecto y rutas fuera del recorrido
 
 01_ddl/10_indexes/007_config_indexes.sql está vacío aunque su changeset se incluye. Los directorios de tipos, vistas, vistas materializadas y procedimientos tienen changelogs vacíos. 04_tcl y las fixtures tests/mqtt no forman parte del maestro. El marcador de política de zonas vacío no demuestra que haya modelo de zonas.
 
 ## Trabajar sobre una instalación existente
-
-### Dependencia del puente de sesiones (009)
-
-El changeset `hu09-session-schema-bridge-20261014` crea o reconcilia `auth.refresh_token` y `auth.user.session_version`, que el backend usa para las familias de sesión. Se preparó el 2026-10-14 sobre una rama basada en `03-dev` (`e18b2d0`), cuyo historial no incluía `01_ddl/04_alter/012_create_refresh_token_table.sql`; en `dev` ese archivo ya declara la tabla desde `5878c85` (2026-09-22), y el puente conserva los objetos compatibles que encuentre. Concede a `smarthome_runtime_app` SELECT, INSERT de los campos necesarios y UPDATE de revocación, reemplazo y último uso, sin DELETE. Si encuentra objetos compatibles conserva sus filas: comprueba tipos, nulabilidad, clave primaria, unicidad por hash y FK sin cascada, y ante una divergencia falla y revierte la transacción sin reescribir la tabla. Esa comprobación no sustituye comparar defaults, propietarios y políticas del esquema instalado. Antes de aplicarlo sobre una base existente, contrastar `DATABASECHANGELOG`, checksums, esquema de sesiones y privilegios. Antecedente: [puente del esquema de sesiones HU09](../../99-archivo/base-de-datos/originales/docs/hu09-session-schema-bridge.md).
 
 Identificar versión y propietario de la base, tabla databasechangelog, parámetros de conexión y changesets ya aplicados. Los puentes usan IF NOT EXISTS y validaciones de compatibilidad; eso no convierte un esquema divergente en compatible automáticamente.
 
