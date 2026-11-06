@@ -2,7 +2,7 @@
 title: Pruebas y verificaciones
 status: borrador
 owner: desarrollo
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-05
 canonical_for:
   - estrategia-pruebas
 ---
@@ -34,7 +34,7 @@ La prueba e2e inicial del backend espera GET /, pero AppController no está regi
 
 ## Pruebas de datos
 
-Consultar [pruebas y verificación SQL](../10-arquitectura/base-de-datos/pruebas-y-verificacion.md): auditorías, fixtures, suites SQL034 y regresión SQL032. La revisión actual recorrió 96 changesets; los resultados históricos sobre 64 no se reproducen automáticamente ni sustituyen una ejecución nueva. No se ejecutaron esas pruebas en esta entrega.
+Consultar [pruebas y verificación SQL](../10-arquitectura/base-de-datos/pruebas-y-verificacion.md): auditorías, fixtures, suites SQL034 y regresión SQL032. La revisión estructural anterior recorrió 96 changesets; el maestro actual contiene 99. Los resultados históricos sobre 64 no se reproducen automáticamente ni sustituyen una ejecución nueva. No se ejecutaron esas pruebas en esta entrega.
 
 ## Resultado de esta entrega
 

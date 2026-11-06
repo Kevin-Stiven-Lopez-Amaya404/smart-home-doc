@@ -1,14 +1,16 @@
 {
-  "ok": true,
-  "markdown": 78,
-  "relativeLinks": 469,
-  "anchors": 36,
-  "externalLinks": 1001,
-  "jsonExamples": 11,
-  "jsonFiles": 3,
-  "mermaidBlocks": 4,
-  "directories": 19,
-  "canonicalKeys": 78,
-  "verifiedExternalReferences": 552,
-  "errors": []
+    "ok":  true,
+    "markdown":  117,
+    "relativeLinks":  678,
+    "anchors":  29,
+    "externalLinks":  1136,
+    "jsonExamples":  13,
+    "jsonFiles":  4,
+    "mermaidBlocks":  5,
+    "directories":  29,
+    "canonicalKeys":  117,
+    "verifiedExternalReferences":  659,
+    "errors":  [
+
+               ]
 }

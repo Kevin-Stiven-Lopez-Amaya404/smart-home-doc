@@ -2,7 +2,7 @@
 title: Registro de validación documental
 status: borrador
 owner: documentacion
-last_reviewed: 2026-11-03
+last_reviewed: 2026-11-06
 canonical_for:
   - resultados-validacion
 ---
@@ -11,7 +11,7 @@ canonical_for:
 
 ## Resultado y reproducción
 
-Revisión del 2026-10-29. El validador documental se ejecutó con Node.js **v24.20.0**, sin instalar dependencias. Los [resultados JSON de la última ejecución](resultados-validacion.json) contienen contadores y errores; no son pruebas del sistema SmartHome.
+La ejecución inicial del validador fue el 2026-10-29 con Node.js **v24.20.0**, sin instalar dependencias. Los [resultados JSON](resultados-validacion.json) se actualizaron con la revalidación documental del 2026-11-06; no son pruebas del sistema SmartHome.
 
 Comando reproducible desde la raíz:
 
@@ -32,12 +32,12 @@ En esta máquina se utilizó la ruta absoluta de node.exe porque no está en PAT
 
 ## Revisión de base de datos
 
-La ampliación de datos se prepara en docs/db desde origin/main c5ba34a1f99ecaab3717fe9fe7028192262dae96, después de integrar PR #1. Sus [12 guías](../10-arquitectura/base-de-datos/README.md) reúnen la documentación junto a la del backend.
+La ampliación inicial de datos se preparó en `docs/db` desde `origin/main` `c5ba34a1f99ecaab3717fe9fe7028192262dae96`, después de integrar PR #1. Sus [guías](../10-arquitectura/base-de-datos/README.md) reúnen la documentación junto a la del backend. En el corte actual, los cambios se trabajan sobre el checkout local `main` `e1168c8`; su `origin/main` `c9054ab` está 21 commits adelante y el fast-forward fue denegado al escribir `.git/ORIG_HEAD`.
 
 Resultados estáticos ejecutados:
 
 - 332 archivos enumerados; 288 contenidos recuperados, excluidos 44 .gitkeep.
-- 42 changelogs y 96 changesets recorridos; cero rutas de avance/rollback faltantes o ciclos localizados.
+- En la revisión estructural de octubre se recorrieron 42 changelogs y 96 changesets; se localizaron cero rutas de avance/rollback faltantes o ciclos.
 - 93 referencias a rollback SQL, un rollback inline de conservación y dos changesets sin rollback.
 - Inventario consistente: 33 nombres de tabla, incluida DEFAULT; 73 nombres de función con última definición.
 - 295 nombres de columna y 73 posiciones de definición de función contrastados con las fuentes recuperadas, sin discrepancias en esa comprobación.
@@ -98,6 +98,12 @@ No se ejecutaron aplicaciones, suites, migraciones, brokers, firmware, despliegu
 
 No hay evidencia aquí de ADR aceptados, aprobación de producto, pruebas funcionales aprobadas, alertas activas o backups restaurados.
 
+## Revalidación documental del 2026-11-06
+
+Se ejecutó node scripts/check-docs.mjs después de integrar la actualización sobre el main remoto c9054ab. Resultado: **117 Markdown, 678 enlaces internos, 29 anclas, 1136 referencias externas, 13 ejemplos JSON, 5 bloques Mermaid, 29 directorios con README y cero errores**. El manifiesto incluye 659 referencias registradas. También se ejecutó git diff --check sin errores de whitespace. Esta validación comprueba integridad documental, no las aplicaciones ni la base de datos.
+## Estructura de documentación por componente — 2026-11-06
+
+La documentación de backend, base-de-datos, from_movil y web se organiza en carpetas hermanas bajo docs/10-arquitectura/, cada una con su README.md. La rama de publicación se construye sobre el main remoto c9054ab y conserva los cambios documentales integrados después del checkout local. El validador registró **117 Markdown, 678 enlaces internos, 29 anclas, 1136 referencias externas, 13 ejemplos JSON, 5 bloques Mermaid, 29 directorios con README y cero errores**. El registro JSON refleja esta ejecución.
 ## Fuentes
 
 [Mapa](mapa-de-repositorios.md), [inventario](inventario-documental.md), [discrepancias](evidencias-y-pendientes.md), [script](../../scripts/check-docs.mjs), [alcance del validador](../30-desarrollo/calidad-documental.md).

@@ -2,7 +2,7 @@
 title: Diccionario de datos
 status: borrador
 owner: datos
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-05
 canonical_for:
   - diccionario-base-datos
 ---
@@ -11,7 +11,7 @@ canonical_for:
 
 ## Alcance del diccionario
 
-Derivación estática del commit `6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878`. Son **295 columnas declaradas en 32 tablas con definición de columnas**, más la partición DEFAULT que hereda las del padre. No se afirma que las tablas existan en una instalación.
+Derivación estática del corte base `6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878`, más las seis columnas de `consumption.mqtt_ingest_dedup` incorporadas por SQL035 en `3b20c9177a9aabfcc285043a6d85048bb1b95b7a`. El inventario actual contiene **301 columnas declaradas en 33 tablas con definición de columnas**, además de la partición `DEFAULT`, que hereda las columnas de su tabla padre. No se afirma que los objetos existan en una instalación.
 
 Se incorporan ALTER de session_version, revocation_probe_at y nulabilidad de monthly_budget_cop. Las claves foráneas y restricciones añadidas/reemplazadas después del CREATE TABLE deben leerse en [modelo](modelo-de-datos.md), [seguridad](seguridad-y-permisos.md) y [migraciones](migraciones-y-rollbacks.md). La tabla de columnas no sustituye el DDL completo.
 
@@ -555,3 +555,18 @@ La nulabilidad final de monthly_budget_cop procede de [SQL034/002](https://githu
 Repetir lectura del CREATE y ALTER en orden cuando cambie el commit. Contrastar PK/FK, índices, políticas y catálogos con una base migrada de pruebas antes de marcar como vigente. No copiar datos de tablas ni secretos de configuración a este diccionario.
 
 Fuentes: archivos por commit de cada sección, [changelog maestro](https://github.com/nataliachala1/smarthome-database/blob/6caed6bdfdcc89105a9f0e221e5b2dc8aad4d878/changelog/changelog-master.yaml) e [inventario estructural](inventario-estructural.json).
+
+## SQL035: consumption.mqtt_ingest_dedup
+
+Esta tabla se agregó después del corte estructural `6caed6b`. La declaración actual está en [SQL035, commit `3b20c91`](https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/035_flespi_mqtt_ingest_idempotency/001_mqtt_ingest_dedup.sql).
+
+| Columna | Tipo | Puede ser NULL | Clave primaria | Restricción/uso |
+| --- | --- | --- | --- | --- |
+| id_device | UUID | No | Componente | Dispositivo propietario del evento. |
+| id_home | UUID | No | — | Hogar asociado; FK compuesta con `id_device`. |
+| event_key | VARCHAR(64) | No | Componente | SHA-256 hexadecimal; unicidad por dispositivo. |
+| source_topic | VARCHAR(256) | No | — | Topic MQTT permitido por el contrato Shelly DEV. |
+| device_event_ts | NUMERIC(18,6) | No | — | Timestamp de origen positivo; SQL036 agrega permiso SELECT acotado e índice. |
+| first_received_at | TIMESTAMPTZ | No | — | Momento de recepción con `NOW()` por defecto. |
+
+La tabla registra identidad durable para el modo de ingesta Flespi; no guarda lecturas, no agrupa por similitud de magnitudes y no reemplaza la tabla particionada `consumption.consumption`. SQL035 aplica RLS al rol `smarthome_ingest`.

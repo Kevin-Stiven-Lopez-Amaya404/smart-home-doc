@@ -17,7 +17,7 @@ Se conserva una copia documental de **26 archivos** del repositorio `Kevin-Stive
 - Se redactaron **22 referencias** a un usuario o clave de demostración conocidos. El contenido de las copias no es byte por byte idéntico al origen cuando hay redacciones. Los hashes `git_blob_origen` identifican el archivo exacto del origen para auditoría, **no son hashes del contenido sanitizado**.
 - La información puede contener rutas, credenciales demostrativas, capturas o afirmaciones obsoletas. No se considera prueba de vigencia técnica ni de un despliegue.
 - Los documentos `BACKEND_CONNECTION.md` y `BLE_POC_ANDROID.md` tienen copias de archivo por trazabilidad, pero sus versiones **operativas** siguen junto al código móvil y no deben retirarse sin reemplazo.
-- La documentación funcional y la configuración siguen teniendo como fuente de verdad los archivos de `from_movil/dev`. La [síntesis de arquitectura móvil](../../10-arquitectura/aplicacion-movil.md) es una instantánea que necesita actualización tras cambios posteriores.
+- La documentación funcional y la configuración siguen teniendo como fuente de verdad los archivos de `from_movil/dev`. La [síntesis de arquitectura móvil](../../10-arquitectura/from_movil/README.md) es una instantánea que necesita actualización tras cambios posteriores.
 - El PR #36 de producción QA no forma parte de estas fuentes.
 - Las cuentas, claves u otros valores expuestos en el historial Git no se revocan mediante esta operación; confirmar si alguna vez fueron reales y rotarlos si corresponde.
 

@@ -2,7 +2,7 @@
 title: Índice de documentación
 status: borrador
 owner: documentacion
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-06
 canonical_for:
   - indice-documental
 ---
@@ -20,9 +20,10 @@ canonical_for:
 
 ## Referencias por implementación
 
-- [Backend](10-arquitectura/backend/referencia-tecnica.md).
+- [Backend](10-arquitectura/backend/README.md).
 - [Base de datos](10-arquitectura/base-de-datos/README.md).
-- [Archivo histórico del frontend móvil](99-archivo/movil/README.md).
+- [Móvil (`from_movil`)](10-arquitectura/from_movil/README.md).
+- [Web](10-arquitectura/web/README.md).
 
 ## Fuentes y estado
 

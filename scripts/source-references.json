@@ -5393,6 +5393,371 @@
       "repository": "Kevin-Stiven-Lopez-Amaya404/from_movil",
       "checked_on": "2026-11-05",
       "evidence": "Draft qa-to-main PR metadata verified, release-order and mobile CI checks successful; no physical QA or production deployment claimed"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/.env.example",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  ".env.example"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/.github/workflows/ci-dev.yml",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  ".github/workflows/ci-dev.yml"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/.github/workflows/pr-validate-dev.yml",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  ".github/workflows/pr-validate-dev.yml"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/package.json",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "package.json"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/prisma/schema.prisma",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "prisma/schema.prisma"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/app.module.ts",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "src/app.module.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/config/mqtt-config.ts",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "src/config/mqtt-config.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/config/runtime-config.ts",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "src/config/runtime-config.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/modules/devices/infrastructure/messaging/flespi-shelly-event-key.ts",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "src/modules/devices/infrastructure/messaging/flespi-shelly-event-key.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/modules/devices/infrastructure/messaging/flespi-shelly-state-sync.worker.ts",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "src/modules/devices/infrastructure/messaging/flespi-shelly-state-sync.worker.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/modules/devices/infrastructure/messaging/mqtt-device-status.subscriber.ts",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "src/modules/devices/infrastructure/messaging/mqtt-device-status.subscriber.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/modules/devices/infrastructure/messaging/mqtt-topic-contract.ts",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "src/modules/devices/infrastructure/messaging/mqtt-topic-contract.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/modules/energy/application/dto/create-home-energy-tariff.dto.ts",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "src/modules/energy/application/dto/create-home-energy-tariff.dto.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/modules/energy/application/dto/home-energy-summary.response.ts",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "src/modules/energy/application/dto/home-energy-summary.response.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/modules/energy/application/dto/upsert-home-energy-goal.dto.ts",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "src/modules/energy/application/dto/upsert-home-energy-goal.dto.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/modules/energy/presentation/controllers/home-energy-goals.controller.ts",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "src/modules/energy/presentation/controllers/home-energy-goals.controller.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/modules/energy/presentation/controllers/home-energy-summary.controller.ts",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "src/modules/energy/presentation/controllers/home-energy-summary.controller.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/modules/energy/presentation/controllers/home-energy-tariffs.controller.ts",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "src/modules/energy/presentation/controllers/home-energy-tariffs.controller.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-backend/tree/60297c361e4acac6e98161337ef8e149e069d441",
+        "repository":  "nataliachala1/smarthome-backend",
+        "checked_on":  "2026-11-05",
+        "commit":  "60297c361e4acac6e98161337ef8e149e069d441",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review."
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/.env.production.example",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  ".env.production.example"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/.github/workflows/ci-dev.yml",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  ".github/workflows/ci-dev.yml"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/README.md",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "README.md"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/changelog/changelog-master.yaml",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "changelog/changelog-master.yaml"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/docker-compose.production.yml",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "docker-compose.production.yml"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/docker-compose.yml",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "docker-compose.yml"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/033_mqtt_ingest_realtime/001_mqtt_ingest_realtime.sql",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "releases/033_mqtt_ingest_realtime/001_mqtt_ingest_realtime.sql"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/034_energy_tariff_budget/001_energy_tariff_budget.sql",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "releases/034_energy_tariff_budget/001_energy_tariff_budget.sql"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/035_flespi_mqtt_ingest_idempotency/001_mqtt_ingest_dedup.sql",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "releases/035_flespi_mqtt_ingest_idempotency/001_mqtt_ingest_dedup.sql"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/035_flespi_mqtt_ingest_idempotency/changelog.yaml",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "releases/035_flespi_mqtt_ingest_idempotency/changelog.yaml"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/036_flespi_mqtt_event_order/001_flespi_event_order.sql",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "releases/036_flespi_mqtt_event_order/001_flespi_event_order.sql"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/036_flespi_mqtt_event_order/changelog.yaml",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "releases/036_flespi_mqtt_event_order/changelog.yaml"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/037_mqtt_lease_quarantine_least_privilege/001_mqtt_lease_quarantine_least_privilege.sql",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "releases/037_mqtt_lease_quarantine_least_privilege/001_mqtt_lease_quarantine_least_privilege.sql"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/releases/037_mqtt_lease_quarantine_least_privilege/changelog.yaml",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "releases/037_mqtt_lease_quarantine_least_privilege/changelog.yaml"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/scripts/update.ps1",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "scripts/update.ps1"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/scripts/validate.ps1",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "scripts/validate.ps1"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-database/tree/3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "repository":  "nataliachala1/smarthome-database",
+        "checked_on":  "2026-11-05",
+        "commit":  "3b20c9177a9aabfcc285043a6d85048bb1b95b7a",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review."
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-frontend-web/blob/7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac/.github/workflows/ci-deploy.yml",
+        "repository":  "nataliachala1/smarthome-frontend-web",
+        "checked_on":  "2026-11-05",
+        "commit":  "7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  ".github/workflows/ci-deploy.yml"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-frontend-web/blob/7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac/web/.env.example",
+        "repository":  "nataliachala1/smarthome-frontend-web",
+        "checked_on":  "2026-11-05",
+        "commit":  "7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "web/.env.example"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-frontend-web/blob/7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac/web/package.json",
+        "repository":  "nataliachala1/smarthome-frontend-web",
+        "checked_on":  "2026-11-05",
+        "commit":  "7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "web/package.json"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-frontend-web/blob/7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac/web/src/features/consumption/HomeEnergySection.tsx",
+        "repository":  "nataliachala1/smarthome-frontend-web",
+        "checked_on":  "2026-11-05",
+        "commit":  "7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "web/src/features/consumption/HomeEnergySection.tsx"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-frontend-web/blob/7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac/web/src/shared/api/api-client.ts",
+        "repository":  "nataliachala1/smarthome-frontend-web",
+        "checked_on":  "2026-11-05",
+        "commit":  "7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "web/src/shared/api/api-client.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-frontend-web/blob/7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac/web/src/shared/api/energy.api.ts",
+        "repository":  "nataliachala1/smarthome-frontend-web",
+        "checked_on":  "2026-11-05",
+        "commit":  "7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "web/src/shared/api/energy.api.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-frontend-web/blob/7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac/web/src/shared/api/shelly-pairing-contract.ts",
+        "repository":  "nataliachala1/smarthome-frontend-web",
+        "checked_on":  "2026-11-05",
+        "commit":  "7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "web/src/shared/api/shelly-pairing-contract.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-frontend-web/blob/7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac/web/src/shared/realtime/realtime-client.ts",
+        "repository":  "nataliachala1/smarthome-frontend-web",
+        "checked_on":  "2026-11-05",
+        "commit":  "7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "web/src/shared/realtime/realtime-client.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-frontend-web/blob/7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac/web/vite.config.ts",
+        "repository":  "nataliachala1/smarthome-frontend-web",
+        "checked_on":  "2026-11-05",
+        "commit":  "7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review.",
+        "path":  "web/vite.config.ts"
+    },
+    {
+        "url":  "https://github.com/nataliachala1/smarthome-frontend-web/tree/7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac",
+        "repository":  "nataliachala1/smarthome-frontend-web",
+        "checked_on":  "2026-11-05",
+        "commit":  "7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac",
+        "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review."
     }
   ]
 }
