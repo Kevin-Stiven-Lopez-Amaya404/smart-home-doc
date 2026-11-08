@@ -22,6 +22,7 @@ Propósito, alcance y fuentes verificables.
 - [Evidencias y pendientes](evidencias-y-pendientes.md)
 - [Revisión de alineación con las implementaciones](revision-alineacion-implementaciones-2026-11-05.md)
 - [Validaciones ejecutadas](validacion-documental.md)
+- [Declaración de uso de inteligencia artificial](declaracion-uso-ia.md)
 
 ## Fuentes y pendientes
 

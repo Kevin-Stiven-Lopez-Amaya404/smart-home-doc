@@ -5758,6 +5758,24 @@
         "checked_on":  "2026-11-05",
         "commit":  "7b9acdf12205cbc25aa3d0647cb9c60dbaaf17ac",
         "evidence":  "Source path inspected at the fixed commit through the GitHub connector during the alignment review."
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-backend/blob/60297c361e4acac6e98161337ef8e149e069d441/src/app.module.ts",
+      "repository": "nataliachala1/smarthome-backend",
+      "checked_on": "2026-11-08",
+      "evidence": "Path verified with git cat-file at the fixed commit"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/tree/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/03_dcl/02_policies",
+      "repository": "nataliachala1/smarthome-database",
+      "checked_on": "2026-11-08",
+      "evidence": "Path verified with git cat-file at the fixed commit"
+    },
+    {
+      "url": "https://github.com/nataliachala1/smarthome-database/blob/3b20c9177a9aabfcc285043a6d85048bb1b95b7a/changelog/changelog-master.yaml",
+      "repository": "nataliachala1/smarthome-database",
+      "checked_on": "2026-11-08",
+      "evidence": "Path verified with git cat-file at the fixed commit"
     }
   ]
 }
