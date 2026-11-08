@@ -1,3 +1,12 @@
+---
+title: Declaración de uso de inteligencia artificial
+status: vigente
+owner: equipo
+last_reviewed: 2026-11-08
+canonical_for:
+  - uso-de-ia
+---
+
 # Declaración de uso de inteligencia artificial — SmartHome
 
 **Proyecto:** SmartHome · SENA ADSO, ficha 3145555
