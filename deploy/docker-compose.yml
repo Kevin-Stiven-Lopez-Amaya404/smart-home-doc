@@ -1,0 +1,129 @@
+# SmartHome - full local / evaluation stack.
+#
+# Expects the repositories cloned side by side:
+#   smarthome/
+#     smart-home-doc/          (this repository; run compose from deploy/)
+#     smarthome-database/
+#     smarthome-backend/
+#     smarthome-frontend-web/
+#
+#   cp .env.example .env
+#   docker compose up -d --build --wait
+#
+# Web: http://localhost:8080   API docs: http://localhost:3000/api/docs
+# Mailpit (activation emails): http://localhost:8025
+# Never use this file in production: it seeds demo users and uses local secrets.
+
+name: smarthome
+
+services:
+  postgres:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: smarthome_owner
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: smarthome
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U smarthome_owner -d smarthome"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  # Applies every migration plus the demo users (changelog-demo.yaml).
+  migrations:
+    image: liquibase/liquibase:4.29
+    depends_on:
+      postgres:
+        condition: service_healthy
+    working_dir: /liquibase/project
+    volumes:
+      - ../../smarthome-database:/liquibase/project:ro
+    environment:
+      LIQUIBASE_COMMAND_URL: jdbc:postgresql://postgres:5432/smarthome
+      LIQUIBASE_COMMAND_USERNAME: smarthome_owner
+      LIQUIBASE_COMMAND_PASSWORD: ${POSTGRES_PASSWORD}
+      LIQUIBASE_COMMAND_CHANGELOG_FILE: changelog/changelog-demo.yaml
+    command: ["--defaults-file=liquibase.properties", "update"]
+    restart: "no"
+
+  # Creates the least-privilege LOGIN roles used by the backend.
+  db-roles:
+    image: postgres:18-alpine
+    depends_on:
+      migrations:
+        condition: service_completed_successfully
+    volumes:
+      - ../../smarthome-database/scripts/provision-runtime-roles.sql:/provision.sql:ro
+    environment:
+      PGHOST: postgres
+      PGUSER: smarthome_owner
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+      PGDATABASE: smarthome
+      APP_DB_PASSWORD: ${APP_DB_PASSWORD:?Set APP_DB_PASSWORD in .env}
+      IOT_DB_PASSWORD: ${IOT_DB_PASSWORD:?Set IOT_DB_PASSWORD in .env}
+    command: ["psql", "-X", "-v", "ON_ERROR_STOP=1", "-f", "/provision.sql"]
+    restart: "no"
+
+  mosquitto:
+    image: eclipse-mosquitto:2
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+
+  mailpit:
+    image: axllent/mailpit:v1.27
+    ports:
+      - "127.0.0.1:${MAILPIT_PORT:-8025}:8025"
+
+  backend:
+    build:
+      context: ../../smarthome-backend
+    depends_on:
+      db-roles:
+        condition: service_completed_successfully
+      mosquitto:
+        condition: service_started
+      mailpit:
+        condition: service_started
+    environment:
+      NODE_ENV: development
+      PORT: "3000"
+      DATABASE_URL: postgresql://smarthome_app_login:${APP_DB_PASSWORD}@postgres:5432/smarthome
+      DATABASE_IOT_URL: postgresql://smarthome_ingest_login:${IOT_DB_PASSWORD}@postgres:5432/smarthome
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET in .env}
+      JWT_EXPIRES_IN: 15m
+      FRONTEND_URL: http://localhost:${WEB_PORT:-8080}
+      CORS_ALLOWED_ORIGINS: http://localhost:${WEB_PORT:-8080}
+      COOKIE_SECURE: "false"
+      COOKIE_SAME_SITE: lax
+      SWAGGER_ENABLED: "true"
+      EMAIL_ENABLED: "true"
+      SMTP_HOST: mailpit
+      SMTP_PORT: "1025"
+      SMTP_SECURE: "false"
+      SMTP_FROM: SmartHome <no-reply@smarthome.local>
+      MQTT_ENABLED: "true"
+      MQTT_BROKER_URL: mqtt://mosquitto:1883
+    ports:
+      - "127.0.0.1:${API_PORT:-3000}:3000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 15s
+
+  web:
+    build:
+      context: ../../smarthome-frontend-web/web
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      BACKEND_UPSTREAM: backend:3000
+    ports:
+      - "127.0.0.1:${WEB_PORT:-8080}:8080"
+
+volumes:
+  postgres_data:

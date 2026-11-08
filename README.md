@@ -2,7 +2,7 @@
 title: SmartHome — documentación central
 status: borrador
 owner: documentacion
-last_reviewed: 2026-10-29
+last_reviewed: 2026-11-08
 canonical_for:
   - entrada-central
 ---
@@ -12,6 +12,21 @@ canonical_for:
 SmartHome reúne servicios y aplicaciones para gestionar hogares, dispositivos y datos de consumo eléctrico. Este repositorio explica el sistema y permite localizar las fuentes de implementación. No acredita una instalación productiva.
 
 Repositorio central: **smart-home-doc**, en singular. Se conserva la identidad del README original y se amplía su navegación. El repositorio separado smart-home-docs contiene antecedentes documentales; no es el destino de este trabajo.
+
+## Inicio rápido
+
+El sistema completo se levanta con un solo comando desde [deploy/](deploy/README.md):
+
+```bash
+cd deploy
+cp .env.example .env
+docker compose up -d --build --wait
+./smoke-test.sh
+```
+
+Web en <http://localhost:8080>. Usuarios de prueba con contraseña `SmartHome#2026`: `admin@example.com` (SYSTEM_ADMIN), `owner@example.com` (OWNER), `member@example.com` (MEMBER) y `guest@example.com` (GUEST).
+
+El uso de herramientas de inteligencia artificial está declarado en [docs/00-contexto/declaracion-uso-ia.md](docs/00-contexto/declaracion-uso-ia.md).
 
 ## Por dónde empezar
 

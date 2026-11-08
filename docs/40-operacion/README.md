@@ -13,6 +13,8 @@ Procedimientos y requisitos, sin acreditar servicios activos.
 
 ## Documentos
 
+- [Instalación del sistema completo con Docker Compose](../../deploy/README.md)
+- [Evidencias de la prueba extremo a extremo](evidencias-e2e/README.md)
 - [Despliegue](despliegue.md)
 - [Promoción de ramas y liberación del frontend móvil](promocion-frontend-movil-dev-qa-main.md)
 - [Variables](variables-de-entorno.md)
